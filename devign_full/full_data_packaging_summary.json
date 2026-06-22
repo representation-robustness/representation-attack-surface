@@ -1,0 +1,27 @@
+{
+  "manifest_total_files": 27318,
+  "aligned_retained": 26865,
+  "dropped_not_fully_sliced_all_variants": 453,
+  "variants": {
+    "originals": {
+      "path": "/home/jesse/thesis/devign_full/originals_full_data_with_slices.json",
+      "count": 26865
+    },
+    "obf_identifier": {
+      "path": "/home/jesse/thesis/devign_full/obf_identifier_full_data_with_slices.json",
+      "count": 26865
+    },
+    "obf_deadcode": {
+      "path": "/home/jesse/thesis/devign_full/obf_deadcode_full_data_with_slices.json",
+      "count": 26865
+    },
+    "obf_controlflow": {
+      "path": "/home/jesse/thesis/devign_full/obf_controlflow_full_data_with_slices.json",
+      "count": 26865
+    }
+  },
+  "label_distribution": {
+    "0": 14610,
+    "1": 12255
+  }
+}

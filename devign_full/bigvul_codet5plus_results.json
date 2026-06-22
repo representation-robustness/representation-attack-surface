@@ -1,0 +1,35 @@
+{
+  "dataset": "Big-Vul",
+  "model": "CodeT5+",
+  "seed": 42,
+  "best_val_f1": 84.45,
+  "results": {
+    "original": {
+      "f1": 83.15,
+      "acc": 97.94,
+      "pr": 78.75,
+      "rc": 88.07
+    },
+    "identifier": {
+      "f1": 83.62,
+      "acc": 98.06,
+      "pr": 81.83,
+      "rc": 85.5,
+      "delta_f1": 0.47
+    },
+    "deadcode": {
+      "f1": 65.92,
+      "acc": 94.98,
+      "pr": 54.23,
+      "rc": 84.04,
+      "delta_f1": -17.23
+    },
+    "controlflow": {
+      "f1": 80.8,
+      "acc": 97.66,
+      "pr": 76.73,
+      "rc": 85.32,
+      "delta_f1": -2.35
+    }
+  }
+}

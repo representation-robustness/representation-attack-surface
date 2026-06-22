@@ -1,0 +1,84 @@
+{
+  "reveal": {
+    "model": "reveal",
+    "n_seeds": 10,
+    "variants": {
+      "ren": {
+        "mean": 50.6,
+        "std": 8.6
+      }
+    }
+  },
+  "regvd": {
+    "model": "regvd",
+    "n_seeds": 1,
+    "variants": {
+      "ren": {
+        "mean": 12.9,
+        "std": 0.0
+      },
+      "vocab_shift": {
+        "mean": 6.5,
+        "std": 0.0
+      },
+      "benign_token": {
+        "mean": 41.6,
+        "std": 0.0
+      }
+    }
+  },
+  "codebert": {
+    "model": "codebert",
+    "n_seeds": 1,
+    "variants": {
+      "ren": {
+        "mean": 14.1,
+        "std": 0.0
+      },
+      "vocab_shift": {
+        "mean": 7.1,
+        "std": 0.0
+      },
+      "benign_token": {
+        "mean": 6.2,
+        "std": 0.0
+      }
+    }
+  },
+  "tfidf": {
+    "model": "tfidf",
+    "n_seeds": 5,
+    "variants": {
+      "ren": {
+        "mean": 22.4,
+        "std": 3.4
+      },
+      "vocab_shift": {
+        "mean": 42.7,
+        "std": 0.0
+      },
+      "benign_token": {
+        "mean": 42.7,
+        "std": 0.0
+      }
+    }
+  },
+  "codet5plus": {
+    "model": "codet5plus",
+    "n_seeds": 5,
+    "variants": {
+      "ren": {
+        "mean": 16.3,
+        "std": 7.0
+      },
+      "vocab_shift": {
+        "mean": 21.2,
+        "std": 10.9
+      },
+      "benign_token": {
+        "mean": 11.5,
+        "std": 5.7
+      }
+    }
+  }
+}

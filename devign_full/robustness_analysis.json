@@ -1,0 +1,31 @@
+{
+  "token_shift": {
+    "n_functions": 500,
+    "total_tokens_orig": 184116,
+    "total_tokens_renamed": 194461,
+    "pct_tokens_changed_mean": 77.58,
+    "pct_tokens_changed_std": 24.39,
+    "vocab_size_orig": 5039,
+    "vocab_size_renamed": 4534,
+    "vocab_jaccard_overlap": 0.8987,
+    "new_tokens_introduced": 3
+  },
+  "embedding_similarity": {
+    "n_pairs": 500,
+    "cosine_sim_mean": 0.989,
+    "cosine_sim_std": 0.0208,
+    "cosine_sim_min": 0.5899,
+    "cosine_sim_p5": 0.9715,
+    "cosine_sim_p25": 0.9869,
+    "cosine_sim_median": 0.9923,
+    "l2_dist_mean": 2.3623,
+    "l2_dist_std": 1.4836
+  },
+  "gnn_feature_identity": {
+    "n_chunks_checked": 5,
+    "n_function_pairs": 1000,
+    "pct_feature_identical": 100.0,
+    "max_feature_diff": 0.0,
+    "l2_diff_mean": 0.0
+  }
+}

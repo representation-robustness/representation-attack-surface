@@ -1,0 +1,33 @@
+{
+  "original": {
+    "f1": 51.46
+  },
+  "identifier": {
+    "f1": 43.96,
+    "delta_f1": -7.5
+  },
+  "deadcode": {
+    "f1": 42.61,
+    "delta_f1": -8.85
+  },
+  "controlflow": {
+    "f1": 47.21,
+    "delta_f1": -4.25
+  },
+  "ren_dead": {
+    "f1": 37.07,
+    "delta_f1": -14.39
+  },
+  "ren_cf": {
+    "f1": 36.67,
+    "delta_f1": -14.79
+  },
+  "dead_cf": {
+    "f1": 39.02,
+    "delta_f1": -12.44
+  },
+  "compound": {
+    "f1": 32.06,
+    "delta_f1": -19.4
+  }
+}

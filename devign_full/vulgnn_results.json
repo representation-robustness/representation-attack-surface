@@ -1,0 +1,21 @@
+{
+  "test": {
+    "f1": 57.95,
+    "accuracy": 55.02
+  },
+  "test_obf_identifier": {
+    "f1": 57.95,
+    "accuracy": 55.02
+  },
+  "test_obf_deadcode": {
+    "f1": 59.46,
+    "accuracy": 51.42
+  },
+  "test_obf_controlflow": {
+    "f1": 57.98,
+    "accuracy": 53.87
+  },
+  "best_val_f1": 57.98,
+  "best_epoch": 6,
+  "model": "VulGNN"
+}

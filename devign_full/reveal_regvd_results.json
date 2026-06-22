@@ -1,0 +1,5 @@
+{
+  "dataset": "ReVeal",
+  "model": "ReGVD (ReGCN+CodeBERT)",
+  "results": {}
+}

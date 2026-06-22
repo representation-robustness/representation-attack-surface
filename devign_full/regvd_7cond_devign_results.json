@@ -1,0 +1,45 @@
+{
+  "test": {
+    "f1_mean": 62.45,
+    "f1_std": 0.0
+  },
+  "test_obf_identifier": {
+    "f1_mean": 60.6,
+    "f1_std": 0.0,
+    "delta_f1": -1.85
+  },
+  "test_obf_deadcode": {
+    "f1_mean": 63.38,
+    "f1_std": 0.0,
+    "delta_f1": 0.93
+  },
+  "test_obf_controlflow": {
+    "f1_mean": 63.38,
+    "f1_std": 0.0,
+    "delta_f1": 0.93
+  },
+  "test_obf_ren_dead": {
+    "f1_mean": 63.24,
+    "f1_std": 0.0,
+    "delta_f1": 0.79
+  },
+  "test_obf_ren_cf": {
+    "f1_mean": 64.12,
+    "f1_std": 0.0,
+    "delta_f1": 1.67
+  },
+  "test_obf_dead_cf": {
+    "f1_mean": 64.0,
+    "f1_std": 0.0,
+    "delta_f1": 1.55
+  },
+  "test_obf_compound": {
+    "f1_mean": 64.02,
+    "f1_std": 0.0,
+    "delta_f1": 1.57
+  },
+  "max_drop": 1.85,
+  "model": "ReGVD",
+  "dataset": "Devign",
+  "note": "single checkpoint (best.pt)"
+}

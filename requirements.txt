@@ -1,0 +1,44 @@
+# Python dependencies for the thesis experiments.
+#
+# IMPORTANT — install in this order:
+#
+# 1. PyTorch with CUDA 12.1:
+#    pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 \
+#        --index-url https://download.pytorch.org/whl/cu121
+#
+# 2. PyTorch Geometric (CUDA-specific wheels required):
+#    pip install torch-scatter torch-sparse torch-cluster torch-spline-conv \
+#        -f https://data.pyg.org/whl/torch-2.5.1+cu121.html
+#    pip install torch-geometric==2.7.0
+#
+# 3. Everything else:
+#    pip install -r requirements.txt
+#
+# If you have a different CUDA version, adjust the --index-url and -f URLs accordingly.
+# See https://pytorch.org/get-started and https://pytorch-geometric.readthedocs.io/en/latest/install/installation.html
+
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1
+torch-geometric==2.7.0
+torch-scatter==2.1.2
+torch-sparse==0.6.18
+torch-cluster==1.6.3
+torch-spline-conv==1.2.2
+transformers==4.44.0
+tokenizers==0.19.1
+accelerate==1.13.0
+datasets==4.8.4
+scikit-learn==1.7.2
+gensim==4.4.0
+omegaconf==2.3.0
+pytorch-lightning==1.9.5
+numpy==1.26.4
+scipy==1.15.3
+pandas==2.3.3
+networkx==3.4.2
+matplotlib==3.10.2
+seaborn==0.13.2
+tqdm==4.67.3
+tree-sitter==0.25.2
+tree-sitter-c==0.24.1

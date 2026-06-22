@@ -1,0 +1,95 @@
+{
+  "oov_analysis": {
+    "original": {
+      "total_tokens": 359828,
+      "unique_tokens": 42549,
+      "oov_count": 13229,
+      "unique_oov": 6575,
+      "oov_rate_pct": 3.68
+    },
+    "obf_identifier": {
+      "total_tokens": 221554,
+      "unique_tokens": 39124,
+      "oov_count": 9438,
+      "unique_oov": 5894,
+      "oov_rate_pct": 4.26
+    },
+    "obf_deadcode": {
+      "total_tokens": 371126,
+      "unique_tokens": 42549,
+      "oov_count": 13519,
+      "unique_oov": 6575,
+      "oov_rate_pct": 3.64
+    },
+    "obf_controlflow": {
+      "total_tokens": 344749,
+      "unique_tokens": 41447,
+      "oov_count": 12847,
+      "unique_oov": 6362,
+      "oov_rate_pct": 3.73
+    }
+  },
+  "tfidf_analysis": {
+    "original": {
+      "centroid_cosine_sim": 0.9914,
+      "mean_per_func_sim": 0.1561,
+      "std_per_func_sim": 0.0581
+    },
+    "obf_identifier": {
+      "centroid_cosine_sim": 0.8734,
+      "mean_per_func_sim": 0.1446,
+      "std_per_func_sim": 0.0573
+    },
+    "obf_deadcode": {
+      "centroid_cosine_sim": 0.9173,
+      "mean_per_func_sim": 0.1804,
+      "std_per_func_sim": 0.0574
+    },
+    "obf_controlflow": {
+      "centroid_cosine_sim": 0.9618,
+      "mean_per_func_sim": 0.1669,
+      "std_per_func_sim": 0.0573
+    }
+  },
+  "gnn_size_analysis": {
+    "original": {
+      "mean_lines": 108.1,
+      "mean_tokens": 176.1
+    },
+    "obf_identifier": {
+      "mean_lines": 108.1,
+      "mean_tokens": 176.1,
+      "delta_lines_pct": 0.0,
+      "delta_tokens_pct": 0.0
+    },
+    "obf_deadcode": {
+      "mean_lines": 118.9,
+      "mean_tokens": 265.9,
+      "delta_lines_pct": 10.0,
+      "delta_tokens_pct": 51.0
+    },
+    "obf_controlflow": {
+      "mean_lines": 103.9,
+      "mean_tokens": 193.9,
+      "delta_lines_pct": -3.9,
+      "delta_tokens_pct": 10.1
+    }
+  },
+  "embedding_analysis": {
+    "obf_identifier": {
+      "mean_cosine_sim": 0.9975,
+      "std_cosine_sim": 0.0019,
+      "n_pairs": 400
+    },
+    "obf_deadcode": {
+      "mean_cosine_sim": 0.9916,
+      "std_cosine_sim": 0.0079,
+      "n_pairs": 400
+    },
+    "obf_controlflow": {
+      "mean_cosine_sim": 0.9975,
+      "std_cosine_sim": 0.0027,
+      "n_pairs": 400
+    }
+  }
+}

@@ -1,0 +1,1669 @@
+{
+  "seed_bootstrap": {
+    "devign_ecgrgcn": {
+      "clean": {
+        "mean": 63.476,
+        "ci95_lo": 62.996,
+        "ci95_hi": 63.986,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 63.048,
+        "ci95_lo": 62.714,
+        "ci95_hi": 63.312,
+        "n_seeds": 5,
+        "delta_mean": -0.428,
+        "delta_ci95_lo": -0.754,
+        "delta_ci95_hi": -0.102
+      },
+      "dead": {
+        "mean": 63.338,
+        "ci95_lo": 63.012,
+        "ci95_hi": 63.628,
+        "n_seeds": 5,
+        "delta_mean": -0.138,
+        "delta_ci95_lo": -0.352,
+        "delta_ci95_hi": 0.076
+      },
+      "cf": {
+        "mean": 63.154,
+        "ci95_lo": 62.874,
+        "ci95_hi": 63.406,
+        "n_seeds": 5,
+        "delta_mean": -0.322,
+        "delta_ci95_lo": -0.804,
+        "delta_ci95_hi": 0.208
+      }
+    },
+    "devign_angle": {
+      "clean": {
+        "mean": 59.978,
+        "ci95_lo": 58.998,
+        "ci95_hi": 60.958,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 59.982,
+        "ci95_lo": 58.998,
+        "ci95_hi": 60.966,
+        "n_seeds": 5,
+        "delta_mean": 0.004,
+        "delta_ci95_lo": -0.008,
+        "delta_ci95_hi": 0.016
+      },
+      "dead": {
+        "mean": 61.364,
+        "ci95_lo": 60.924,
+        "ci95_hi": 61.792,
+        "n_seeds": 5,
+        "delta_mean": 1.386,
+        "delta_ci95_lo": 0.692,
+        "delta_ci95_hi": 2.196
+      },
+      "cf": {
+        "mean": 58.79,
+        "ci95_lo": 56.704,
+        "ci95_hi": 60.634,
+        "n_seeds": 5,
+        "delta_mean": -1.188,
+        "delta_ci95_lo": -2.422,
+        "delta_ci95_hi": 0.046
+      }
+    },
+    "devign_vulgnn": {
+      "clean": {
+        "mean": 60.676,
+        "ci95_lo": 60.034,
+        "ci95_hi": 61.192,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 60.676,
+        "ci95_lo": 60.03,
+        "ci95_hi": 61.192,
+        "n_seeds": 5,
+        "delta_mean": 0.0,
+        "delta_ci95_lo": -0.008,
+        "delta_ci95_hi": 0.01
+      },
+      "dead": {
+        "mean": 61.918,
+        "ci95_lo": 61.772,
+        "ci95_hi": 62.064,
+        "n_seeds": 5,
+        "delta_mean": 1.242,
+        "delta_ci95_lo": 0.848,
+        "delta_ci95_hi": 1.782
+      },
+      "cf": {
+        "mean": 61.294,
+        "ci95_lo": 60.622,
+        "ci95_hi": 61.792,
+        "n_seeds": 5,
+        "delta_mean": 0.618,
+        "delta_ci95_lo": 0.44,
+        "delta_ci95_hi": 0.796
+      }
+    },
+    "devign_reveal": {
+      "ren": {
+        "mean": 53.37,
+        "ci95_lo": 51.752,
+        "ci95_hi": 54.7861,
+        "n_seeds": 10
+      },
+      "dead": {
+        "mean": 61.043,
+        "ci95_lo": 60.3939,
+        "ci95_hi": 61.659,
+        "n_seeds": 10
+      },
+      "cf": {
+        "mean": 55.824,
+        "ci95_lo": 54.225,
+        "ci95_hi": 57.235,
+        "n_seeds": 10
+      },
+      "ren_dead": {
+        "mean": 1.014,
+        "ci95_lo": 0.13,
+        "ci95_hi": 2.118,
+        "n_seeds": 10
+      },
+      "ren_cf": {
+        "mean": 1.588,
+        "ci95_lo": 0.194,
+        "ci95_hi": 3.324,
+        "n_seeds": 10
+      },
+      "dead_cf": {
+        "mean": 0.732,
+        "ci95_lo": 0.032,
+        "ci95_hi": 1.6633,
+        "n_seeds": 10
+      }
+    },
+    "devign_regvd": {
+      "clean": {
+        "mean": 62.014,
+        "ci95_lo": 60.788,
+        "ci95_hi": 63.206,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 60.058,
+        "ci95_lo": 58.644,
+        "ci95_hi": 61.44,
+        "n_seeds": 5,
+        "delta_mean": -1.956,
+        "delta_ci95_lo": -3.592,
+        "delta_ci95_hi": -0.44
+      },
+      "dead": {
+        "mean": 63.126,
+        "ci95_lo": 62.522,
+        "ci95_hi": 63.73,
+        "n_seeds": 5,
+        "delta_mean": 1.112,
+        "delta_ci95_lo": 0.084,
+        "delta_ci95_hi": 2.074
+      },
+      "cf": {
+        "mean": 63.004,
+        "ci95_lo": 62.152,
+        "ci95_hi": 63.966,
+        "n_seeds": 5,
+        "delta_mean": 0.99,
+        "delta_ci95_lo": 0.476,
+        "delta_ci95_hi": 1.504
+      }
+    },
+    "devign_lmggnn": {
+      "clean": {
+        "mean": 62.486,
+        "ci95_lo": 61.134,
+        "ci95_hi": 63.85,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 60.304,
+        "ci95_lo": 58.988,
+        "ci95_hi": 61.724,
+        "n_seeds": 5,
+        "delta_mean": -2.182,
+        "delta_ci95_lo": -3.742,
+        "delta_ci95_hi": -0.622
+      },
+      "dead": {
+        "mean": 63.1,
+        "ci95_lo": 62.902,
+        "ci95_hi": 63.244,
+        "n_seeds": 5,
+        "delta_mean": 0.614,
+        "delta_ci95_lo": -0.756,
+        "delta_ci95_hi": 2.028
+      },
+      "cf": {
+        "mean": 62.502,
+        "ci95_lo": 62.334,
+        "ci95_hi": 62.67,
+        "n_seeds": 5,
+        "delta_mean": 0.016,
+        "delta_ci95_lo": -1.174,
+        "delta_ci95_hi": 1.204
+      }
+    },
+    "devign_codebert": {
+      "clean": {
+        "mean": 63.536,
+        "ci95_lo": 62.05,
+        "ci95_hi": 65.022,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 62.086,
+        "ci95_lo": 60.232,
+        "ci95_hi": 63.94,
+        "n_seeds": 5,
+        "delta_mean": -1.45,
+        "delta_ci95_lo": -2.046,
+        "delta_ci95_hi": -0.854
+      },
+      "dead": {
+        "mean": 62.976,
+        "ci95_lo": 62.648,
+        "ci95_hi": 63.3,
+        "n_seeds": 5,
+        "delta_mean": -0.56,
+        "delta_ci95_lo": -1.908,
+        "delta_ci95_hi": 0.788
+      },
+      "cf": {
+        "mean": 62.522,
+        "ci95_lo": 62.25,
+        "ci95_hi": 62.794,
+        "n_seeds": 5,
+        "delta_mean": -1.014,
+        "delta_ci95_lo": -2.294,
+        "delta_ci95_hi": 0.324
+      }
+    },
+    "devign_codet5": {
+      "clean": {
+        "mean": 63.618,
+        "ci95_lo": 62.542,
+        "ci95_hi": 64.464,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 62.94,
+        "ci95_lo": 61.642,
+        "ci95_hi": 64.306,
+        "n_seeds": 5,
+        "delta_mean": -0.678,
+        "delta_ci95_lo": -1.496,
+        "delta_ci95_hi": 0.334
+      },
+      "dead": {
+        "mean": 64.26,
+        "ci95_lo": 63.732,
+        "ci95_hi": 64.86,
+        "n_seeds": 5,
+        "delta_mean": 0.642,
+        "delta_ci95_lo": -0.206,
+        "delta_ci95_hi": 1.436
+      },
+      "cf": {
+        "mean": 63.784,
+        "ci95_lo": 63.132,
+        "ci95_hi": 64.43,
+        "n_seeds": 5,
+        "delta_mean": 0.166,
+        "delta_ci95_lo": -0.306,
+        "delta_ci95_hi": 0.638
+      }
+    },
+    "bigvul_ecgrgcn": {
+      "clean": {
+        "mean": 21.346,
+        "ci95_lo": 20.902,
+        "ci95_hi": 21.834,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 21.344,
+        "ci95_lo": 20.906,
+        "ci95_hi": 21.806,
+        "n_seeds": 5,
+        "delta_mean": -0.002,
+        "delta_ci95_lo": -0.028,
+        "delta_ci95_hi": 0.018
+      },
+      "dead": {
+        "mean": 17.858,
+        "ci95_lo": 16.236,
+        "ci95_hi": 19.48,
+        "n_seeds": 5,
+        "delta_mean": -3.488,
+        "delta_ci95_lo": -5.412,
+        "delta_ci95_hi": -1.858
+      },
+      "cf": {
+        "mean": 19.894,
+        "ci95_lo": 19.318,
+        "ci95_hi": 20.47,
+        "n_seeds": 5,
+        "delta_mean": -1.452,
+        "delta_ci95_lo": -1.88,
+        "delta_ci95_hi": -0.964
+      }
+    },
+    "bigvul_angle": {
+      "clean": {
+        "mean": 20.44,
+        "ci95_lo": 19.944,
+        "ci95_hi": 20.936,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 20.466,
+        "ci95_lo": 19.952,
+        "ci95_hi": 20.98,
+        "n_seeds": 5,
+        "delta_mean": 0.026,
+        "delta_ci95_lo": 0.004,
+        "delta_ci95_hi": 0.05
+      },
+      "dead": {
+        "mean": 14.778,
+        "ci95_lo": 14.53,
+        "ci95_hi": 15.026,
+        "n_seeds": 5,
+        "delta_mean": -5.662,
+        "delta_ci95_lo": -5.92,
+        "delta_ci95_hi": -5.37
+      },
+      "cf": {
+        "mean": 19.756,
+        "ci95_lo": 19.1,
+        "ci95_hi": 20.412,
+        "n_seeds": 5,
+        "delta_mean": -0.684,
+        "delta_ci95_lo": -1.098,
+        "delta_ci95_hi": -0.376
+      }
+    },
+    "bigvul_vulgnn": {
+      "clean": {
+        "mean": 20.174,
+        "ci95_lo": 19.854,
+        "ci95_hi": 20.494,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 20.176,
+        "ci95_lo": 19.85,
+        "ci95_hi": 20.502,
+        "n_seeds": 5,
+        "delta_mean": 0.002,
+        "delta_ci95_lo": -0.004,
+        "delta_ci95_hi": 0.008
+      },
+      "dead": {
+        "mean": 15.802,
+        "ci95_lo": 15.484,
+        "ci95_hi": 16.234,
+        "n_seeds": 5,
+        "delta_mean": -4.372,
+        "delta_ci95_lo": -4.658,
+        "delta_ci95_hi": -4.086
+      },
+      "cf": {
+        "mean": 19.53,
+        "ci95_lo": 19.048,
+        "ci95_hi": 19.932,
+        "n_seeds": 5,
+        "delta_mean": -0.644,
+        "delta_ci95_lo": -0.866,
+        "delta_ci95_hi": -0.436
+      }
+    },
+    "bigvul_reveal": {
+      "clean": {
+        "mean": 18.35,
+        "ci95_lo": 18.004,
+        "ci95_hi": 18.558,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 18.332,
+        "ci95_lo": 17.986,
+        "ci95_hi": 18.52,
+        "n_seeds": 5,
+        "delta_mean": -0.018,
+        "delta_ci95_lo": -0.06,
+        "delta_ci95_hi": 0.006
+      },
+      "dead": {
+        "mean": 17.094,
+        "ci95_lo": 16.638,
+        "ci95_hi": 17.55,
+        "n_seeds": 5,
+        "delta_mean": -1.256,
+        "delta_ci95_lo": -1.516,
+        "delta_ci95_hi": -0.996
+      },
+      "cf": {
+        "mean": 17.832,
+        "ci95_lo": 17.306,
+        "ci95_hi": 18.2,
+        "n_seeds": 5,
+        "delta_mean": -0.518,
+        "delta_ci95_lo": -0.714,
+        "delta_ci95_hi": -0.294
+      }
+    },
+    "bigvul_regvd": {
+      "clean": {
+        "mean": 59.15,
+        "ci95_lo": 58.52,
+        "ci95_hi": 59.78,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 57.17,
+        "ci95_lo": 56.988,
+        "ci95_hi": 57.326,
+        "n_seeds": 5,
+        "delta_mean": -1.98,
+        "delta_ci95_lo": -2.546,
+        "delta_ci95_hi": -1.464
+      },
+      "dead": {
+        "mean": 30.198,
+        "ci95_lo": 26.386,
+        "ci95_hi": 34.408,
+        "n_seeds": 5,
+        "delta_mean": -28.952,
+        "delta_ci95_lo": -33.224,
+        "delta_ci95_hi": -24.118
+      },
+      "cf": {
+        "mean": 37.95,
+        "ci95_lo": 34.846,
+        "ci95_hi": 41.162,
+        "n_seeds": 5,
+        "delta_mean": -21.2,
+        "delta_ci95_lo": -24.764,
+        "delta_ci95_hi": -17.434
+      }
+    },
+    "bigvul_lmggnn": {
+      "clean": {
+        "mean": 79.882,
+        "ci95_lo": 78.372,
+        "ci95_hi": 81.392,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 78.912,
+        "ci95_lo": 77.46,
+        "ci95_hi": 80.284,
+        "n_seeds": 5,
+        "delta_mean": -0.97,
+        "delta_ci95_lo": -1.234,
+        "delta_ci95_hi": -0.726
+      },
+      "dead": {
+        "mean": 69.828,
+        "ci95_lo": 66.62,
+        "ci95_hi": 72.872,
+        "n_seeds": 5,
+        "delta_mean": -10.054,
+        "delta_ci95_lo": -14.076,
+        "delta_ci95_hi": -6.032
+      },
+      "cf": {
+        "mean": 77.472,
+        "ci95_lo": 76.03,
+        "ci95_hi": 78.888,
+        "n_seeds": 5,
+        "delta_mean": -2.41,
+        "delta_ci95_lo": -2.958,
+        "delta_ci95_hi": -1.964
+      }
+    },
+    "bigvul_codebert": {
+      "clean": {
+        "mean": 79.572,
+        "ci95_lo": 78.47,
+        "ci95_hi": 80.366,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 79.164,
+        "ci95_lo": 78.454,
+        "ci95_hi": 79.87,
+        "n_seeds": 5,
+        "delta_mean": -0.408,
+        "delta_ci95_lo": -1.07,
+        "delta_ci95_hi": 0.182
+      },
+      "dead": {
+        "mean": 60.756,
+        "ci95_lo": 56.562,
+        "ci95_hi": 63.698,
+        "n_seeds": 5,
+        "delta_mean": -18.816,
+        "delta_ci95_lo": -23.07,
+        "delta_ci95_hi": -16.37
+      },
+      "cf": {
+        "mean": 76.992,
+        "ci95_lo": 75.44,
+        "ci95_hi": 78.368,
+        "n_seeds": 5,
+        "delta_mean": -2.58,
+        "delta_ci95_lo": -4.176,
+        "delta_ci95_hi": -1.524
+      },
+      "ren_dead": {
+        "mean": 60.432,
+        "ci95_lo": 55.912,
+        "ci95_hi": 63.264,
+        "n_seeds": 5,
+        "delta_mean": -19.14,
+        "delta_ci95_lo": -23.71,
+        "delta_ci95_hi": -16.474
+      },
+      "ren_cf": {
+        "mean": 76.688,
+        "ci95_lo": 74.606,
+        "ci95_hi": 78.276,
+        "n_seeds": 5,
+        "delta_mean": -2.884,
+        "delta_ci95_lo": -4.9285,
+        "delta_ci95_hi": -1.698
+      },
+      "dead_cf": {
+        "mean": 58.632,
+        "ci95_lo": 54.02,
+        "ci95_hi": 61.546,
+        "n_seeds": 5,
+        "delta_mean": -20.94,
+        "delta_ci95_lo": -25.394,
+        "delta_ci95_hi": -18.558
+      }
+    },
+    "bigvul_codet5": {
+      "clean": {
+        "mean": 84.42,
+        "ci95_lo": 83.44,
+        "ci95_hi": 85.4,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 85.142,
+        "ci95_lo": 84.21,
+        "ci95_hi": 85.936,
+        "n_seeds": 5,
+        "delta_mean": 0.722,
+        "delta_ci95_lo": 0.302,
+        "delta_ci95_hi": 1.248
+      },
+      "dead": {
+        "mean": 66.126,
+        "ci95_lo": 62.848,
+        "ci95_hi": 69.348,
+        "n_seeds": 5,
+        "delta_mean": -18.294,
+        "delta_ci95_lo": -21.184,
+        "delta_ci95_hi": -15.846
+      },
+      "cf": {
+        "mean": 81.484,
+        "ci95_lo": 80.36,
+        "ci95_hi": 82.608,
+        "n_seeds": 5,
+        "delta_mean": -2.936,
+        "delta_ci95_lo": -3.396,
+        "delta_ci95_hi": -2.56
+      },
+      "ren_dead": {
+        "mean": 66.86,
+        "ci95_lo": 64.23,
+        "ci95_hi": 69.51,
+        "n_seeds": 5,
+        "delta_mean": -17.56,
+        "delta_ci95_lo": -19.786,
+        "delta_ci95_hi": -15.73
+      },
+      "ren_cf": {
+        "mean": 82.084,
+        "ci95_lo": 81.134,
+        "ci95_hi": 82.946,
+        "n_seeds": 5,
+        "delta_mean": -2.336,
+        "delta_ci95_lo": -2.732,
+        "delta_ci95_hi": -1.94
+      },
+      "dead_cf": {
+        "mean": 65.302,
+        "ci95_lo": 61.686,
+        "ci95_hi": 68.736,
+        "n_seeds": 5,
+        "delta_mean": -19.118,
+        "delta_ci95_lo": -22.346,
+        "delta_ci95_hi": -16.458
+      }
+    },
+    "dv_ecgrgcn": {
+      "clean": {
+        "mean": 68.512,
+        "ci95_lo": 66.774,
+        "ci95_hi": 70.476,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 68.512,
+        "ci95_lo": 66.822,
+        "ci95_hi": 70.244,
+        "n_seeds": 5,
+        "delta_mean": 0.0,
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0
+      },
+      "dead": {
+        "mean": 69.348,
+        "ci95_lo": 68.316,
+        "ci95_hi": 70.59,
+        "n_seeds": 5,
+        "delta_mean": 0.836,
+        "delta_ci95_lo": 0.058,
+        "delta_ci95_hi": 1.758
+      },
+      "cf": {
+        "mean": 68.208,
+        "ci95_lo": 66.44,
+        "ci95_hi": 69.986,
+        "n_seeds": 5,
+        "delta_mean": -0.304,
+        "delta_ci95_lo": -0.99,
+        "delta_ci95_hi": 0.398
+      }
+    },
+    "dv_angle": {
+      "clean": {
+        "mean": 65.71,
+        "ci95_lo": 64.894,
+        "ci95_hi": 66.526,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 65.71,
+        "ci95_lo": 64.894,
+        "ci95_hi": 66.526,
+        "n_seeds": 5,
+        "delta_mean": 0.0,
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0
+      },
+      "dead": {
+        "mean": 68.986,
+        "ci95_lo": 68.082,
+        "ci95_hi": 69.904,
+        "n_seeds": 5,
+        "delta_mean": 3.276,
+        "delta_ci95_lo": 2.94,
+        "delta_ci95_hi": 3.526
+      },
+      "cf": {
+        "mean": 65.934,
+        "ci95_lo": 64.916,
+        "ci95_hi": 66.902,
+        "n_seeds": 5,
+        "delta_mean": 0.224,
+        "delta_ci95_lo": -0.066,
+        "delta_ci95_hi": 0.514
+      }
+    },
+    "dv_vulgnn": {
+      "clean": {
+        "mean": 66.166,
+        "ci95_lo": 65.618,
+        "ci95_hi": 66.634,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 66.166,
+        "ci95_lo": 65.644,
+        "ci95_hi": 66.634,
+        "n_seeds": 5,
+        "delta_mean": 0.0,
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0
+      },
+      "dead": {
+        "mean": 68.734,
+        "ci95_lo": 68.134,
+        "ci95_hi": 69.6,
+        "n_seeds": 5,
+        "delta_mean": 2.568,
+        "delta_ci95_lo": 2.086,
+        "delta_ci95_hi": 3.07
+      },
+      "cf": {
+        "mean": 65.9,
+        "ci95_lo": 65.328,
+        "ci95_hi": 66.334,
+        "n_seeds": 5,
+        "delta_mean": -0.266,
+        "delta_ci95_lo": -0.472,
+        "delta_ci95_hi": 0.028
+      }
+    },
+    "dv_reveal": {
+      "clean": {
+        "mean": 34.526,
+        "ci95_lo": 26.0485,
+        "ci95_hi": 45.646,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 34.526,
+        "ci95_lo": 25.992,
+        "ci95_hi": 45.704,
+        "n_seeds": 5,
+        "delta_mean": 0.0,
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0
+      },
+      "dead": {
+        "mean": 35.072,
+        "ci95_lo": 26.238,
+        "ci95_hi": 47.124,
+        "n_seeds": 5,
+        "delta_mean": 0.546,
+        "delta_ci95_lo": -0.098,
+        "delta_ci95_hi": 1.5041
+      },
+      "cf": {
+        "mean": 33.266,
+        "ci95_lo": 24.526,
+        "ci95_hi": 44.936,
+        "n_seeds": 5,
+        "delta_mean": -1.26,
+        "delta_ci95_lo": -1.594,
+        "delta_ci95_hi": -0.764
+      }
+    },
+    "dv_regvd": {
+      "clean": {
+        "mean": 73.202,
+        "ci95_lo": 72.728,
+        "ci95_hi": 73.69,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 72.664,
+        "ci95_lo": 71.966,
+        "ci95_hi": 73.172,
+        "n_seeds": 5,
+        "delta_mean": -0.538,
+        "delta_ci95_lo": -1.01,
+        "delta_ci95_hi": -0.066
+      },
+      "dead": {
+        "mean": 73.36,
+        "ci95_lo": 73.088,
+        "ci95_hi": 73.602,
+        "n_seeds": 5,
+        "delta_mean": 0.158,
+        "delta_ci95_lo": -0.196,
+        "delta_ci95_hi": 0.526
+      },
+      "cf": {
+        "mean": 72.906,
+        "ci95_lo": 72.58,
+        "ci95_hi": 73.232,
+        "n_seeds": 5,
+        "delta_mean": -0.296,
+        "delta_ci95_lo": -0.586,
+        "delta_ci95_hi": 0.052
+      }
+    },
+    "dv_lmggnn": {
+      "clean": {
+        "mean": 75.472,
+        "ci95_lo": 74.788,
+        "ci95_hi": 76.028,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 74.344,
+        "ci95_lo": 73.786,
+        "ci95_hi": 74.812,
+        "n_seeds": 5,
+        "delta_mean": -1.128,
+        "delta_ci95_lo": -1.3782,
+        "delta_ci95_hi": -0.944
+      },
+      "dead": {
+        "mean": 75.056,
+        "ci95_lo": 74.862,
+        "ci95_hi": 75.25,
+        "n_seeds": 5,
+        "delta_mean": -0.416,
+        "delta_ci95_lo": -0.778,
+        "delta_ci95_hi": 0.074
+      },
+      "cf": {
+        "mean": 76.186,
+        "ci95_lo": 75.644,
+        "ci95_hi": 76.714,
+        "n_seeds": 5,
+        "delta_mean": 0.714,
+        "delta_ci95_lo": 0.348,
+        "delta_ci95_hi": 0.966
+      }
+    },
+    "dv_codebert": {
+      "clean": {
+        "mean": 73.106,
+        "ci95_lo": 72.058,
+        "ci95_hi": 74.072,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 72.95,
+        "ci95_lo": 71.634,
+        "ci95_hi": 74.164,
+        "n_seeds": 5,
+        "delta_mean": -0.156,
+        "delta_ci95_lo": -0.734,
+        "delta_ci95_hi": 0.38
+      },
+      "dead": {
+        "mean": 72.988,
+        "ci95_lo": 71.522,
+        "ci95_hi": 74.056,
+        "n_seeds": 5,
+        "delta_mean": -0.118,
+        "delta_ci95_lo": -0.776,
+        "delta_ci95_hi": 0.456
+      },
+      "cf": {
+        "mean": 72.674,
+        "ci95_lo": 71.382,
+        "ci95_hi": 73.768,
+        "n_seeds": 5,
+        "delta_mean": -0.432,
+        "delta_ci95_lo": -1.084,
+        "delta_ci95_hi": 0.22
+      },
+      "ren_dead": {
+        "mean": 72.622,
+        "ci95_lo": 71.452,
+        "ci95_hi": 73.552,
+        "n_seeds": 5,
+        "delta_mean": -0.484,
+        "delta_ci95_lo": -0.796,
+        "delta_ci95_hi": -0.172
+      },
+      "ren_cf": {
+        "mean": 72.592,
+        "ci95_lo": 71.778,
+        "ci95_hi": 73.406,
+        "n_seeds": 5,
+        "delta_mean": -0.514,
+        "delta_ci95_lo": -0.892,
+        "delta_ci95_hi": -0.2
+      },
+      "dead_cf": {
+        "mean": 72.65,
+        "ci95_lo": 70.93,
+        "ci95_hi": 73.764,
+        "n_seeds": 5,
+        "delta_mean": -0.456,
+        "delta_ci95_lo": -1.362,
+        "delta_ci95_hi": 0.404
+      }
+    },
+    "dv_codet5": {
+      "clean": {
+        "mean": 73.726,
+        "ci95_lo": 73.16,
+        "ci95_hi": 74.43,
+        "n_seeds": 5
+      },
+      "ren": {
+        "mean": 72.966,
+        "ci95_lo": 71.522,
+        "ci95_hi": 74.186,
+        "n_seeds": 5,
+        "delta_mean": -0.76,
+        "delta_ci95_lo": -1.74,
+        "delta_ci95_hi": -0.048
+      },
+      "dead": {
+        "mean": 74.198,
+        "ci95_lo": 73.376,
+        "ci95_hi": 74.976,
+        "n_seeds": 5,
+        "delta_mean": 0.472,
+        "delta_ci95_lo": 0.112,
+        "delta_ci95_hi": 0.828
+      },
+      "cf": {
+        "mean": 73.42,
+        "ci95_lo": 72.744,
+        "ci95_hi": 74.232,
+        "n_seeds": 5,
+        "delta_mean": -0.306,
+        "delta_ci95_lo": -0.644,
+        "delta_ci95_hi": 0.004
+      },
+      "ren_dead": {
+        "mean": 73.34,
+        "ci95_lo": 71.904,
+        "ci95_hi": 74.508,
+        "n_seeds": 5,
+        "delta_mean": -0.386,
+        "delta_ci95_lo": -1.412,
+        "delta_ci95_hi": 0.402
+      },
+      "ren_cf": {
+        "mean": 72.984,
+        "ci95_lo": 71.544,
+        "ci95_hi": 74.056,
+        "n_seeds": 5,
+        "delta_mean": -0.742,
+        "delta_ci95_lo": -1.804,
+        "delta_ci95_hi": 0.028
+      },
+      "dead_cf": {
+        "mean": 74.19,
+        "ci95_lo": 73.214,
+        "ci95_hi": 75.14,
+        "n_seeds": 5,
+        "delta_mean": 0.464,
+        "delta_ci95_lo": -0.076,
+        "delta_ci95_hi": 1.004
+      }
+    }
+  },
+  "function_bootstrap": {
+    "angle": {
+      "seed42_ren": {
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0
+      },
+      "seed42_dead": {
+        "delta_ci95_lo": -0.2141,
+        "delta_ci95_hi": 0.9737
+      },
+      "seed42_cf": {
+        "delta_ci95_lo": -1.8692,
+        "delta_ci95_hi": -0.3914
+      },
+      "seed42_ren_dead": {
+        "delta_ci95_lo": -0.2176,
+        "delta_ci95_hi": 0.9753
+      },
+      "seed42_ren_cf": {
+        "delta_ci95_lo": -1.8728,
+        "delta_ci95_hi": -0.393
+      },
+      "seed1337_ren": {
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0618
+      },
+      "seed1337_dead": {
+        "delta_ci95_lo": 0.3632,
+        "delta_ci95_hi": 1.456
+      },
+      "seed1337_cf": {
+        "delta_ci95_lo": 0.1814,
+        "delta_ci95_hi": 1.1396
+      },
+      "seed1337_ren_dead": {
+        "delta_ci95_lo": 0.3853,
+        "delta_ci95_hi": 1.4644
+      },
+      "seed1337_ren_cf": {
+        "delta_ci95_lo": 0.208,
+        "delta_ci95_hi": 1.1594
+      },
+      "seed7_ren": {
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0
+      },
+      "seed7_dead": {
+        "delta_ci95_lo": 0.6903,
+        "delta_ci95_hi": 2.0024
+      },
+      "seed7_cf": {
+        "delta_ci95_lo": -3.4539,
+        "delta_ci95_hi": -1.4047
+      },
+      "seed7_ren_dead": {
+        "delta_ci95_lo": 0.6851,
+        "delta_ci95_hi": 2.0131
+      },
+      "seed7_ren_cf": {
+        "delta_ci95_lo": -3.4836,
+        "delta_ci95_hi": -1.4261
+      },
+      "seed100_ren": {
+        "delta_ci95_lo": -0.0482,
+        "delta_ci95_hi": 0.0
+      },
+      "seed100_dead": {
+        "delta_ci95_lo": 0.5958,
+        "delta_ci95_hi": 2.2508
+      },
+      "seed100_cf": {
+        "delta_ci95_lo": -0.6212,
+        "delta_ci95_hi": 0.6514
+      },
+      "seed100_ren_dead": {
+        "delta_ci95_lo": 0.5868,
+        "delta_ci95_hi": 2.2819
+      },
+      "seed100_ren_cf": {
+        "delta_ci95_lo": -0.6374,
+        "delta_ci95_hi": 0.6786
+      },
+      "seed999_ren": {
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0719
+      },
+      "seed999_dead": {
+        "delta_ci95_lo": 1.9676,
+        "delta_ci95_hi": 3.8151
+      },
+      "seed999_cf": {
+        "delta_ci95_lo": -4.121,
+        "delta_ci95_hi": -1.9987
+      },
+      "seed999_ren_dead": {
+        "delta_ci95_lo": 1.9619,
+        "delta_ci95_hi": 3.8589
+      },
+      "seed999_ren_cf": {
+        "delta_ci95_lo": -4.0955,
+        "delta_ci95_hi": -1.9785
+      }
+    },
+    "codet5plus": {
+      "seed42_ren": {
+        "delta_ci95_lo": -5.0838,
+        "delta_ci95_hi": -1.6008
+      },
+      "seed42_dead": {
+        "delta_ci95_lo": -0.1348,
+        "delta_ci95_hi": 3.018
+      },
+      "seed42_cf": {
+        "delta_ci95_lo": -1.7639,
+        "delta_ci95_hi": 0.8278
+      },
+      "seed42_ren_dead": {
+        "delta_ci95_lo": -1.2895,
+        "delta_ci95_hi": 2.1394
+      },
+      "seed42_ren_cf": {
+        "delta_ci95_lo": -4.1375,
+        "delta_ci95_hi": -0.5321
+      },
+      "seed42_dead_cf": {
+        "delta_ci95_lo": -0.6038,
+        "delta_ci95_hi": 2.695
+      },
+      "seed42_compound": {
+        "delta_ci95_lo": -0.9969,
+        "delta_ci95_hi": 2.4147
+      },
+      "seed1337_ren": {
+        "delta_ci95_lo": -2.432,
+        "delta_ci95_hi": -0.2674
+      },
+      "seed1337_dead": {
+        "delta_ci95_lo": -1.8983,
+        "delta_ci95_hi": 0.4903
+      },
+      "seed1337_cf": {
+        "delta_ci95_lo": -0.5968,
+        "delta_ci95_hi": 0.9767
+      },
+      "seed1337_ren_dead": {
+        "delta_ci95_lo": -2.4385,
+        "delta_ci95_hi": 0.0825
+      },
+      "seed1337_ren_cf": {
+        "delta_ci95_lo": -2.3515,
+        "delta_ci95_hi": -0.1915
+      },
+      "seed1337_dead_cf": {
+        "delta_ci95_lo": -2.093,
+        "delta_ci95_hi": 0.5368
+      },
+      "seed1337_compound": {
+        "delta_ci95_lo": -1.9738,
+        "delta_ci95_hi": 0.6887
+      },
+      "seed7_ren": {
+        "delta_ci95_lo": 0.055,
+        "delta_ci95_hi": 3.0385
+      },
+      "seed7_dead": {
+        "delta_ci95_lo": -0.4924,
+        "delta_ci95_hi": 2.7571
+      },
+      "seed7_cf": {
+        "delta_ci95_lo": -1.5607,
+        "delta_ci95_hi": 1.2168
+      },
+      "seed7_ren_dead": {
+        "delta_ci95_lo": -0.5259,
+        "delta_ci95_hi": 2.9764
+      },
+      "seed7_ren_cf": {
+        "delta_ci95_lo": -1.8562,
+        "delta_ci95_hi": 1.2822
+      },
+      "seed7_dead_cf": {
+        "delta_ci95_lo": -0.4825,
+        "delta_ci95_hi": 2.7963
+      },
+      "seed7_compound": {
+        "delta_ci95_lo": -0.2767,
+        "delta_ci95_hi": 3.23
+      },
+      "seed100_ren": {
+        "delta_ci95_lo": -2.8153,
+        "delta_ci95_hi": 0.6727
+      },
+      "seed100_dead": {
+        "delta_ci95_lo": 5.7753,
+        "delta_ci95_hi": 10.2291
+      },
+      "seed100_cf": {
+        "delta_ci95_lo": 1.4754,
+        "delta_ci95_hi": 4.68
+      },
+      "seed100_ren_dead": {
+        "delta_ci95_lo": 6.8358,
+        "delta_ci95_hi": 11.8685
+      },
+      "seed100_ren_cf": {
+        "delta_ci95_lo": -0.5931,
+        "delta_ci95_hi": 3.5653
+      },
+      "seed100_dead_cf": {
+        "delta_ci95_lo": 5.143,
+        "delta_ci95_hi": 9.937
+      },
+      "seed100_compound": {
+        "delta_ci95_lo": 8.185,
+        "delta_ci95_hi": 13.3442
+      },
+      "seed999_ren": {
+        "delta_ci95_lo": -8.7907,
+        "delta_ci95_hi": -4.8531
+      },
+      "seed999_dead": {
+        "delta_ci95_lo": 1.5489,
+        "delta_ci95_hi": 5.0808
+      },
+      "seed999_cf": {
+        "delta_ci95_lo": -0.1419,
+        "delta_ci95_hi": 2.8502
+      },
+      "seed999_ren_dead": {
+        "delta_ci95_lo": 1.6227,
+        "delta_ci95_hi": 5.3956
+      },
+      "seed999_ren_cf": {
+        "delta_ci95_lo": -1.9509,
+        "delta_ci95_hi": 1.9602
+      },
+      "seed999_dead_cf": {
+        "delta_ci95_lo": 3.2858,
+        "delta_ci95_hi": 7.1921
+      },
+      "seed999_compound": {
+        "delta_ci95_lo": 2.4784,
+        "delta_ci95_hi": 6.4118
+      }
+    },
+    "ecg_rgcn": {
+      "seed42_ren": {
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0
+      },
+      "seed42_dead": {
+        "delta_ci95_lo": 1.0374,
+        "delta_ci95_hi": 3.0453
+      },
+      "seed42_cf": {
+        "delta_ci95_lo": -2.1083,
+        "delta_ci95_hi": -0.1591
+      },
+      "seed42_ren_dead": {
+        "delta_ci95_lo": 1.0242,
+        "delta_ci95_hi": 3.0494
+      },
+      "seed42_ren_cf": {
+        "delta_ci95_lo": -2.1379,
+        "delta_ci95_hi": -0.158
+      },
+      "seed1337_ren": {
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0
+      },
+      "seed1337_dead": {
+        "delta_ci95_lo": 0.2374,
+        "delta_ci95_hi": 1.7567
+      },
+      "seed1337_cf": {
+        "delta_ci95_lo": -0.9033,
+        "delta_ci95_hi": 0.3847
+      },
+      "seed1337_ren_dead": {
+        "delta_ci95_lo": 0.2221,
+        "delta_ci95_hi": 1.7563
+      },
+      "seed1337_ren_cf": {
+        "delta_ci95_lo": -0.8739,
+        "delta_ci95_hi": 0.4011
+      },
+      "seed7_ren": {
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0
+      },
+      "seed7_dead": {
+        "delta_ci95_lo": -0.1553,
+        "delta_ci95_hi": 1.5092
+      },
+      "seed7_cf": {
+        "delta_ci95_lo": -2.0515,
+        "delta_ci95_hi": -0.435
+      },
+      "seed7_ren_dead": {
+        "delta_ci95_lo": -0.1758,
+        "delta_ci95_hi": 1.464
+      },
+      "seed7_ren_cf": {
+        "delta_ci95_lo": -2.0397,
+        "delta_ci95_hi": -0.4344
+      },
+      "seed100_ren": {
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0
+      },
+      "seed100_dead": {
+        "delta_ci95_lo": -2.9299,
+        "delta_ci95_hi": -1.0569
+      },
+      "seed100_cf": {
+        "delta_ci95_lo": -4.0976,
+        "delta_ci95_hi": -2.1824
+      },
+      "seed100_ren_dead": {
+        "delta_ci95_lo": -2.9354,
+        "delta_ci95_hi": -1.0472
+      },
+      "seed100_ren_cf": {
+        "delta_ci95_lo": -4.1101,
+        "delta_ci95_hi": -2.1937
+      },
+      "seed999_ren": {
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0
+      },
+      "seed999_dead": {
+        "delta_ci95_lo": -3.4155,
+        "delta_ci95_hi": -1.3488
+      },
+      "seed999_cf": {
+        "delta_ci95_lo": -2.4355,
+        "delta_ci95_hi": -0.6091
+      },
+      "seed999_ren_dead": {
+        "delta_ci95_lo": -3.4179,
+        "delta_ci95_hi": -1.3586
+      },
+      "seed999_ren_cf": {
+        "delta_ci95_lo": -2.4102,
+        "delta_ci95_hi": -0.6005
+      }
+    },
+    "reveal": {
+      "seed1000_ren": {
+        "delta_ci95_lo": -8.2423,
+        "delta_ci95_hi": -2.3863
+      },
+      "seed1000_cf": {
+        "delta_ci95_lo": -4.1869,
+        "delta_ci95_hi": 1.3306
+      },
+      "seed1000_compound": {
+        "delta_ci95_lo": 0.7775,
+        "delta_ci95_hi": 5.8343
+      },
+      "seed1007_ren": {
+        "delta_ci95_lo": -9.9489,
+        "delta_ci95_hi": -4.3247
+      },
+      "seed1007_cf": {
+        "delta_ci95_lo": -8.5595,
+        "delta_ci95_hi": -3.015
+      },
+      "seed1007_compound": {
+        "delta_ci95_lo": 4.537,
+        "delta_ci95_hi": 8.4855
+      },
+      "seed1014_ren": {
+        "delta_ci95_lo": -6.2057,
+        "delta_ci95_hi": -1.6125
+      },
+      "seed1014_cf": {
+        "delta_ci95_lo": -5.4469,
+        "delta_ci95_hi": -0.9101
+      },
+      "seed1014_compound": {
+        "delta_ci95_lo": 2.1514,
+        "delta_ci95_hi": 5.5205
+      },
+      "seed1021_ren": {
+        "delta_ci95_lo": -9.9441,
+        "delta_ci95_hi": -4.3236
+      },
+      "seed1021_cf": {
+        "delta_ci95_lo": -5.8341,
+        "delta_ci95_hi": -0.6137
+      },
+      "seed1021_compound": {
+        "delta_ci95_lo": 2.4054,
+        "delta_ci95_hi": 6.5419
+      },
+      "seed1028_ren": {
+        "delta_ci95_lo": -11.3216,
+        "delta_ci95_hi": -5.1081
+      },
+      "seed1028_cf": {
+        "delta_ci95_lo": -12.7979,
+        "delta_ci95_hi": -6.4433
+      },
+      "seed1028_compound": {
+        "delta_ci95_lo": 2.3384,
+        "delta_ci95_hi": 7.1049
+      },
+      "seed1035_ren": {
+        "delta_ci95_lo": -14.143,
+        "delta_ci95_hi": -7.8699
+      },
+      "seed1035_cf": {
+        "delta_ci95_lo": -12.8704,
+        "delta_ci95_hi": -6.6209
+      },
+      "seed1035_compound": {
+        "delta_ci95_lo": 2.1943,
+        "delta_ci95_hi": 7.1487
+      },
+      "seed1042_ren": {
+        "delta_ci95_lo": -8.0607,
+        "delta_ci95_hi": -2.9397
+      },
+      "seed1042_cf": {
+        "delta_ci95_lo": -5.8885,
+        "delta_ci95_hi": -0.9052
+      },
+      "seed1042_compound": {
+        "delta_ci95_lo": 1.8361,
+        "delta_ci95_hi": 5.5248
+      },
+      "seed1049_ren": {
+        "delta_ci95_lo": -8.0239,
+        "delta_ci95_hi": -2.5849
+      },
+      "seed1049_cf": {
+        "delta_ci95_lo": -8.1689,
+        "delta_ci95_hi": -2.7096
+      },
+      "seed1049_compound": {
+        "delta_ci95_lo": 2.8674,
+        "delta_ci95_hi": 7.1056
+      },
+      "seed1056_ren": {
+        "delta_ci95_lo": -4.366,
+        "delta_ci95_hi": 0.708
+      },
+      "seed1056_cf": {
+        "delta_ci95_lo": -3.6652,
+        "delta_ci95_hi": 1.3065
+      },
+      "seed1056_compound": {
+        "delta_ci95_lo": 4.0315,
+        "delta_ci95_hi": 8.2087
+      },
+      "seed1063_ren": {
+        "delta_ci95_lo": -11.0725,
+        "delta_ci95_hi": -4.9122
+      },
+      "seed1063_cf": {
+        "delta_ci95_lo": -14.2952,
+        "delta_ci95_hi": -8.0293
+      },
+      "seed1063_compound": {
+        "delta_ci95_lo": 0.8309,
+        "delta_ci95_hi": 5.7751
+      }
+    },
+    "tfidf": {
+      "seed42_ren": {
+        "delta_ci95_lo": -3.9756,
+        "delta_ci95_hi": -0.1203
+      },
+      "seed42_dead": {
+        "delta_ci95_lo": -1.0008,
+        "delta_ci95_hi": 0.7916
+      },
+      "seed42_cf": {
+        "delta_ci95_lo": -1.1603,
+        "delta_ci95_hi": 0.5921
+      },
+      "seed42_ren_dead": {
+        "delta_ci95_lo": -3.6673,
+        "delta_ci95_hi": 0.0944
+      },
+      "seed42_ren_cf": {
+        "delta_ci95_lo": -4.139,
+        "delta_ci95_hi": -0.2906
+      },
+      "seed42_dead_cf": {
+        "delta_ci95_lo": -0.6202,
+        "delta_ci95_hi": 1.3749
+      },
+      "seed42_compound": {
+        "delta_ci95_lo": -3.2458,
+        "delta_ci95_hi": 0.5129
+      },
+      "seed49_ren": {
+        "delta_ci95_lo": -4.6994,
+        "delta_ci95_hi": -0.7081
+      },
+      "seed49_dead": {
+        "delta_ci95_lo": -0.0826,
+        "delta_ci95_hi": 1.8136
+      },
+      "seed49_cf": {
+        "delta_ci95_lo": -0.7556,
+        "delta_ci95_hi": 1.2317
+      },
+      "seed49_ren_dead": {
+        "delta_ci95_lo": -1.866,
+        "delta_ci95_hi": 1.8537
+      },
+      "seed49_ren_cf": {
+        "delta_ci95_lo": -3.7008,
+        "delta_ci95_hi": 0.1928
+      },
+      "seed49_dead_cf": {
+        "delta_ci95_lo": 0.317,
+        "delta_ci95_hi": 2.5717
+      },
+      "seed49_compound": {
+        "delta_ci95_lo": -1.3135,
+        "delta_ci95_hi": 2.5492
+      },
+      "seed56_ren": {
+        "delta_ci95_lo": -9.4851,
+        "delta_ci95_hi": -5.3624
+      },
+      "seed56_dead": {
+        "delta_ci95_lo": -0.9788,
+        "delta_ci95_hi": 0.6876
+      },
+      "seed56_cf": {
+        "delta_ci95_lo": -0.8792,
+        "delta_ci95_hi": 1.0577
+      },
+      "seed56_ren_dead": {
+        "delta_ci95_lo": -10.4101,
+        "delta_ci95_hi": -6.1868
+      },
+      "seed56_ren_cf": {
+        "delta_ci95_lo": -9.2658,
+        "delta_ci95_hi": -5.073
+      },
+      "seed56_dead_cf": {
+        "delta_ci95_lo": -0.9841,
+        "delta_ci95_hi": 1.0226
+      },
+      "seed56_compound": {
+        "delta_ci95_lo": -8.9164,
+        "delta_ci95_hi": -4.8102
+      },
+      "seed63_ren": {
+        "delta_ci95_lo": -4.0724,
+        "delta_ci95_hi": -0.2767
+      },
+      "seed63_dead": {
+        "delta_ci95_lo": -1.1755,
+        "delta_ci95_hi": 0.6489
+      },
+      "seed63_cf": {
+        "delta_ci95_lo": -0.3144,
+        "delta_ci95_hi": 1.784
+      },
+      "seed63_ren_dead": {
+        "delta_ci95_lo": -3.4154,
+        "delta_ci95_hi": 0.2885
+      },
+      "seed63_ren_cf": {
+        "delta_ci95_lo": -2.7944,
+        "delta_ci95_hi": 1.0448
+      },
+      "seed63_dead_cf": {
+        "delta_ci95_lo": -1.0635,
+        "delta_ci95_hi": 1.1462
+      },
+      "seed63_compound": {
+        "delta_ci95_lo": -1.7638,
+        "delta_ci95_hi": 1.917
+      },
+      "seed70_ren": {
+        "delta_ci95_lo": -5.5422,
+        "delta_ci95_hi": -1.8729
+      },
+      "seed70_dead": {
+        "delta_ci95_lo": 0.9275,
+        "delta_ci95_hi": 3.372
+      },
+      "seed70_cf": {
+        "delta_ci95_lo": 0.1244,
+        "delta_ci95_hi": 2.2178
+      },
+      "seed70_ren_dead": {
+        "delta_ci95_lo": -0.2771,
+        "delta_ci95_hi": 3.2898
+      },
+      "seed70_ren_cf": {
+        "delta_ci95_lo": -2.0621,
+        "delta_ci95_hi": 1.6074
+      },
+      "seed70_dead_cf": {
+        "delta_ci95_lo": 0.7579,
+        "delta_ci95_hi": 3.4521
+      },
+      "seed70_compound": {
+        "delta_ci95_lo": 0.5366,
+        "delta_ci95_hi": 4.1552
+      }
+    },
+    "vulgnn": {
+      "seed42_ren": {
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0474
+      },
+      "seed42_dead": {
+        "delta_ci95_lo": -0.0938,
+        "delta_ci95_hi": 1.4669
+      },
+      "seed42_cf": {
+        "delta_ci95_lo": -0.3926,
+        "delta_ci95_hi": 1.095
+      },
+      "seed42_ren_dead": {
+        "delta_ci95_lo": -0.0809,
+        "delta_ci95_hi": 1.4476
+      },
+      "seed42_ren_cf": {
+        "delta_ci95_lo": -0.3908,
+        "delta_ci95_hi": 1.1156
+      },
+      "seed1337_ren": {
+        "delta_ci95_lo": -0.0265,
+        "delta_ci95_hi": 0.0
+      },
+      "seed1337_dead": {
+        "delta_ci95_lo": 0.394,
+        "delta_ci95_hi": 1.5431
+      },
+      "seed1337_cf": {
+        "delta_ci95_lo": 0.2416,
+        "delta_ci95_hi": 1.3572
+      },
+      "seed1337_ren_dead": {
+        "delta_ci95_lo": 0.381,
+        "delta_ci95_hi": 1.5359
+      },
+      "seed1337_ren_cf": {
+        "delta_ci95_lo": 0.2501,
+        "delta_ci95_hi": 1.3407
+      },
+      "seed7_ren": {
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0
+      },
+      "seed7_dead": {
+        "delta_ci95_lo": 1.4197,
+        "delta_ci95_hi": 3.1248
+      },
+      "seed7_cf": {
+        "delta_ci95_lo": -0.1061,
+        "delta_ci95_hi": 1.3819
+      },
+      "seed7_ren_dead": {
+        "delta_ci95_lo": 1.4155,
+        "delta_ci95_hi": 3.1095
+      },
+      "seed7_ren_cf": {
+        "delta_ci95_lo": -0.0874,
+        "delta_ci95_hi": 1.3769
+      },
+      "seed100_ren": {
+        "delta_ci95_lo": -0.0265,
+        "delta_ci95_hi": 0.0
+      },
+      "seed100_dead": {
+        "delta_ci95_lo": 0.5514,
+        "delta_ci95_hi": 1.7455
+      },
+      "seed100_cf": {
+        "delta_ci95_lo": 0.3368,
+        "delta_ci95_hi": 1.4222
+      },
+      "seed100_ren_dead": {
+        "delta_ci95_lo": 0.5441,
+        "delta_ci95_hi": 1.741
+      },
+      "seed100_ren_cf": {
+        "delta_ci95_lo": 0.3358,
+        "delta_ci95_hi": 1.4191
+      },
+      "seed999_ren": {
+        "delta_ci95_lo": 0.0,
+        "delta_ci95_hi": 0.0
+      },
+      "seed999_dead": {
+        "delta_ci95_lo": 0.5224,
+        "delta_ci95_hi": 1.8533
+      },
+      "seed999_cf": {
+        "delta_ci95_lo": -0.1006,
+        "delta_ci95_hi": 0.9827
+      },
+      "seed999_ren_dead": {
+        "delta_ci95_lo": 0.5049,
+        "delta_ci95_hi": 1.8542
+      },
+      "seed999_ren_cf": {
+        "delta_ci95_lo": -0.1153,
+        "delta_ci95_hi": 0.952
+      }
+    }
+  }
+}

@@ -1,0 +1,317 @@
+{
+  "angle": {
+    "angle": null,
+    "vulgnn": {
+      "asr1": 0.92,
+      "asr2": 12.34,
+      "asr3": 24.12,
+      "mean_transfer_budget": 2.44,
+      "n_seed_pairs": 25
+    },
+    "ecg_rgcn": {
+      "asr1": 6.65,
+      "asr2": 19.48,
+      "asr3": 31.41,
+      "mean_transfer_budget": 2.11,
+      "n_seed_pairs": 25
+    },
+    "reveal": {
+      "asr1": 14.23,
+      "asr2": 14.23,
+      "asr3": 21.58,
+      "mean_transfer_budget": 1.56,
+      "n_seed_pairs": 50
+    },
+    "codebert": {
+      "asr1": 0.0,
+      "asr2": 0.0,
+      "asr3": 0.0,
+      "mean_transfer_budget": null,
+      "n_seed_pairs": 5
+    },
+    "codet5plus": {
+      "asr1": 2.4,
+      "asr2": 4.19,
+      "asr3": 5.49,
+      "mean_transfer_budget": 1.64,
+      "n_seed_pairs": 25
+    },
+    "regvd": {
+      "asr1": 1.2,
+      "asr2": 1.85,
+      "asr3": 2.81,
+      "mean_transfer_budget": 1.81,
+      "n_seed_pairs": 5
+    }
+  },
+  "vulgnn": {
+    "angle": {
+      "asr1": 1.97,
+      "asr2": 31.8,
+      "asr3": 62.51,
+      "mean_transfer_budget": 2.45,
+      "n_seed_pairs": 25
+    },
+    "vulgnn": null,
+    "ecg_rgcn": {
+      "asr1": 2.35,
+      "asr2": 23.4,
+      "asr3": 46.66,
+      "mean_transfer_budget": 2.42,
+      "n_seed_pairs": 25
+    },
+    "reveal": {
+      "asr1": 4.96,
+      "asr2": 4.96,
+      "asr3": 13.92,
+      "mean_transfer_budget": 2.12,
+      "n_seed_pairs": 50
+    },
+    "codebert": {
+      "asr1": 0.0,
+      "asr2": 0.0,
+      "asr3": 0.0,
+      "mean_transfer_budget": null,
+      "n_seed_pairs": 5
+    },
+    "codet5plus": {
+      "asr1": 0.47,
+      "asr2": 1.82,
+      "asr3": 3.36,
+      "mean_transfer_budget": 2.31,
+      "n_seed_pairs": 25
+    },
+    "regvd": {
+      "asr1": 0.14,
+      "asr2": 1.37,
+      "asr3": 4.11,
+      "mean_transfer_budget": 2.54,
+      "n_seed_pairs": 5
+    }
+  },
+  "ecg_rgcn": {
+    "angle": {
+      "asr1": 6.9,
+      "asr2": 20.39,
+      "asr3": 33.1,
+      "mean_transfer_budget": 2.13,
+      "n_seed_pairs": 25
+    },
+    "vulgnn": {
+      "asr1": 1.3,
+      "asr2": 10.54,
+      "asr3": 20.8,
+      "mean_transfer_budget": 2.43,
+      "n_seed_pairs": 25
+    },
+    "ecg_rgcn": null,
+    "reveal": {
+      "asr1": 16.62,
+      "asr2": 16.62,
+      "asr3": 21.84,
+      "mean_transfer_budget": 1.51,
+      "n_seed_pairs": 50
+    },
+    "codebert": {
+      "asr1": 0.0,
+      "asr2": 0.0,
+      "asr3": 0.21,
+      "mean_transfer_budget": 3.0,
+      "n_seed_pairs": 5
+    },
+    "codet5plus": {
+      "asr1": 2.84,
+      "asr2": 4.34,
+      "asr3": 5.76,
+      "mean_transfer_budget": 1.71,
+      "n_seed_pairs": 25
+    },
+    "regvd": {
+      "asr1": 0.8,
+      "asr2": 1.15,
+      "asr3": 2.08,
+      "mean_transfer_budget": 1.86,
+      "n_seed_pairs": 5
+    }
+  },
+  "reveal": {
+    "angle": {
+      "asr1": 2.05,
+      "asr2": 2.05,
+      "asr3": 2.42,
+      "mean_transfer_budget": 1.3,
+      "n_seed_pairs": 50
+    },
+    "vulgnn": {
+      "asr1": 0.38,
+      "asr2": 0.38,
+      "asr3": 0.55,
+      "mean_transfer_budget": 1.64,
+      "n_seed_pairs": 50
+    },
+    "ecg_rgcn": {
+      "asr1": 2.98,
+      "asr2": 2.98,
+      "asr3": 3.52,
+      "mean_transfer_budget": 1.31,
+      "n_seed_pairs": 50
+    },
+    "reveal": null,
+    "codebert": {
+      "asr1": 8.38,
+      "asr2": 8.38,
+      "asr3": 8.38,
+      "mean_transfer_budget": 1.0,
+      "n_seed_pairs": 10
+    },
+    "codet5plus": {
+      "asr1": 11.5,
+      "asr2": 11.5,
+      "asr3": 11.63,
+      "mean_transfer_budget": 1.02,
+      "n_seed_pairs": 50
+    },
+    "regvd": {
+      "asr1": 7.98,
+      "asr2": 7.98,
+      "asr3": 8.04,
+      "mean_transfer_budget": 1.02,
+      "n_seed_pairs": 10
+    }
+  },
+  "codebert": {
+    "angle": {
+      "asr1": 0.0,
+      "asr2": 0.0,
+      "asr3": 0.0,
+      "mean_transfer_budget": null,
+      "n_seed_pairs": 5
+    },
+    "vulgnn": {
+      "asr1": 0.0,
+      "asr2": 0.0,
+      "asr3": 0.0,
+      "mean_transfer_budget": null,
+      "n_seed_pairs": 5
+    },
+    "ecg_rgcn": {
+      "asr1": 0.0,
+      "asr2": 0.0,
+      "asr3": 0.0,
+      "mean_transfer_budget": null,
+      "n_seed_pairs": 5
+    },
+    "reveal": {
+      "asr1": 50.15,
+      "asr2": 50.15,
+      "asr3": 50.15,
+      "mean_transfer_budget": 1.0,
+      "n_seed_pairs": 10
+    },
+    "codebert": null,
+    "codet5plus": {
+      "asr1": 24.6,
+      "asr2": 24.6,
+      "asr3": 24.6,
+      "mean_transfer_budget": 1.0,
+      "n_seed_pairs": 5
+    },
+    "regvd": {
+      "asr1": 17.0,
+      "asr2": 17.0,
+      "asr3": 17.0,
+      "mean_transfer_budget": 1.0,
+      "n_seed_pairs": 1
+    }
+  },
+  "codet5plus": {
+    "angle": {
+      "asr1": 1.34,
+      "asr2": 2.48,
+      "asr3": 2.55,
+      "mean_transfer_budget": 1.4,
+      "n_seed_pairs": 25
+    },
+    "vulgnn": {
+      "asr1": 0.13,
+      "asr2": 0.3,
+      "asr3": 0.3,
+      "mean_transfer_budget": 1.5,
+      "n_seed_pairs": 25
+    },
+    "ecg_rgcn": {
+      "asr1": 2.19,
+      "asr2": 3.81,
+      "asr3": 3.9,
+      "mean_transfer_budget": 1.38,
+      "n_seed_pairs": 25
+    },
+    "reveal": {
+      "asr1": 41.07,
+      "asr2": 41.07,
+      "asr3": 41.18,
+      "mean_transfer_budget": 1.0,
+      "n_seed_pairs": 50
+    },
+    "codebert": {
+      "asr1": 15.31,
+      "asr2": 15.31,
+      "asr3": 15.31,
+      "mean_transfer_budget": 1.0,
+      "n_seed_pairs": 5
+    },
+    "codet5plus": null,
+    "regvd": {
+      "asr1": 15.42,
+      "asr2": 15.77,
+      "asr3": 15.77,
+      "mean_transfer_budget": 1.02,
+      "n_seed_pairs": 5
+    }
+  },
+  "regvd": {
+    "angle": {
+      "asr1": 2.74,
+      "asr2": 3.17,
+      "asr3": 3.81,
+      "mean_transfer_budget": 1.44,
+      "n_seed_pairs": 5
+    },
+    "vulgnn": {
+      "asr1": 0.24,
+      "asr2": 0.24,
+      "asr3": 1.0,
+      "mean_transfer_budget": 2.6,
+      "n_seed_pairs": 5
+    },
+    "ecg_rgcn": {
+      "asr1": 1.69,
+      "asr2": 2.53,
+      "asr3": 3.17,
+      "mean_transfer_budget": 1.67,
+      "n_seed_pairs": 5
+    },
+    "reveal": {
+      "asr1": 46.93,
+      "asr2": 46.93,
+      "asr3": 47.06,
+      "mean_transfer_budget": 1.01,
+      "n_seed_pairs": 10
+    },
+    "codebert": {
+      "asr1": 15.74,
+      "asr2": 16.67,
+      "asr3": 16.67,
+      "mean_transfer_budget": 1.06,
+      "n_seed_pairs": 1
+    },
+    "codet5plus": {
+      "asr1": 25.76,
+      "asr2": 26.02,
+      "asr3": 26.02,
+      "mean_transfer_budget": 1.01,
+      "n_seed_pairs": 5
+    },
+    "regvd": null
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "dataset": "Big-Vul (MSR 2021)",
+  "model": "TF-IDF + LR",
+  "n_trials": 10,
+  "subsample_per_trial": 5000,
+  "tfidf_params": {
+    "max_features": 10000,
+    "sublinear_tf": true,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "analyzer": "word",
+    "token_pattern": "[A-Za-z_][A-Za-z0-9_]*",
+    "min_df": 3
+  },
+  "results": {
+    "original": {
+      "f1_mean": 21.74,
+      "f1_std": 0.62,
+      "pr_mean": 16.12,
+      "rc_mean": 33.53,
+      "acc_mean": 86.06,
+      "all_f1": [
+        21.46,
+        22.1,
+        22.8,
+        21.58,
+        22.67,
+        21.5,
+        21.83,
+        21.04,
+        20.71,
+        21.74
+      ]
+    },
+    "identifier": {
+      "f1_mean": 21.04,
+      "f1_std": 0.99,
+      "pr_mean": 15.54,
+      "rc_mean": 32.83,
+      "acc_mean": 85.75,
+      "all_f1": [
+        20.43,
+        20.5,
+        22.22,
+        21.58,
+        22.59,
+        21.31,
+        20.3,
+        20.17,
+        19.37,
+        21.95
+      ],
+      "delta_f1": -0.7
+    },
+    "deadcode": {
+      "f1_mean": 21.11,
+      "f1_std": 1.35,
+      "pr_mean": 15.08,
+      "rc_mean": 37.47,
+      "acc_mean": 83.57,
+      "all_f1": [
+        21.75,
+        21.61,
+        23.37,
+        19.44,
+        22.58,
+        21.12,
+        18.9,
+        20.5,
+        19.83,
+        21.96
+      ],
+      "delta_f1": -0.63
+    },
+    "controlflow": {
+      "f1_mean": 21.36,
+      "f1_std": 0.75,
+      "pr_mean": 15.37,
+      "rc_mean": 35.29,
+      "acc_mean": 84.97,
+      "all_f1": [
+        20.74,
+        21.1,
+        22.88,
+        21.01,
+        22.46,
+        20.82,
+        21.42,
+        21.21,
+        20.28,
+        21.66
+      ],
+      "delta_f1": -0.38
+    }
+  }
+}

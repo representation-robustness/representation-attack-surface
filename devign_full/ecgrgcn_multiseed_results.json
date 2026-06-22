@@ -1,0 +1,60 @@
+{
+  "test": {
+    "f1_mean": 63.48,
+    "f1_std": 0.56,
+    "all_f1": [
+      63.3,
+      62.6,
+      64.25,
+      63.88,
+      63.35
+    ]
+  },
+  "test_obf_identifier": {
+    "f1_mean": 63.05,
+    "f1_std": 0.35,
+    "all_f1": [
+      63.22,
+      62.41,
+      63.4,
+      62.94,
+      63.27
+    ],
+    "delta_f1": -0.43
+  },
+  "test_obf_deadcode": {
+    "f1_mean": 63.34,
+    "f1_std": 0.36,
+    "all_f1": [
+      63.24,
+      62.72,
+      63.81,
+      63.47,
+      63.45
+    ],
+    "delta_f1": -0.14
+  },
+  "test_obf_controlflow": {
+    "f1_mean": 63.15,
+    "f1_std": 0.31,
+    "all_f1": [
+      62.64,
+      63.17,
+      63.42,
+      63.03,
+      63.51
+    ],
+    "delta_f1": -0.33
+  },
+  "n_seeds": 5,
+  "seeds": [
+    42,
+    1337,
+    7,
+    100,
+    999
+  ],
+  "model": "ECG RGCN",
+  "dataset": "Devign",
+  "format": "5-edge GGNN (AST+CFG+DataFlow+ControlDep+DOM)"
+}

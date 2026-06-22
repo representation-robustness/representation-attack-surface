@@ -1,0 +1,25 @@
+{
+  "model": "LogisticRegression (class_weight=balanced, C=1.0)",
+  "features": "Mean-pooled CPG node features, zero-padded to 200-dim (0-hop GNN baseline)",
+  "training_set": "devign_full originals train (21340 samples, pos=9737, neg=11603)",
+  "test_set": "devign_full originals test (2670 samples)",
+  "evaluation": "30-trial (5k subsample) + single-run full train",
+  "results_30trial": {
+    "originals": {"acc": 56.30, "pr": 52.08, "rc": 56.93, "f1": 54.38, "f1_std": 0.99},
+    "identifier_renaming": {"acc": 56.30, "pr": 53.05, "rc": 43.30, "f1": 47.09, "f1_std": 4.83, "delta_f1": -7.29},
+    "dead_code_insertion": {"acc": 50.24, "pr": 47.56, "rc": 83.42, "f1": 60.52, "f1_std": 0.93, "delta_f1": 6.14},
+    "control_flow_obfuscation": {"acc": 55.95, "pr": 52.01, "rc": 53.99, "f1": 52.46, "f1_std": 4.35, "delta_f1": -1.93}
+  },
+  "results_full_train": {
+    "originals": {"acc": 57.6, "pr": 53.4, "rc": 58.5, "f1": 55.8},
+    "identifier_renaming": {"acc": 57.5, "pr": 54.7, "rc": 40.7, "f1": 46.7, "delta_f1": -9.1},
+    "dead_code_insertion": {"acc": 50.2, "pr": 47.6, "rc": 86.9, "f1": 61.5, "delta_f1": 5.7},
+    "control_flow_obfuscation": {"acc": 57.3, "pr": 53.2, "rc": 54.7, "f1": 54.0, "delta_f1": -1.8}
+  },
+  "key_findings": [
+    "Identifier renaming causes the largest F1 drop (-9.1% full / -7.29% 30-trial), suggesting the model relies on identifier-based node features",
+    "Dead code insertion anomalously increases Recall (58.5% -> 86.9%) while reducing Precision (53.4% -> 47.6%), likely because added CPG nodes shift the mean-pooled embedding toward patterns correlated with vulnerabilities in the training set",
+    "Control flow obfuscation has minimal impact (-1.8%), indicating graph topology features in mean-pooled representation are not strongly affected",
+    "GNN training (Devign+DGL, REVEAL+PyTorch) failed to converge on devign_full: DGL 0.4->2.5 API mismatch caused Devign to predict all-positive; REVEAL GNN diverged due to 21340 per-sample gradient steps per epoch causing loss explosion"
+  ]
+}

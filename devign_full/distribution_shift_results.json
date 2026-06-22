@@ -1,0 +1,34 @@
+{
+  "devign": {
+    "token_jsd": 0.028787,
+    "oov_clean": 0.0,
+    "oov_dead": 0.045607,
+    "vocab_shift": 0.045607,
+    "pattern_freq_train_vuln": 0.0,
+    "graph_divergence": {
+      "node_type_jsd": 0.0,
+      "edge_type_jsd": 0.0,
+      "size_ratio_delta": 0.443
+    }
+  },
+  "bigvul": {
+    "token_jsd": 0.022317,
+    "oov_clean": 0.0,
+    "oov_dead": 0.037141,
+    "vocab_shift": 0.037141,
+    "pattern_freq_train_vuln": 0.0,
+    "graph_divergence": {
+      "node_type_jsd": 0.0
+    }
+  },
+  "diversevul": {
+    "token_jsd": 0.014244,
+    "oov_clean": 0.0,
+    "oov_dead": 0.02612,
+    "vocab_shift": 0.02612,
+    "pattern_freq_train_vuln": 0.0,
+    "graph_divergence": {
+      "node_type_jsd": 0.0
+    }
+  }
+}

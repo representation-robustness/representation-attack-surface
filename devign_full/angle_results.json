@@ -1,0 +1,21 @@
+{
+  "test": {
+    "f1": 64.08,
+    "accuracy": 57.35
+  },
+  "test_obf_identifier": {
+    "f1": 63.64,
+    "accuracy": 49.22
+  },
+  "test_obf_deadcode": {
+    "f1": 63.66,
+    "accuracy": 51.59
+  },
+  "test_obf_controlflow": {
+    "f1": 64.11,
+    "accuracy": 55.79
+  },
+  "best_val_f1": 63.42,
+  "best_epoch": 1,
+  "model": "ANGLE"
+}

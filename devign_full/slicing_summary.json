@@ -1,0 +1,32 @@
+[
+  {
+    "variant": "obf_identifier",
+    "input_dir": "/home/jesse/thesis/devign_full/obf_identifier",
+    "output_dir": "/home/jesse/thesis/devign_full/obf_identifier_slices",
+    "total_input_files": 27318,
+    "fully_sliced": 26884,
+    "failed_files": 434,
+    "missing_forward": 434,
+    "missing_backward": 434
+  },
+  {
+    "variant": "obf_deadcode",
+    "input_dir": "/home/jesse/thesis/devign_full/obf_deadcode",
+    "output_dir": "/home/jesse/thesis/devign_full/obf_deadcode_slices",
+    "total_input_files": 27318,
+    "fully_sliced": 26866,
+    "failed_files": 452,
+    "missing_forward": 452,
+    "missing_backward": 452
+  },
+  {
+    "variant": "obf_controlflow",
+    "input_dir": "/home/jesse/thesis/devign_full/obf_controlflow",
+    "output_dir": "/home/jesse/thesis/devign_full/obf_controlflow_slices",
+    "total_input_files": 27318,
+    "fully_sliced": 26866,
+    "failed_files": 452,
+    "missing_forward": 452,
+    "missing_backward": 452
+  }
+]

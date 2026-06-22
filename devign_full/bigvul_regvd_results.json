@@ -1,0 +1,33 @@
+{
+  "dataset": "Big-Vul",
+  "model": "ReGVD (ReGCN+CodeBERT)",
+  "results": {
+    "original": {
+      "f1": 24.69,
+      "pr": 63.5,
+      "rc": 15.32,
+      "acc": 94.6
+    },
+    "identifier": {
+      "f1": 19.12,
+      "pr": 68.75,
+      "rc": 11.1,
+      "acc": 94.57,
+      "delta_f1": -5.57
+    },
+    "deadcode": {
+      "f1": 23.93,
+      "pr": 70.72,
+      "rc": 14.4,
+      "acc": 94.71,
+      "delta_f1": -0.76
+    },
+    "controlflow": {
+      "f1": 24.64,
+      "pr": 68.05,
+      "rc": 15.05,
+      "acc": 94.68,
+      "delta_f1": -0.05
+    }
+  }
+}

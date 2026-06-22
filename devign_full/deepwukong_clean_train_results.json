@@ -1,0 +1,36 @@
+{
+  "checkpoint": "ts_logger/DeepWuKong_CleanTrain/clean_v1/checkpoints/epoch=28-step=7888-val_loss=0.0907.ckpt",
+  "conditions": {
+    "clean": {
+      "fpr": 2.43,
+      "precision": 93.68,
+      "recall": 93.68,
+      "accuracy": 96.49,
+      "f1": 93.68
+    },
+    "obf_identifier": {
+      "fpr": 13.14,
+      "precision": 21.06,
+      "recall": 66.16,
+      "accuracy": 85.82,
+      "f1": 31.95,
+      "delta_f1": -61.73
+    },
+    "obf_deadcode": {
+      "fpr": 1.93,
+      "precision": 59.8,
+      "recall": 74.16,
+      "accuracy": 97.17,
+      "f1": 66.21,
+      "delta_f1": -27.47
+    },
+    "obf_controlflow": {
+      "fpr": 11.16,
+      "precision": 27.34,
+      "recall": 59.02,
+      "accuracy": 86.86,
+      "f1": 37.37,
+      "delta_f1": -56.31
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "transfer_matrix": {
+    "reveal": {
+      "best_transform": "ren",
+      "self_asr": 50.7,
+      "targets": {
+        "reveal": 50.7,
+        "regvd": 14.22,
+        "codebert": 19.48,
+        "codet5plus": 21.22,
+        "angle": 0.0,
+        "vulgnn": 0.0
+      }
+    },
+    "regvd": {
+      "best_transform": "ren",
+      "self_asr": 13.81,
+      "targets": {
+        "reveal": 50.51,
+        "regvd": 13.81,
+        "codebert": 15.71,
+        "codet5plus": 18.9,
+        "angle": 0.0,
+        "vulgnn": 0.0
+      }
+    },
+    "codebert": {
+      "best_transform": "ren",
+      "self_asr": 19.19,
+      "targets": {
+        "reveal": 50.16,
+        "regvd": 10.63,
+        "codebert": 19.19,
+        "codet5plus": 19.81,
+        "angle": 0.0,
+        "vulgnn": 0.0
+      }
+    },
+    "angle": {
+      "best_transform": "cf",
+      "self_asr": 9.01,
+      "targets": {
+        "reveal": 48.07,
+        "regvd": 1.48,
+        "codebert": 0.0,
+        "codet5plus": 7.71,
+        "angle": 9.01,
+        "vulgnn": 1.24
+      }
+    },
+    "vulgnn": {
+      "best_transform": "cf",
+      "self_asr": 1.71,
+      "targets": {
+        "reveal": 48.06,
+        "regvd": 1.5,
+        "codebert": 0.0,
+        "codet5plus": 7.84,
+        "angle": 8.21,
+        "vulgnn": 1.71
+      }
+    }
+  },
+  "per_transform_asr": {
+    "ren": {
+      "angle": 0.0,
+      "codebert": 19.19,
+      "codet5plus": 21.01,
+      "ecg_rgcn": 0.0,
+      "regvd": 13.81,
+      "reveal": 50.7,
+      "tfidf": 24.82,
+      "vulgnn": 0.0
+    },
+    "dead": {
+      "angle": 0.07,
+      "codebert": 0.0,
+      "codet5plus": 4.86,
+      "ecg_rgcn": 6.42,
+      "regvd": 0.28,
+      "reveal": 23.4,
+      "tfidf": 2.52,
+      "vulgnn": 0.24
+    },
+    "cf": {
+      "angle": 9.01,
+      "codebert": 0.0,
+      "codet5plus": 7.77,
+      "ecg_rgcn": 9.39,
+      "regvd": 1.38,
+      "reveal": 48.01,
+      "tfidf": 3.66,
+      "vulgnn": 1.71
+    }
+  },
+  "n_test_functions": 5311
+}
