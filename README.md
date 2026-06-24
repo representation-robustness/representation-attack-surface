@@ -44,7 +44,7 @@ requirements.txt    pinned Python dependency versions
 
 > **CodeBERT-Aug** (augmented training variant) lives in `baselines/codebert/codebert_augmented_multiseed.py`.
 
-> **Devign GGNN** collapses to an all-positive predictor on Devign (F1 ≈ 62.7%, Recall ≈ 100%). This is a known replication issue documented in Chakraborty et al. (2022) and is reported as a degenerate baseline.
+> **Devign GGNN** collapses to an all-positive predictor on Devign (F1 ≈ 62.7%, Recall ≈ 100%). This is a known replication issue documented in Chakraborty et al. (2022).
 
 ---
 
