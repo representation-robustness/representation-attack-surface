@@ -21,7 +21,6 @@ utils/              CPG parsers, obfuscation transforms, aggregation script
 scripts/            analysis and figure-generation scripts
 experiments/        supplementary experiment scripts (ablations, CI, transfer)
 devign_full/        all result JSON files (pre-computed; no raw data)
-figures/            generated figures (PDFs and PNGs)
 requirements.txt    pinned Python dependency versions
 ```
 
@@ -34,10 +33,10 @@ requirements.txt    pinned Python dependency versions
 | `ecg_rgcn/` | ECG RGCN | Implemented from paper (Pativada et al. 2025 — no public code) |
 | `angle/` | ANGLE | Implemented from paper (Peng et al. 2024 — no public code) |
 | `vulgnn/` | VulGNN | Implemented from paper (Farmer et al. 2026 — no public code) |
-| `reveal/` | REVEAL | Faithful reimplementation (Chakraborty et al. 2022 — original code incompatible) |
+| `reveal/` | REVEAL | Faithful reimplementation (Chakraborty et al. 2022 ) |
 | `devign_ggnn/` | Devign GGNN | Adapted from authors' GitHub repo |
 | `vul_lmggnn/` | Vul-LMGGNN | Wrapper scripts for Liu et al. 2025 (clone to `~/vul-LMGGNN/`) |
-| `regvd/` | ReGVD | Implemented from paper (Nguyen et al. 2022 — original repo not reproducible) |
+| `regvd/` | ReGVD | Implemented from paper (Nguyen et al. 2022 ) |
 | `codebert/` | CodeBERT | Fine-tuned via HuggingFace `microsoft/codebert-base` |
 | `codet5plus/` | CodeT5+ | Fine-tuned via HuggingFace `Salesforce/codet5p-220m` |
 | `tfidf_logreg/` | TF-IDF + LogReg | Implemented from scratch |
@@ -85,7 +84,7 @@ source ~/.venvs/vuln-detect/bin/activate
 
 Processed datasets are hosted on Zenodo:
 
-**DOI: [https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX)** *(will be finalized upon publication)*
+**DOI: [https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX)** *(will be finalized in coming days)*
 
 Download and extract the archive (~105 GB uncompressed), then place the contents:
 
