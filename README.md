@@ -82,9 +82,7 @@ source ~/.venvs/vuln-detect/bin/activate
 
 ## Dataset Setup
 
-Processed datasets are hosted on Zenodo:
 
-**DOI: [https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXX)** *(will be finalized in coming days)*
 
 Download and extract the archive (~105 GB uncompressed), then place the contents:
 
