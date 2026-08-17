@@ -84,7 +84,7 @@ source ~/.venvs/vuln-detect/bin/activate
 
 
 
-Download and extract the archive (~105 GB uncompressed), then place the contents:
+Download and extract the [archive](https://zenodo.org/records/21912027?token=eyJhbGciOiJIUzUxMiIsImlhdCI6MTc4Njk2Mjk0NiwiZXhwIjoxODYxOTE5OTk5fQ.eyJpZCI6ImI1YjQ0YjI0LTc2NzItNGU5MC05ZGNhLTU0OTc4NWI3ODBmOCIsImRhdGEiOnt9LCJyYW5kb20iOiJhZWUyZTg1NjAxZDkxMDBjMTA0MTIxMTkyMWI4YWRmYiJ9.9qn1OArmzaEe_ws1KVi8KJr4oQRA5HemBBb1V7F4rxtJut7uqnTKh7Nq0SxrDpqsy92xIR2wkgNqMEXN42KM_g) (~105 GB uncompressed), then place the contents:
 
 ```
 dataset_release/
