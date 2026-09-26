@@ -1,0 +1,323 @@
+{
+ "generated": "2026-09-26T01:11:06",
+ "scipy": "1.18.1",
+ "summary": {
+  "Devign (III)": {
+   "m_tests": 50,
+   "sig_uncorrected": 17,
+   "sig_bonferroni": 4,
+   "sig_bh": 10,
+   "bh_only": [
+    "VulGNN/Dead",
+    "VulGNN/CF",
+    "VulGNN/R+D",
+    "VulGNN/R+CF",
+    "VulGNN/D+CF",
+    "VulGNN/Cmp"
+   ],
+   "bonf_not_bh": []
+  },
+  "DiverseVul (IV)": {
+   "m_tests": 45,
+   "sig_uncorrected": 15,
+   "sig_bonferroni": 7,
+   "sig_bh": 13,
+   "bh_only": [
+    "VulGNN/D+CF",
+    "VulGNN/Cmp",
+    "REVEAL/CF",
+    "REVEAL/R+CF",
+    "Vul-LMGGNN/R+D",
+    "Vul-LMGGNN/Cmp"
+   ],
+   "bonf_not_bh": []
+  },
+  "Big-Vul (V)": {
+   "m_tests": 49,
+   "sig_uncorrected": 43,
+   "sig_bonferroni": 19,
+   "sig_bh": 41,
+   "bh_only": [
+    "ECG RGCN/Dead",
+    "ECG RGCN/CF",
+    "ECG RGCN/R+D",
+    "ECG RGCN/R+CF",
+    "ANGLE/CF",
+    "VulGNN/CF",
+    "VulGNN/R+CF",
+    "REVEAL/Dead",
+    "REVEAL/CF",
+    "REVEAL/R+D",
+    "REVEAL/R+CF",
+    "REVEAL/D+CF",
+    "REVEAL/Cmp",
+    "Vul-LMGGNN/Ren",
+    "Vul-LMGGNN/Dead",
+    "Vul-LMGGNN/CF",
+    "Vul-LMGGNN/R+D",
+    "Vul-LMGGNN/D+CF",
+    "Vul-LMGGNN/Cmp",
+    "CodeBERT/CF",
+    "CodeBERT/R+D",
+    "CodeBERT/Cmp"
+   ],
+   "bonf_not_bh": []
+  },
+  "Table VI (ablation)": {
+   "m_tests": 2,
+   "sig_uncorrected": 0,
+   "sig_bonferroni": 0,
+   "sig_bh": 0,
+   "bh_only": [],
+   "bonf_not_bh": []
+  },
+  "Table IX (augmented)": {
+   "m_tests": 21,
+   "sig_uncorrected": 9,
+   "sig_bonferroni": 1,
+   "sig_bh": 6,
+   "bh_only": [
+    "REVEAL-Aug/Ren",
+    "REVEAL-Aug/CF",
+    "REVEAL-Aug/R+D",
+    "REVEAL-Aug/R+CF",
+    "REVEAL-Aug/D+CF"
+   ],
+   "bonf_not_bh": []
+  }
+ },
+ "sanity_check_vs_significance_tests_json": {
+  "n_compared": 123,
+  "max_abs_diff": 4.997692343577942e-07
+ },
+ "excluded_or_untestable": [
+  {
+   "table": "Devign (III)",
+   "model": "ECG RGCN",
+   "cond": "Ren",
+   "reason": "not testable: identical deltas across runs (zero variance)"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "REVEAL",
+   "cond": "R+D",
+   "reason": "EXCLUDED: stored per-run values are the failed evaluation (F1 about 1%)"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "REVEAL",
+   "cond": "R+CF",
+   "reason": "EXCLUDED: stored per-run values are the failed evaluation (F1 about 1%)"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "REVEAL",
+   "cond": "D+CF",
+   "reason": "EXCLUDED: stored per-run values are the failed evaluation (F1 about 1%)"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "Dev.GGNN",
+   "cond": "R+D",
+   "reason": "EXCLUDED: entry copied from Dead/CF in source file, not measured"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "Dev.GGNN",
+   "cond": "R+CF",
+   "reason": "EXCLUDED: entry copied from Dead/CF in source file, not measured"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "ReGVD",
+   "cond": "Ren",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "ReGVD",
+   "cond": "Dead",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "ReGVD",
+   "cond": "CF",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "ReGVD",
+   "cond": "R+D",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "ReGVD",
+   "cond": "R+CF",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "ReGVD",
+   "cond": "D+CF",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "ReGVD",
+   "cond": "Cmp",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "CodeBERT",
+   "cond": "Ren",
+   "reason": "EXCLUDED: only 1 run (single checkpoint)"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "CodeBERT",
+   "cond": "Dead",
+   "reason": "EXCLUDED: only 1 run (single checkpoint)"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "CodeBERT",
+   "cond": "CF",
+   "reason": "EXCLUDED: only 1 run (single checkpoint)"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "CodeBERT",
+   "cond": "R+D",
+   "reason": "EXCLUDED: only 1 run (single checkpoint)"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "CodeBERT",
+   "cond": "R+CF",
+   "reason": "EXCLUDED: only 1 run (single checkpoint)"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "CodeBERT",
+   "cond": "D+CF",
+   "reason": "EXCLUDED: only 1 run (single checkpoint)"
+  },
+  {
+   "table": "Devign (III)",
+   "model": "CodeBERT",
+   "cond": "Cmp",
+   "reason": "EXCLUDED: only 1 run (single checkpoint)"
+  },
+  {
+   "table": "DiverseVul (IV)",
+   "model": "ECG RGCN",
+   "cond": "Ren",
+   "reason": "not testable: identical deltas across runs (zero variance)"
+  },
+  {
+   "table": "DiverseVul (IV)",
+   "model": "ANGLE",
+   "cond": "Ren",
+   "reason": "not testable: identical deltas across runs (zero variance)"
+  },
+  {
+   "table": "DiverseVul (IV)",
+   "model": "VulGNN",
+   "cond": "Ren",
+   "reason": "not testable: identical deltas across runs (zero variance)"
+  },
+  {
+   "table": "DiverseVul (IV)",
+   "model": "REVEAL",
+   "cond": "Ren",
+   "reason": "not testable: identical deltas across runs (zero variance)"
+  },
+  {
+   "table": "DiverseVul (IV)",
+   "model": "ReGVD",
+   "cond": "Ren",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "DiverseVul (IV)",
+   "model": "ReGVD",
+   "cond": "Dead",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "DiverseVul (IV)",
+   "model": "ReGVD",
+   "cond": "CF",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "DiverseVul (IV)",
+   "model": "ReGVD",
+   "cond": "R+D",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "DiverseVul (IV)",
+   "model": "ReGVD",
+   "cond": "R+CF",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "DiverseVul (IV)",
+   "model": "ReGVD",
+   "cond": "D+CF",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "DiverseVul (IV)",
+   "model": "ReGVD",
+   "cond": "Cmp",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Big-Vul (V)",
+   "model": "ReGVD",
+   "cond": "Ren",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Big-Vul (V)",
+   "model": "ReGVD",
+   "cond": "Dead",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Big-Vul (V)",
+   "model": "ReGVD",
+   "cond": "CF",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Big-Vul (V)",
+   "model": "ReGVD",
+   "cond": "R+D",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Big-Vul (V)",
+   "model": "ReGVD",
+   "cond": "R+CF",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Big-Vul (V)",
+   "model": "ReGVD",
+   "cond": "D+CF",
+   "reason": "EXCLUDED: no per-run values"
+  },
+  {
+   "table": "Big-Vul (V)",
+   "model": "ReGVD",
+   "cond": "Cmp",
+   "reason": "EXCLUDED: no per-run values"
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+table,model,cond,n,mean_delta,ci_lo,ci_hi,excludes_zero,note,source
+Devign (III),TF-IDF+LR,Ren,30,-4.017,-7.0647,-2.1377,True,trials,tfidf_7cond_devign_results.json
+Devign (III),TF-IDF+LR,Dead,30,0.28,-1.9152,2.2132,False,trials,tfidf_7cond_devign_results.json
+Devign (III),TF-IDF+LR,CF,30,0.2513,-1.1645,1.223,False,trials,tfidf_7cond_devign_results.json
+Devign (III),TF-IDF+LR,R+D,30,-3.2217,-8.2538,1.7602,False,trials,tfidf_7cond_devign_results.json
+Devign (III),TF-IDF+LR,R+CF,30,-3.012,-7.259,-0.1262,True,trials,tfidf_7cond_devign_results.json
+Devign (III),TF-IDF+LR,D+CF,30,0.4253,-2.053,2.3385,False,trials,tfidf_7cond_devign_results.json
+Devign (III),TF-IDF+LR,Cmp,30,-2.4817,-6.9287,2.5005,False,trials,tfidf_7cond_devign_results.json
+Devign (III),CPG+LR,Ren,30,-6.3027,-13.6127,1.5815,False,trials,cpglr_7cond_devign_results.json
+Devign (III),CPG+LR,Dead,30,6.1057,3.0995,7.6453,True,trials,cpglr_7cond_devign_results.json
+Devign (III),CPG+LR,CF,30,-1.106,-6.405,3.6472,False,trials,cpglr_7cond_devign_results.json
+Devign (III),CPG+LR,R+D,30,6.1057,3.0995,7.6453,True,trials,cpglr_7cond_devign_results.json
+Devign (III),CPG+LR,R+CF,30,-1.106,-6.405,3.6472,False,trials,cpglr_7cond_devign_results.json
+Devign (III),CPG+LR,D+CF,30,4.3587,-4.1575,7.5398,False,trials,cpglr_7cond_devign_results.json
+Devign (III),CPG+LR,Cmp,30,4.3587,-4.1575,7.5398,False,trials,cpglr_7cond_devign_results.json
+DiverseVul (IV),TF-IDF+LR,Ren,5,-2.67,-2.67,-2.67,True,only 5 runs; interval not meaningful,tfidf_7cond_diversevul_results.json
+DiverseVul (IV),TF-IDF+LR,Dead,5,1.01,1.01,1.01,True,only 5 runs; interval not meaningful,tfidf_7cond_diversevul_results.json
+DiverseVul (IV),TF-IDF+LR,CF,5,0.37,0.37,0.37,True,only 5 runs; interval not meaningful,tfidf_7cond_diversevul_results.json
+DiverseVul (IV),TF-IDF+LR,R+D,5,-1.42,-1.42,-1.42,True,only 5 runs; interval not meaningful,tfidf_7cond_diversevul_results.json
+DiverseVul (IV),TF-IDF+LR,R+CF,5,-1.91,-1.91,-1.91,True,only 5 runs; interval not meaningful,tfidf_7cond_diversevul_results.json
+DiverseVul (IV),TF-IDF+LR,D+CF,5,1.1,1.1,1.1,True,only 5 runs; interval not meaningful,tfidf_7cond_diversevul_results.json
+DiverseVul (IV),TF-IDF+LR,Cmp,5,-1.28,-1.28,-1.28,True,only 5 runs; interval not meaningful,tfidf_7cond_diversevul_results.json
+DiverseVul (IV),CPG+LR,Ren,30,0.0,0.0,0.0,False,trials,cpglr_7cond_diversevul_results.json
+DiverseVul (IV),CPG+LR,Dead,30,5.9027,5.336,6.4027,True,trials,cpglr_7cond_diversevul_results.json
+DiverseVul (IV),CPG+LR,CF,30,0.9107,0.4173,1.5565,True,trials,cpglr_7cond_diversevul_results.json
+DiverseVul (IV),CPG+LR,R+D,30,5.9027,5.336,6.4027,True,trials,cpglr_7cond_diversevul_results.json
+DiverseVul (IV),CPG+LR,R+CF,30,0.9107,0.4173,1.5565,True,trials,cpglr_7cond_diversevul_results.json
+DiverseVul (IV),CPG+LR,D+CF,30,5.65,4.9872,6.3895,True,trials,cpglr_7cond_diversevul_results.json
+DiverseVul (IV),CPG+LR,Cmp,30,5.653,4.9872,6.3895,True,trials,cpglr_7cond_diversevul_results.json
+Big-Vul (V),TF-IDF+LR,Ren,5,-1.79,-1.79,-1.79,True,only 5 runs; interval not meaningful,tfidf_7cond_bigvul_results.json
+Big-Vul (V),TF-IDF+LR,Dead,5,-3.72,-3.72,-3.72,True,only 5 runs; interval not meaningful,tfidf_7cond_bigvul_results.json
+Big-Vul (V),TF-IDF+LR,CF,5,-1.42,-1.42,-1.42,True,only 5 runs; interval not meaningful,tfidf_7cond_bigvul_results.json
+Big-Vul (V),TF-IDF+LR,R+D,5,-5.56,-5.56,-5.56,True,only 5 runs; interval not meaningful,tfidf_7cond_bigvul_results.json
+Big-Vul (V),TF-IDF+LR,R+CF,5,-2.78,-2.78,-2.78,True,only 5 runs; interval not meaningful,tfidf_7cond_bigvul_results.json
+Big-Vul (V),TF-IDF+LR,D+CF,5,-4.43,-4.43,-4.43,True,only 5 runs; interval not meaningful,tfidf_7cond_bigvul_results.json
+Big-Vul (V),TF-IDF+LR,Cmp,5,-6.04,-6.04,-6.04,True,only 5 runs; interval not meaningful,tfidf_7cond_bigvul_results.json
+Big-Vul (V),CPG+LR,Ren,30,0.0313,0.0,0.06,False,trials,cpglr_7cond_bigvul_results.json
+Big-Vul (V),CPG+LR,Dead,30,-3.8223,-5.1755,-2.098,True,trials,cpglr_7cond_bigvul_results.json
+Big-Vul (V),CPG+LR,CF,30,-1.1947,-1.8732,-0.3915,True,trials,cpglr_7cond_bigvul_results.json
+Big-Vul (V),CPG+LR,R+D,30,-3.8037,-5.1672,-2.078,True,trials,cpglr_7cond_bigvul_results.json
+Big-Vul (V),CPG+LR,R+CF,30,-1.166,-1.8305,-0.3615,True,trials,cpglr_7cond_bigvul_results.json
+Big-Vul (V),CPG+LR,D+CF,30,-4.107,-5.5428,-2.3235,True,trials,cpglr_7cond_bigvul_results.json
+Big-Vul (V),CPG+LR,Cmp,30,-4.0893,-5.5155,-2.3035,True,trials,cpglr_7cond_bigvul_results.json

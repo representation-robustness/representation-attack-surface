@@ -1,0 +1,37 @@
+BH significance grid (B = significant at BH q<0.05, u = significant only before correction, . = not significant, - = not testable (zero variance), x = excluded (no valid per-run data))
+
+
+Devign (III)
+model           Ren  Dead    CF   R+D  R+CF  D+CF   Cmp
+ECG RGCN          -     .     u     .     u     .     .
+ANGLE             .     u     .     u     .     u     u
+VulGNN            .     B     B     B     B     B     B
+REVEAL            B     B     B     x     x     x     B
+Dev.GGNN          .     .     .     x     x     .     .
+Vul-LMGGNN        .     .     .     .     .     .     .
+ReGVD             x     x     x     x     x     x     x
+CodeBERT          x     x     x     x     x     x     x
+CodeT5+           .     .     .     .     .     .     .
+CodeBERT-Aug      .     .     .     .     u     .     .
+
+DiverseVul (IV)
+model           Ren  Dead    CF   R+D  R+CF  D+CF   Cmp
+ECG RGCN          -     .     .     .     .     .     .
+ANGLE             -     B     .     B     .     B     B
+VulGNN            -     B     .     B     .     B     B
+REVEAL            -     .     B     .     B     .     .
+Vul-LMGGNN        B     .     u     B     .     .     B
+ReGVD             x     x     x     x     x     x     x
+CodeBERT          .     .     .     .     .     .     u
+CodeT5+           .     .     .     .     .     .     .
+
+Big-Vul (V)
+model           Ren  Dead    CF   R+D  R+CF  D+CF   Cmp
+ECG RGCN          .     B     B     B     B     B     B
+ANGLE             .     B     B     B     u     B     B
+VulGNN            .     B     B     B     B     B     B
+REVEAL            .     B     B     B     B     B     B
+Vul-LMGGNN        B     B     B     B     B     B     B
+ReGVD             x     x     x     x     x     x     x
+CodeBERT          .     B     B     B     u     B     B
+CodeT5+           .     B     B     B     B     B     B

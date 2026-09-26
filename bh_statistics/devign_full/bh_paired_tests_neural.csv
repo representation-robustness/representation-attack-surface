@@ -1,0 +1,206 @@
+table,model,cond,n,mean_delta,sd,t,p,m_tests,p_bonf,q_bh,sig_uncorrected,sig_bonf,sig_bh,note,source
+Devign (III),ECG RGCN,Ren,5,0.0,0.0,,,,,,,,,not testable: identical deltas across runs (zero variance),ecgrgcn_7cond_results.json
+Devign (III),ECG RGCN,Dead,5,0.614,0.854184,1.607319,0.183263,50,1.0,0.327255,False,False,False,,ecgrgcn_7cond_results.json
+Devign (III),ECG RGCN,CF,5,-1.196,0.728169,-3.672688,0.021341,50,1.0,0.076217,True,False,False,,ecgrgcn_7cond_results.json
+Devign (III),ECG RGCN,R+D,5,0.614,0.854184,1.607319,0.183263,50,1.0,0.327255,False,False,False,,ecgrgcn_7cond_results.json
+Devign (III),ECG RGCN,R+CF,5,-1.196,0.725003,-3.688724,0.021042,50,1.0,0.076217,True,False,False,,ecgrgcn_7cond_results.json
+Devign (III),ECG RGCN,D+CF,5,0.56,0.985266,1.270923,0.272639,50,1.0,0.370383,False,False,False,,ecgrgcn_7cond_results.json
+Devign (III),ECG RGCN,Cmp,5,0.558,0.985226,1.266436,0.274084,50,1.0,0.370383,False,False,False,,ecgrgcn_7cond_results.json
+Devign (III),ANGLE,Ren,5,0.004,0.016733,0.534522,0.621308,50,1.0,0.706032,False,False,False,,angle_7cond_results.json
+Devign (III),ANGLE,Dead,5,1.386,0.937033,3.307452,0.029725,50,1.0,0.092891,True,False,False,,angle_7cond_results.json
+Devign (III),ANGLE,CF,5,-1.188,1.575173,-1.686449,0.166987,50,1.0,0.322765,False,False,False,,angle_7cond_results.json
+Devign (III),ANGLE,R+D,5,1.392,0.938493,3.316599,0.029472,50,1.0,0.092891,True,False,False,,angle_7cond_results.json
+Devign (III),ANGLE,R+CF,5,-1.188,1.579231,-1.682116,0.167838,50,1.0,0.322765,False,False,False,,angle_7cond_results.json
+Devign (III),ANGLE,D+CF,5,1.41,0.831414,3.792159,0.019233,50,0.961653,0.076217,True,False,False,,angle_7cond_results.json
+Devign (III),ANGLE,Cmp,5,1.414,0.828631,3.815689,0.018848,50,0.942393,0.076217,True,False,False,,angle_7cond_results.json
+Devign (III),VulGNN,Ren,5,0.0,0.012247,0.0,1.0,50,1.0,1.0,False,False,False,,vulgnn_7cond_results.json
+Devign (III),VulGNN,Dead,5,1.242,0.601515,4.617005,0.009903,50,0.495168,0.049517,True,False,True,,vulgnn_7cond_results.json
+Devign (III),VulGNN,CF,5,0.618,0.225987,6.114917,0.003621,50,0.181067,0.030973,True,False,True,,vulgnn_7cond_results.json
+Devign (III),VulGNN,R+D,5,1.242,0.601515,4.617005,0.009903,50,0.495168,0.049517,True,False,True,,vulgnn_7cond_results.json
+Devign (III),VulGNN,R+CF,5,0.614,0.226119,6.071772,0.003717,50,0.18584,0.030973,True,False,True,,vulgnn_7cond_results.json
+Devign (III),VulGNN,D+CF,5,1.498,0.705386,4.748645,0.00898,50,0.448992,0.049517,True,False,True,,vulgnn_7cond_results.json
+Devign (III),VulGNN,Cmp,5,1.498,0.705386,4.748645,0.00898,50,0.448992,0.049517,True,False,True,,vulgnn_7cond_results.json
+Devign (III),REVEAL,Ren,10,-6.082,2.130925,-9.025646,8e-06,50,0.000417,0.000139,True,True,True,,reveal_7cond_results.json
+Devign (III),REVEAL,Dead,10,1.591,0.555507,9.056926,8e-06,50,0.000405,0.000139,True,True,True,,reveal_7cond_results.json
+Devign (III),REVEAL,CF,10,-3.628,2.194411,-5.228165,0.000543,50,0.027163,0.006791,True,True,True,,reveal_7cond_results.json
+Devign (III),REVEAL,R+D,,,,,,,,,,,,EXCLUDED: stored per-run values are the failed evaluation (F1 about 1%),reveal_7cond_results.json
+Devign (III),REVEAL,R+CF,,,,,,,,,,,,EXCLUDED: stored per-run values are the failed evaluation (F1 about 1%),reveal_7cond_results.json
+Devign (III),REVEAL,D+CF,,,,,,,,,,,,EXCLUDED: stored per-run values are the failed evaluation (F1 about 1%),reveal_7cond_results.json
+Devign (III),REVEAL,Cmp,10,1.585,0.472235,10.613813,2e-06,50,0.000109,0.000109,True,True,True,,reveal_7cond_results.json
+Devign (III),Dev.GGNN,Ren,5,-0.142,0.235308,-1.349386,0.248531,50,1.0,0.370383,False,False,False,,devign_ggnn_7cond_results.json
+Devign (III),Dev.GGNN,Dead,5,-0.026,0.070922,-0.819737,0.4584,50,1.0,0.574965,False,False,False,,devign_ggnn_7cond_results.json
+Devign (III),Dev.GGNN,CF,5,-0.17,0.242074,-1.570309,0.191433,50,1.0,0.330056,False,False,False,,devign_ggnn_7cond_results.json
+Devign (III),Dev.GGNN,R+D,,,,,,,,,,,,"EXCLUDED: entry copied from Dead/CF in source file, not measured",devign_ggnn_7cond_results.json
+Devign (III),Dev.GGNN,R+CF,,,,,,,,,,,,"EXCLUDED: entry copied from Dead/CF in source file, not measured",devign_ggnn_7cond_results.json
+Devign (III),Dev.GGNN,D+CF,5,-1.126,1.367929,-1.840602,0.139501,50,1.0,0.317048,False,False,False,,devign_ggnn_7cond_results.json
+Devign (III),Dev.GGNN,Cmp,5,-1.126,1.367929,-1.840602,0.139501,50,1.0,0.317048,False,False,False,,devign_ggnn_7cond_results.json
+Devign (III),Vul-LMGGNN,Ren,5,-2.182,2.012006,-2.424992,0.072371,50,1.0,0.180929,False,False,False,,lmggnn_7cond_results.json
+Devign (III),Vul-LMGGNN,Dead,5,0.614,1.779994,0.77132,0.483552,50,1.0,0.589698,False,False,False,,lmggnn_7cond_results.json
+Devign (III),Vul-LMGGNN,CF,5,0.016,1.506064,0.023755,0.982186,50,1.0,1.0,False,False,False,,lmggnn_7cond_results.json
+Devign (III),Vul-LMGGNN,R+D,5,0.492,1.761865,0.624421,0.5662,50,1.0,0.663933,False,False,False,,lmggnn_7cond_results.json
+Devign (III),Vul-LMGGNN,R+CF,5,-0.068,1.613031,-0.094265,0.929432,50,1.0,0.968158,False,False,False,,lmggnn_7cond_results.json
+Devign (III),Vul-LMGGNN,D+CF,5,0.278,1.657414,0.375058,0.726656,50,1.0,0.807396,False,False,False,,lmggnn_7cond_results.json
+Devign (III),Vul-LMGGNN,Cmp,5,0.248,1.684242,0.329255,0.758482,50,1.0,0.824437,False,False,False,,lmggnn_7cond_results.json
+Devign (III),ReGVD,Ren,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_devign_results.json
+Devign (III),ReGVD,Dead,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_devign_results.json
+Devign (III),ReGVD,CF,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_devign_results.json
+Devign (III),ReGVD,R+D,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_devign_results.json
+Devign (III),ReGVD,R+CF,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_devign_results.json
+Devign (III),ReGVD,D+CF,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_devign_results.json
+Devign (III),ReGVD,Cmp,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_devign_results.json
+Devign (III),CodeBERT,Ren,,,,,,,,,,,,EXCLUDED: only 1 run (single checkpoint),codebert_7cond_devign_results.json
+Devign (III),CodeBERT,Dead,,,,,,,,,,,,EXCLUDED: only 1 run (single checkpoint),codebert_7cond_devign_results.json
+Devign (III),CodeBERT,CF,,,,,,,,,,,,EXCLUDED: only 1 run (single checkpoint),codebert_7cond_devign_results.json
+Devign (III),CodeBERT,R+D,,,,,,,,,,,,EXCLUDED: only 1 run (single checkpoint),codebert_7cond_devign_results.json
+Devign (III),CodeBERT,R+CF,,,,,,,,,,,,EXCLUDED: only 1 run (single checkpoint),codebert_7cond_devign_results.json
+Devign (III),CodeBERT,D+CF,,,,,,,,,,,,EXCLUDED: only 1 run (single checkpoint),codebert_7cond_devign_results.json
+Devign (III),CodeBERT,Cmp,,,,,,,,,,,,EXCLUDED: only 1 run (single checkpoint),codebert_7cond_devign_results.json
+Devign (III),CodeT5+,Ren,5,-0.678,1.185188,-1.279168,0.270003,50,1.0,0.370383,False,False,False,,codet5_7cond_devign_results.json
+Devign (III),CodeT5+,Dead,5,0.642,1.044663,1.374181,0.241355,50,1.0,0.370383,False,False,False,,codet5_7cond_devign_results.json
+Devign (III),CodeT5+,CF,5,0.166,0.602188,0.616398,0.570982,50,1.0,0.663933,False,False,False,,codet5_7cond_devign_results.json
+Devign (III),CodeT5+,R+D,5,0.668,1.15053,1.298265,0.263991,50,1.0,0.370383,False,False,False,,codet5_7cond_devign_results.json
+Devign (III),CodeT5+,R+CF,5,0.508,0.670723,1.693578,0.165597,50,1.0,0.322765,False,False,False,,codet5_7cond_devign_results.json
+Devign (III),CodeT5+,D+CF,5,0.794,1.376456,1.289862,0.26662,50,1.0,0.370383,False,False,False,,codet5_7cond_devign_results.json
+Devign (III),CodeT5+,Cmp,5,0.718,1.329538,1.20756,0.293734,50,1.0,0.386491,False,False,False,,codet5_7cond_devign_results.json
+Devign (III),CodeBERT-Aug,Ren,5,0.08,0.681799,0.262373,0.805993,50,1.0,0.857439,False,False,False,,codebert_aug_7cond_results.json
+Devign (III),CodeBERT-Aug,Dead,5,-0.272,0.744762,-0.816651,0.459972,50,1.0,0.574965,False,False,False,,codebert_aug_7cond_results.json
+Devign (III),CodeBERT-Aug,CF,5,-0.572,0.475784,-2.688262,0.054757,50,1.0,0.152102,False,False,False,,codebert_aug_7cond_results.json
+Devign (III),CodeBERT-Aug,R+D,5,-0.684,0.88923,-1.719994,0.160551,50,1.0,0.322765,False,False,False,,codebert_aug_7cond_results.json
+Devign (III),CodeBERT-Aug,R+CF,5,-0.516,0.399036,-2.891494,0.044496,50,1.0,0.130871,True,False,False,,codebert_aug_7cond_results.json
+Devign (III),CodeBERT-Aug,D+CF,5,-0.516,0.880358,-1.310616,0.260172,50,1.0,0.370383,False,False,False,,codebert_aug_7cond_results.json
+Devign (III),CodeBERT-Aug,Cmp,5,-0.852,0.783945,-2.430183,0.071967,50,1.0,0.180929,False,False,False,,codebert_aug_7cond_results.json
+DiverseVul (IV),ECG RGCN,Ren,5,0.0,0.0,,,,,,,,,not testable: identical deltas across runs (zero variance),ecgrgcn_7cond_diversevul_results.json
+DiverseVul (IV),ECG RGCN,Dead,5,0.836,1.034688,1.806682,0.145106,45,1.0,0.278363,False,False,False,,ecgrgcn_7cond_diversevul_results.json
+DiverseVul (IV),ECG RGCN,CF,5,-0.304,0.908504,-0.748224,0.495919,45,1.0,0.554708,False,False,False,,ecgrgcn_7cond_diversevul_results.json
+DiverseVul (IV),ECG RGCN,R+D,5,0.838,1.03178,1.816109,0.143525,45,1.0,0.278363,False,False,False,,ecgrgcn_7cond_diversevul_results.json
+DiverseVul (IV),ECG RGCN,R+CF,5,-0.308,0.902729,-0.762919,0.488023,45,1.0,0.554708,False,False,False,,ecgrgcn_7cond_diversevul_results.json
+DiverseVul (IV),ECG RGCN,D+CF,5,0.472,1.182759,0.89234,0.422641,45,1.0,0.525578,False,False,False,,ecgrgcn_7cond_diversevul_results.json
+DiverseVul (IV),ECG RGCN,Cmp,5,0.464,1.189046,0.872578,0.432142,45,1.0,0.525578,False,False,False,,ecgrgcn_7cond_diversevul_results.json
+DiverseVul (IV),ANGLE,Ren,5,0.0,0.0,,,,,,,,,not testable: identical deltas across runs (zero variance),angle_7cond_diversevul_results.json
+DiverseVul (IV),ANGLE,Dead,5,3.276,0.383314,19.110571,4.4e-05,45,0.001988,0.000994,True,True,True,,angle_7cond_diversevul_results.json
+DiverseVul (IV),ANGLE,CF,5,0.224,0.378193,1.324401,0.255974,45,1.0,0.38396,False,False,False,,angle_7cond_diversevul_results.json
+DiverseVul (IV),ANGLE,R+D,5,3.28,0.380329,19.284111,4.3e-05,45,0.001918,0.000994,True,True,True,,angle_7cond_diversevul_results.json
+DiverseVul (IV),ANGLE,R+CF,5,0.218,0.381274,1.27851,0.270212,45,1.0,0.392244,False,False,False,,angle_7cond_diversevul_results.json
+DiverseVul (IV),ANGLE,D+CF,5,2.992,0.501568,13.338812,0.000183,45,0.008219,0.002091,True,True,True,,angle_7cond_diversevul_results.json
+DiverseVul (IV),ANGLE,Cmp,5,2.998,0.504847,13.278752,0.000186,45,0.008365,0.002091,True,True,True,,angle_7cond_diversevul_results.json
+DiverseVul (IV),VulGNN,Ren,5,0.0,0.0,,,,,,,,,not testable: identical deltas across runs (zero variance),vulgnn_7cond_diversevul_results.json
+DiverseVul (IV),VulGNN,Dead,5,2.568,0.6071,9.458451,0.000697,45,0.031361,0.005328,True,True,True,,vulgnn_7cond_diversevul_results.json
+DiverseVul (IV),VulGNN,CF,5,-0.266,0.332836,-1.787047,0.14846,45,1.0,0.278363,False,False,False,,vulgnn_7cond_diversevul_results.json
+DiverseVul (IV),VulGNN,R+D,5,2.562,0.608704,9.411488,0.00071,45,0.031969,0.005328,True,True,True,,vulgnn_7cond_diversevul_results.json
+DiverseVul (IV),VulGNN,R+CF,5,-0.266,0.332836,-1.787047,0.14846,45,1.0,0.278363,False,False,False,,vulgnn_7cond_diversevul_results.json
+DiverseVul (IV),VulGNN,D+CF,5,2.422,0.656978,8.243438,0.001181,45,0.053147,0.006014,True,False,True,,vulgnn_7cond_diversevul_results.json
+DiverseVul (IV),VulGNN,Cmp,5,2.416,0.658506,8.203936,0.001203,45,0.05413,0.006014,True,False,True,,vulgnn_7cond_diversevul_results.json
+DiverseVul (IV),REVEAL,Ren,5,0.0,0.0,,,,,,,,,not testable: identical deltas across runs (zero variance),reveal_7cond_diversevul_results.json
+DiverseVul (IV),REVEAL,Dead,5,0.546,1.044787,1.168557,0.307475,45,1.0,0.411614,False,False,False,,reveal_7cond_diversevul_results.json
+DiverseVul (IV),REVEAL,CF,5,-1.26,0.560357,-5.027947,0.007344,45,0.330485,0.025845,True,False,True,,reveal_7cond_diversevul_results.json
+DiverseVul (IV),REVEAL,R+D,5,0.544,1.032027,1.178672,0.303855,45,1.0,0.411614,False,False,False,,reveal_7cond_diversevul_results.json
+DiverseVul (IV),REVEAL,R+CF,5,-1.254,0.560295,-5.004563,0.007466,45,0.335984,0.025845,True,False,True,,reveal_7cond_diversevul_results.json
+DiverseVul (IV),REVEAL,D+CF,5,-0.052,1.265887,-0.091853,0.931231,45,1.0,0.931231,False,False,False,,reveal_7cond_diversevul_results.json
+DiverseVul (IV),REVEAL,Cmp,5,-0.08,1.281269,-0.139616,0.895711,45,1.0,0.916068,False,False,False,,reveal_7cond_diversevul_results.json
+DiverseVul (IV),Vul-LMGGNN,Ren,5,-1.128,0.285867,-8.823277,0.000911,45,0.040977,0.005854,True,True,True,,diversevul_lmggnn_7cond_results.json
+DiverseVul (IV),Vul-LMGGNN,Dead,5,-0.416,0.544729,-1.707645,0.162889,45,1.0,0.293201,False,False,False,,diversevul_lmggnn_7cond_results.json
+DiverseVul (IV),Vul-LMGGNN,CF,5,0.714,0.420868,3.793474,0.019211,45,0.864508,0.061751,True,False,False,,diversevul_lmggnn_7cond_results.json
+DiverseVul (IV),Vul-LMGGNN,R+D,5,-1.886,0.572739,-7.363256,0.001812,45,0.081561,0.008156,True,False,True,,diversevul_lmggnn_7cond_results.json
+DiverseVul (IV),Vul-LMGGNN,R+CF,5,-0.36,0.36187,-2.224512,0.090159,45,1.0,0.212604,False,False,False,,diversevul_lmggnn_7cond_results.json
+DiverseVul (IV),Vul-LMGGNN,D+CF,5,-0.51,0.522542,-2.182399,0.094491,45,1.0,0.212604,False,False,False,,diversevul_lmggnn_7cond_results.json
+DiverseVul (IV),Vul-LMGGNN,Cmp,5,-2.14,0.719618,-6.649619,0.002656,45,0.119503,0.010864,True,False,True,,diversevul_lmggnn_7cond_results.json
+DiverseVul (IV),ReGVD,Ren,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_diversevul_results.json
+DiverseVul (IV),ReGVD,Dead,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_diversevul_results.json
+DiverseVul (IV),ReGVD,CF,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_diversevul_results.json
+DiverseVul (IV),ReGVD,R+D,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_diversevul_results.json
+DiverseVul (IV),ReGVD,R+CF,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_diversevul_results.json
+DiverseVul (IV),ReGVD,D+CF,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_diversevul_results.json
+DiverseVul (IV),ReGVD,Cmp,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_diversevul_results.json
+DiverseVul (IV),CodeBERT,Ren,5,-0.156,0.720299,-0.484281,0.653508,45,1.0,0.700187,False,False,False,,codebert_7cond_diversevul_results.json
+DiverseVul (IV),CodeBERT,Dead,5,-0.118,0.792035,-0.333137,0.755761,45,1.0,0.790913,False,False,False,,codebert_7cond_diversevul_results.json
+DiverseVul (IV),CodeBERT,CF,5,-0.432,0.833589,-1.158823,0.310997,45,1.0,0.411614,False,False,False,,codebert_7cond_diversevul_results.json
+DiverseVul (IV),CodeBERT,R+D,5,-0.484,0.409549,-2.642561,0.057426,45,1.0,0.161512,False,False,False,,codebert_7cond_diversevul_results.json
+DiverseVul (IV),CodeBERT,R+CF,5,-0.514,0.45142,-2.546052,0.063571,45,1.0,0.168276,False,False,False,,codebert_7cond_diversevul_results.json
+DiverseVul (IV),CodeBERT,D+CF,5,-0.456,1.103689,-0.923853,0.407849,45,1.0,0.524377,False,False,False,,codebert_7cond_diversevul_results.json
+DiverseVul (IV),CodeBERT,Cmp,5,-0.662,0.450855,-3.283268,0.030407,45,1.0,0.091222,True,False,False,,codebert_7cond_diversevul_results.json
+DiverseVul (IV),CodeT5+,Ren,5,-0.76,1.122586,-1.513836,0.204628,45,1.0,0.339487,False,False,False,,codet5_7cond_diversevul_results.json
+DiverseVul (IV),CodeT5+,Dead,5,0.472,0.468476,2.252887,0.087365,45,1.0,0.212604,False,False,False,,codet5_7cond_diversevul_results.json
+DiverseVul (IV),CodeT5+,CF,5,-0.306,0.411193,-1.664027,0.171439,45,1.0,0.296722,False,False,False,,codet5_7cond_diversevul_results.json
+DiverseVul (IV),CodeT5+,R+D,5,-0.386,1.169008,-0.738337,0.501285,45,1.0,0.554708,False,False,False,,codet5_7cond_diversevul_results.json
+DiverseVul (IV),CodeT5+,R+CF,5,-0.742,1.209409,-1.371879,0.242013,45,1.0,0.375537,False,False,False,,codet5_7cond_diversevul_results.json
+DiverseVul (IV),CodeT5+,D+CF,5,0.464,0.697768,1.486935,0.211236,45,1.0,0.339487,False,False,False,,codet5_7cond_diversevul_results.json
+DiverseVul (IV),CodeT5+,Cmp,5,-0.448,1.370755,-0.730808,0.5054,45,1.0,0.554708,False,False,False,,codet5_7cond_diversevul_results.json
+Big-Vul (V),ECG RGCN,Ren,5,0.004,0.008944,1.0,0.373901,49,1.0,0.389812,False,False,False,,ecgrgcn_7cond_bigvul_results.json
+Big-Vul (V),ECG RGCN,Dead,5,-3.994,1.128397,-7.914639,0.001379,49,0.067571,0.002413,True,False,True,,ecgrgcn_7cond_bigvul_results.json
+Big-Vul (V),ECG RGCN,CF,5,-1.312,0.422102,-6.950268,0.002251,49,0.110322,0.003677,True,False,True,,ecgrgcn_7cond_bigvul_results.json
+Big-Vul (V),ECG RGCN,R+D,5,-3.99,1.1243,-7.935527,0.001365,49,0.066898,0.002413,True,False,True,,ecgrgcn_7cond_bigvul_results.json
+Big-Vul (V),ECG RGCN,R+CF,5,-1.316,0.420512,-6.997822,0.002195,49,0.10754,0.003677,True,False,True,,ecgrgcn_7cond_bigvul_results.json
+Big-Vul (V),ECG RGCN,D+CF,5,-4.7,1.067872,-9.841556,0.000598,49,0.029294,0.001729,True,True,True,,ecgrgcn_7cond_bigvul_results.json
+Big-Vul (V),ECG RGCN,Cmp,5,-4.704,1.069687,-9.833218,0.0006,49,0.02939,0.001729,True,True,True,,ecgrgcn_7cond_bigvul_results.json
+Big-Vul (V),ANGLE,Ren,5,0.026,0.029665,1.959824,0.121579,49,1.0,0.132386,False,False,False,,angle_7cond_bigvul_results.json
+Big-Vul (V),ANGLE,Dead,5,-5.662,0.350457,-36.126037,4e-06,49,0.000172,5.3e-05,True,True,True,,angle_7cond_bigvul_results.json
+Big-Vul (V),ANGLE,CF,5,-0.684,0.476529,-3.209606,0.032601,49,1.0,0.038962,True,False,True,,angle_7cond_bigvul_results.json
+Big-Vul (V),ANGLE,R+D,5,-5.642,0.34752,-36.302669,3e-06,49,0.000168,5.3e-05,True,True,True,,angle_7cond_bigvul_results.json
+Big-Vul (V),ANGLE,R+CF,5,-0.64,0.511028,-2.800399,0.048792,49,1.0,0.0556,True,False,False,,angle_7cond_bigvul_results.json
+Big-Vul (V),ANGLE,D+CF,5,-6.018,0.38206,-35.2213,4e-06,49,0.00019,5.3e-05,True,True,True,,angle_7cond_bigvul_results.json
+Big-Vul (V),ANGLE,Cmp,5,-6.008,0.392772,-34.203786,4e-06,49,0.000214,5.3e-05,True,True,True,,angle_7cond_bigvul_results.json
+Big-Vul (V),VulGNN,Ren,5,0.002,0.008367,0.534522,0.621308,49,1.0,0.621308,False,False,False,,vulgnn_7cond_bigvul_results.json
+Big-Vul (V),VulGNN,Dead,5,-4.372,0.366633,-26.664486,1.2e-05,49,0.000576,7.3e-05,True,True,True,,vulgnn_7cond_bigvul_results.json
+Big-Vul (V),VulGNN,CF,5,-0.644,0.277543,-5.188489,0.006568,49,0.321825,0.009029,True,False,True,,vulgnn_7cond_bigvul_results.json
+Big-Vul (V),VulGNN,R+D,5,-4.38,0.360347,-27.179292,1.1e-05,49,0.000534,7.3e-05,True,True,True,,vulgnn_7cond_bigvul_results.json
+Big-Vul (V),VulGNN,R+CF,5,-0.64,0.276586,-5.174093,0.006633,49,0.325029,0.009029,True,False,True,,vulgnn_7cond_bigvul_results.json
+Big-Vul (V),VulGNN,D+CF,5,-4.966,0.417469,-26.599161,1.2e-05,49,0.000582,7.3e-05,True,True,True,,vulgnn_7cond_bigvul_results.json
+Big-Vul (V),VulGNN,Cmp,5,-4.976,0.411497,-27.039485,1.1e-05,49,0.000545,7.3e-05,True,True,True,,vulgnn_7cond_bigvul_results.json
+Big-Vul (V),REVEAL,Ren,5,-0.018,0.046043,-0.874157,0.431377,49,1.0,0.440364,False,False,False,,reveal_7cond_bigvul_results.json
+Big-Vul (V),REVEAL,Dead,5,-1.256,0.348037,-8.06954,0.001281,49,0.062769,0.002413,True,False,True,,reveal_7cond_bigvul_results.json
+Big-Vul (V),REVEAL,CF,5,-0.518,0.266964,-4.338718,0.012265,49,0.601,0.01541,True,False,True,,reveal_7cond_bigvul_results.json
+Big-Vul (V),REVEAL,R+D,5,-1.274,0.342023,-8.32911,0.001135,49,0.055633,0.002266,True,False,True,,reveal_7cond_bigvul_results.json
+Big-Vul (V),REVEAL,R+CF,5,-0.53,0.268142,-4.419737,0.011513,49,0.564149,0.014846,True,False,True,,reveal_7cond_bigvul_results.json
+Big-Vul (V),REVEAL,D+CF,5,-1.396,0.376072,-8.300412,0.00115,49,0.05637,0.002266,True,False,True,,reveal_7cond_bigvul_results.json
+Big-Vul (V),REVEAL,Cmp,5,-1.404,0.378722,-8.289572,0.001156,49,0.056652,0.002266,True,False,True,,reveal_7cond_bigvul_results.json
+Big-Vul (V),Vul-LMGGNN,Ren,5,-0.97,0.325346,-6.666706,0.00263,49,0.128888,0.004158,True,False,True,,bigvul_lmggnn_7cond_results.json
+Big-Vul (V),Vul-LMGGNN,Dead,5,-10.054,5.080313,-4.425205,0.011465,49,0.561762,0.014846,True,False,True,,bigvul_lmggnn_7cond_results.json
+Big-Vul (V),Vul-LMGGNN,CF,5,-2.41,0.641677,-8.398181,0.0011,49,0.053905,0.002266,True,False,True,,bigvul_lmggnn_7cond_results.json
+Big-Vul (V),Vul-LMGGNN,R+D,5,-11.426,4.706435,-5.428591,0.005585,49,0.273669,0.008293,True,False,True,,bigvul_lmggnn_7cond_results.json
+Big-Vul (V),Vul-LMGGNN,R+CF,5,-4.092,0.621748,-14.716568,0.000124,49,0.00608,0.000553,True,True,True,,bigvul_lmggnn_7cond_results.json
+Big-Vul (V),Vul-LMGGNN,D+CF,5,-11.676,4.891041,-5.337991,0.005933,49,0.290731,0.008551,True,False,True,,bigvul_lmggnn_7cond_results.json
+Big-Vul (V),Vul-LMGGNN,Cmp,5,-13.698,5.164593,-5.930702,0.004051,49,0.198511,0.006203,True,False,True,,bigvul_lmggnn_7cond_results.json
+Big-Vul (V),ReGVD,Ren,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_bigvul_results.json
+Big-Vul (V),ReGVD,Dead,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_bigvul_results.json
+Big-Vul (V),ReGVD,CF,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_bigvul_results.json
+Big-Vul (V),ReGVD,R+D,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_bigvul_results.json
+Big-Vul (V),ReGVD,R+CF,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_bigvul_results.json
+Big-Vul (V),ReGVD,D+CF,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_bigvul_results.json
+Big-Vul (V),ReGVD,Cmp,,,,,,,,,,,,EXCLUDED: no per-run values,regvd_7cond_bigvul_results.json
+Big-Vul (V),CodeBERT,Ren,5,-0.408,0.804593,-1.133885,0.320191,49,1.0,0.341073,False,False,False,,codebert_7cond_bigvul_results.json
+Big-Vul (V),CodeBERT,Dead,5,-18.816,4.700647,-8.950652,0.000862,49,0.042231,0.002223,True,True,True,,codebert_7cond_bigvul_results.json
+Big-Vul (V),CodeBERT,CF,5,-2.58,1.770621,-3.25821,0.031133,49,1.0,0.038138,True,False,True,,codebert_7cond_bigvul_results.json
+Big-Vul (V),CodeBERT,R+D,5,-19.14,5.12019,-8.35874,0.00112,49,0.054883,0.002266,True,False,True,,codebert_7cond_bigvul_results.json
+Big-Vul (V),CodeBERT,R+CF,5,-2.884,2.288357,-2.8181,0.047921,49,1.0,0.0556,True,False,False,,codebert_7cond_bigvul_results.json
+Big-Vul (V),CodeBERT,D+CF,5,-20.94,4.975977,-9.409863,0.000711,49,0.034834,0.001935,True,True,True,,codebert_7cond_bigvul_results.json
+Big-Vul (V),CodeBERT,Cmp,5,-20.766,5.434596,-8.544184,0.00103,49,0.050467,0.002266,True,False,True,,codebert_7cond_bigvul_results.json
+Big-Vul (V),CodeT5+,Ren,5,0.722,0.594239,2.716821,0.053161,49,1.0,0.059202,False,False,False,,codet5_7cond_bigvul_results.json
+Big-Vul (V),CodeT5+,Dead,5,-18.294,3.366093,-12.152555,0.000263,49,0.012892,0.001054,True,True,True,,codet5_7cond_bigvul_results.json
+Big-Vul (V),CodeT5+,CF,5,-2.936,0.548753,-11.963659,0.00028,49,0.013707,0.001054,True,True,True,,codet5_7cond_bigvul_results.json
+Big-Vul (V),CodeT5+,R+D,5,-17.56,2.597566,-15.116209,0.000112,49,0.00547,0.000553,True,True,True,,codet5_7cond_bigvul_results.json
+Big-Vul (V),CodeT5+,R+CF,5,-2.336,0.514811,-10.146361,0.000531,49,0.026031,0.001729,True,True,True,,codet5_7cond_bigvul_results.json
+Big-Vul (V),CodeT5+,D+CF,5,-19.118,3.688112,-11.591066,0.000317,49,0.01551,0.001108,True,True,True,,codet5_7cond_bigvul_results.json
+Big-Vul (V),CodeT5+,Cmp,5,-18.826,2.817833,-14.939219,0.000117,49,0.00573,0.000553,True,True,True,,codet5_7cond_bigvul_results.json
+Table VI (ablation),REVEAL-StructOnly,Ren,5,0.006918,0.009473,1.632977,0.177811,2,0.355623,0.177811,False,False,False,,reveal_noid_multiseed_results.json
+Table VI (ablation),VulGNN+CodeBERT,Ren,5,-2.388107,3.047361,-1.752326,0.154596,2,0.309191,0.177811,False,False,False,,vulgnn_withid_multiseed_results.json
+Table IX (augmented),ReGVD-Aug,Ren,5,-0.522,0.765356,-1.525078,0.201929,21,1.0,0.2827,False,False,False,,regvd_aug_multiseed_results.json
+Table IX (augmented),ReGVD-Aug,Dead,5,-0.604,0.462093,-2.922756,0.043125,21,0.905616,0.103824,True,False,False,,regvd_aug_multiseed_results.json
+Table IX (augmented),ReGVD-Aug,CF,5,-0.288,0.816192,-0.789014,0.474239,21,1.0,0.497951,False,False,False,,regvd_aug_multiseed_results.json
+Table IX (augmented),ReGVD-Aug,R+D,5,-0.634,0.975541,-1.453211,0.219827,21,1.0,0.288523,False,False,False,,regvd_aug_multiseed_results.json
+Table IX (augmented),ReGVD-Aug,R+CF,5,-0.376,0.815034,-1.031567,0.360562,21,1.0,0.420655,False,False,False,,regvd_aug_multiseed_results.json
+Table IX (augmented),ReGVD-Aug,D+CF,5,-1.008,0.573821,-3.927982,0.017132,21,0.359774,0.051396,True,False,False,,regvd_aug_multiseed_results.json
+Table IX (augmented),ReGVD-Aug,Cmp,5,-1.002,1.065702,-2.102408,0.103372,21,1.0,0.180901,False,False,False,,regvd_aug_multiseed_results.json
+Table IX (augmented),REVEAL-Aug,Ren,5,-0.796874,0.299499,-5.949479,0.004005,21,0.084098,0.039482,True,False,True,,reveal_aug_multiseed_results.json
+Table IX (augmented),REVEAL-Aug,Dead,5,-0.301302,0.372961,-1.80644,0.145147,21,1.0,0.234468,False,False,False,,reveal_aug_multiseed_results.json
+Table IX (augmented),REVEAL-Aug,CF,5,-0.397353,0.207648,-4.27892,0.012859,21,0.270032,0.045005,True,False,True,,reveal_aug_multiseed_results.json
+Table IX (augmented),REVEAL-Aug,R+D,5,-1.115972,0.466235,-5.352214,0.005877,21,0.123415,0.039482,True,False,True,,reveal_aug_multiseed_results.json
+Table IX (augmented),REVEAL-Aug,R+CF,5,-0.987938,0.496676,-4.447763,0.011266,21,0.236589,0.045005,True,False,True,,reveal_aug_multiseed_results.json
+Table IX (augmented),REVEAL-Aug,D+CF,5,-0.600615,0.268906,-4.994369,0.00752,21,0.157927,0.039482,True,False,True,,reveal_aug_multiseed_results.json
+Table IX (augmented),REVEAL-Aug,Cmp,5,-1.393169,0.133073,-23.409919,2e-05,21,0.000414,0.000414,True,True,True,,reveal_aug_multiseed_results.json
+Table IX (augmented),CodeBERT-Aug,Ren,5,0.08,0.681799,0.262373,0.805993,21,1.0,0.805993,False,False,False,,codebert_aug_7cond_results.json
+Table IX (augmented),CodeBERT-Aug,Dead,5,-0.272,0.744762,-0.816651,0.459972,21,1.0,0.497951,False,False,False,,codebert_aug_7cond_results.json
+Table IX (augmented),CodeBERT-Aug,CF,5,-0.572,0.475784,-2.688262,0.054757,21,1.0,0.114989,False,False,False,,codebert_aug_7cond_results.json
+Table IX (augmented),CodeBERT-Aug,R+D,5,-0.684,0.88923,-1.719994,0.160551,21,1.0,0.240827,False,False,False,,codebert_aug_7cond_results.json
+Table IX (augmented),CodeBERT-Aug,R+CF,5,-0.516,0.399036,-2.891494,0.044496,21,0.934418,0.103824,True,False,False,,codebert_aug_7cond_results.json
+Table IX (augmented),CodeBERT-Aug,D+CF,5,-0.516,0.880358,-1.310616,0.260172,21,1.0,0.32139,False,False,False,,codebert_aug_7cond_results.json
+Table IX (augmented),CodeBERT-Aug,Cmp,5,-0.852,0.783945,-2.430183,0.071967,21,1.0,0.137391,False,False,False,,codebert_aug_7cond_results.json
