@@ -402,7 +402,7 @@ Bootstrap confidence intervals and pairwise significance tests for all reported 
 
 ```bash
 python experiments/exp15_bootstrap_ci_v2.py    # 95% CIs via bootstrap resampling
-python experiments/exp16_significance_tests.py # pairwise Wilcoxon tests across seeds
+python experiments/exp16_significance_tests.py # benjamini-hochberg tests across seeds
 ```
 
 Results: `devign_full/bootstrap_ci_v2.json`, `devign_full/significance_tests.json`
