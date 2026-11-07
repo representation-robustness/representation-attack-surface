@@ -65,6 +65,17 @@ The cost is that packed jobs share the GPU and their pinned cores, so each runs 
 - **CPU stages are capped at 4 cores.** Joern graph building is the long one (~4.5 h). This is a shared-server
   limit, not a technical one. GPU jobs that only need text (transformers, ReGVD) start as soon as the transforms
   exist and do not wait for graphs.
+- **Graph builds run in the order of the GPU work they unblock** (`GRAPH_ORDER` in `pipeline/plan.py`). A dataset's
+  graph models need all three of its splits, so the builds are dataset-major: Big-Vul first, because it gates the
+  five Vul-LMGGNN Big-Vul runs, the longest chain (12 h each). The earlier split-major order (all test splits,
+  then all valid, then all train) left Big-Vul train for last.
+
+## Lower bound on wall-clock time
+
+After the graphs are built, the GPU-bound jobs (CodeT5+, CodeBERT, Vul-LMGGNN) need ~160 reference GPU-hours. Each
+keeps a GPU near 100%, so on G GPUs the run cannot finish in less than about 160 / G hours: ~40 h on 4 GPUs.
+The CPU-bound and small jobs (~85 GPU-hours) are packed next to them and add little wall-clock time. The only
+ways below that bound change the experiment (mixed precision, larger batches) or need more GPUs; neither was used.
 
 ## Checking efficiency
 
@@ -100,6 +111,9 @@ change.
   which had been blocking the jobs behind it.
 - Fixed half-budget caps wasted memory on ~3 GB ReGVD jobs. Caps are now set from measured peaks, with up to 4 jobs per GPU.
 - The allowlist file was added so that GPUs 0–2 could be released to another user without a restart.
+- The remaining graph builds were reordered to Big-Vul train first. This became the plan's default.
+- The driver's final "wait for the queue to empty" check counted the empty folders themselves and never ended.
+  It is fixed in `tools/full_rerun.example.sh`, which also runs the comparisons and this report at the end.
 - **Incident:** an in-place edit of `runjob.sh` while jobs ran broke the final step of three running jobs (bash
   reads scripts incrementally). Their outputs were complete, and their manifests were restored and marked
   `"recovered"`. Never edit `runjob.sh` while jobs run.

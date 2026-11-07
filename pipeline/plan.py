@@ -25,6 +25,7 @@ ALL_CONDS = "clean,identifier,deadcode,controlflow,ren_dead,ren_cf,dead_cf,compo
 SEEDS = [42, 7, 100, 999, 1337]
 FAMILIES = ["identifier", "deadcode", "controlflow"]
 # Graph conditions per split: test needs every condition; training augmentation (Devign only) needs the families.
+GRAPH_ORDER = ["bigvul", "devign", "diversevul"]
 GRAPH_CONDS = {("devign", "train"): "clean," + ",".join(FAMILIES)}
 GRAPH_MODELS = ["reveal", "reveal_struct", "devign_ggnn", "ecg_rgcn", "ecg_rgcn_struct", "angle", "angle_struct",
                 "vulgnn", "vulgnn_struct", "vulgnn_struct_cb"]
@@ -51,8 +52,10 @@ def cpu_jobs():
                      m("pipeline.transforms.build", "--dataset", ds, "--split", sp, "--workers", 4), {}))
     jobs.append(("transforms", "semantic_tests", m("pipeline.transforms.semantic_tests"), {}))
     jobs.append(("transforms", "audit_sample", m("pipeline.transforms.audit_sample"), {}))
-    for sp in SPLITS:
-        for ds in DATASETS:
+    # Dataset-major, in order of the GPU work each dataset's graphs unblock (a dataset's graph models need all three
+    # of its splits): Big-Vul first (Vul-LMGGNN Big-Vul, the longest jobs, ~62 GPU-h), then Devign, then DiverseVul.
+    for ds in GRAPH_ORDER:
+        for sp in SPLITS:
             conds = ALL_CONDS if sp == "test" else GRAPH_CONDS.get((ds, sp), "clean")
             jobs.append(("graphs", f"graphs_{ds}_{sp}",
                          m("pipeline.graphs.build", "--dataset", ds, "--split", sp, "--conditions", conds, "--jobs", 2), {}))

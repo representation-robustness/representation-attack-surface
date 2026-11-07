@@ -25,4 +25,10 @@ Q=$RERUN_ROOT/runs/queue
 while [[ -n $(find "$Q/pending" "$Q/running" -name '*.json' 2>/dev/null) ]]; do sleep 900; done
 log "queue drained: $(ls "$Q/done" | wc -l) done, $(ls "$Q/failed" | wc -l) failed"
 ./reproduce.sh results
+PY=${RERUN_PY:-$RERUN_ROOT/venvs/main/bin/python}
+if [[ -n ${REF:-} ]]; then   # reproduction check against the earlier run
+  nice -n 19 taskset -c "$RERUN_CPUS" $PY -m pipeline.report.compare --ref "$REF" --new "$RERUN_ROOT" > "$RERUN_ROOT/results/compare_artifacts.txt" 2>&1
+  nice -n 19 $PY -m pipeline.report.compare_findings --ref "$REF" --new "$RERUN_ROOT"
+fi
+nice -n 19 $PY -m pipeline.report.gpu_usage --root "$RERUN_ROOT" ${REF:+--ref "$REF"} > /dev/null
 log finished
