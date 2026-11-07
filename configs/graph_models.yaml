@@ -1,0 +1,80 @@
+# Graph detectors. `view` selects the graph representation (pipeline/models/graph_views.py).
+# Variants ending in _struct use node types only: they are the controlled
+# structure-only arms (identifier text never reaches the model). The unsuffixed
+# entries follow each paper's lexical node features.
+# Optimisation values follow Table I of the paper (batch, lr, epochs, early-stopping patience).
+
+reveal:
+  arch: reveal
+  view: {level: stmt, edges: [CFG, CDG, REACHING_DEF], features: type+w2v}
+  batch_size: 128
+  lr: 1.0e-3
+  epochs: 100
+  patience: 5
+  hidden: 200
+  source: Chakraborty et al. 2022 (GGNN on statement graphs + SMOTE/triplet representation learning)
+
+reveal_struct:
+  inherit: reveal
+  view: {level: stmt, edges: [CFG, CDG, REACHING_DEF], features: type}
+  source: identifier-exposure ablation arm 1 (REVEAL without the Word2Vec lexical channel)
+
+devign_ggnn:
+  arch: devign
+  view: {level: ast, edges: [AST, CFG, REACHING_DEF], features: type+w2v}
+  batch_size: 128
+  lr: 1.0e-4
+  epochs: 100
+  patience: 10
+  hidden: 200
+  source: Zhou et al. 2019 (gated GNN over AST/CFG/data-flow, conv readout)
+
+ecg_rgcn:
+  arch: rgcn
+  view: {level: ast, edges: [AST, CFG, CDG, REACHING_DEF], features: type+w2v}
+  batch_size: 128
+  lr: 1.0e-4
+  epochs: 150
+  patience: 20
+  hidden: 128
+  layers: 3
+  source: Pativada et al. 2025 (relational GCN over typed code-graph edges)
+
+ecg_rgcn_struct:
+  inherit: ecg_rgcn
+  view: {level: ast, edges: [AST, CFG, CDG, REACHING_DEF], features: type}
+
+angle:
+  arch: angle
+  view: {level: ast, edges: [AST, CFG, REACHING_DEF], features: type+w2v}
+  batch_size: 32
+  lr: 1.0e-4
+  epochs: 50
+  patience: 10
+  hidden: 64
+  layers: 3
+  source: Peng et al. 2024 (Word2Vec node features, SAGPool, alternating GCN/graph transformer)
+
+angle_struct:
+  inherit: angle
+  view: {level: ast, edges: [AST, CFG, REACHING_DEF], features: type}
+
+vulgnn:
+  arch: vulgnn
+  view: {level: ast, edges: [AST, CFG], features: type+w2v}
+  batch_size: 400
+  lr: 1.0e-4
+  epochs: 60
+  patience: 15
+  hidden: 128
+  layers: 6
+  source: Farmer et al. 2026 (lightweight GeneralConv GNN; lexical node features approximated by Word2Vec means)
+
+vulgnn_struct:
+  inherit: vulgnn
+  view: {level: ast, edges: [AST, CFG], features: type}
+
+vulgnn_struct_cb:
+  inherit: vulgnn_struct
+  codebert_cls: true
+  source: identifier-exposure ablation arm 2 (structure-only VulGNN + frozen function-level CodeBERT [CLS] concatenated before the classifier)

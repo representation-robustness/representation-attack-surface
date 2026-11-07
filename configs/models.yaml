@@ -1,0 +1,28 @@
+# Single source of truth for detector hyper-parameters. Table I of the paper is
+# generated from this file. `source` records where each value comes from.
+seeds: [42, 1337, 7, 100, 999]
+
+codebert:
+  source: CodeXGLUE Defect-detection fine-tuning recipe (microsoft/CodeXGLUE, Code-Code/Defect-detection)
+  pretrained: microsoft/codebert-base
+  max_len: 400
+  batch_size: 32
+  lr: 2.0e-5
+  weight_decay: 0.0
+  epochs: 5
+  warmup_ratio: 0.0
+  pooling: cls
+
+codet5plus:
+  source: CodeT5 defect-detection setup (Wang et al. 2021) applied to CodeT5+ 220M encoder
+  pretrained: Salesforce/codet5p-220m
+  max_len: 512
+  batch_size: 32
+  lr: 2.0e-5
+  weight_decay: 0.0
+  epochs: 10
+  warmup_ratio: 0.0
+  pooling: mean
+
+# Datasets whose training sampler is class-balanced (paper: "weighted sampling where applicable").
+balanced_sampler_datasets: [bigvul]

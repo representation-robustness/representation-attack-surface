@@ -1,0 +1,17 @@
+# Pinned external dependencies for the v2 rerun (recorded 2026-10-28)
+jdk: temurin jdk-21.0.12+8 (https://api.adoptium.net/v3/binary/version/jdk-21.0.12%2B8/linux/x64/jdk/hotspot/normal/eclipse)
+joern: v4.0.655 joern-cli-linux-x86_64.zip sha512 df5bd02bc312e4a157decfee6c3fa430...
+git: https://github.com/Vul-LMGNN/vul-LMGGNN.git 7006eb64ed9a96193c7c01f07e11d1f11ea3a802
+git: https://github.com/jumormt/DeepWukong.git 28449e57262dd24c0938108687e1019f0fc6ddd5
+git: https://github.com/daiquocnguyen/GNN-ReGVD.git b5e6657b003ada704b7c75e4bd237c1eee1d8138
+git: https://github.com/VulDetProject/ReVeal.git ca31b783384b4cdb09b69950e48f79fa0748ef1d
+git: https://github.com/epicosy/devign.git da611bf392d81936e6ac8973556f9eed6612dd4f
+git: https://github.com/microsoft/CodeXGLUE.git ac74a62802a0dd159b3258c78a2df8ad36cdf2b9
+data: devign function.json gdrive 1x6hoF7G-tSYxg8AFybggypLZgMGDNHfF sha256 0a3b2d561dc6280e53795886ede727d0045c016d083905ba3e9ce384a7eab246
+# Full checksums read by env/install_env.sh
+jdk_sha256: e4446ff06a276155697597cc0f1b15da004ff083f4964a35271ecee567177370
+joern_sha512: df5bd02bc312e4a157decfee6c3fa430eb40865f8ff23ffd6af7cb5520f33c6c87766f68ce1a67307009b5bfa0571616fb841346ff813feea363e0b346a13c16
+# Pretrained checkpoints (also enforced in code: pipeline/models/common.py HF_REVISIONS)
+hf: microsoft/codebert-base 3b0952feddeffad0063f274080e3c23d75e7eb39
+hf: microsoft/graphcodebert-base 2b0488a7bb0eefc7041f1bb2cad1ab26b0da269d
+hf: Salesforce/codet5p-220m 2b92f36e2782341a50551759fdba0dd15e821f99

@@ -1,0 +1,38 @@
+# Apptainer image for the v2 rerun: same steps as env/Dockerfile (both run env/install_env.sh).
+# Build rootless from the repo root (no sudo, no Docker needed):
+#   apptainer build --fakeroot --ignore-subuid repattack-v2.sif env/apptainer.def   (or: env/build_image.sh)
+# Run (repo + data bound in; GPUs only with --nv):
+#   apptainer exec --nv --bind $RERUN_ROOT:/rerun --env RERUN_ROOT=/rerun repattack-v2.sif ./reproduce.sh status
+Bootstrap: docker
+From: ubuntu@sha256:076e7bf82319619f28dd0aa9c02ab34b055ad37100395b4f49a2ffba04fb5e11
+
+%files
+    env /opt/repattack/env
+
+%post
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get update
+    apt-get install -y --no-install-recommends \
+        python3.10 python3.10-venv python3-pip gcc g++ git curl unzip ca-certificates p7zip-full procps util-linux
+    rm -rf /var/lib/apt/lists/*
+    bash /opt/repattack/env/install_env.sh /opt/repattack
+    # record what the image actually contains
+    { gcc --version | head -1; g++ --version | head -1; /opt/repattack/jdk/bin/java -version 2>&1 | head -1;
+      /opt/repattack/venv/bin/python --version; } > /opt/repattack/VERSIONS
+    /opt/repattack/venv/bin/pip freeze > /opt/repattack/pip-freeze.txt
+
+%environment
+    export RERUN_PY=/opt/repattack/venv/bin/python
+    export RERUN_JDK=/opt/repattack/jdk
+    export RERUN_JOERN=/opt/repattack/joern-v4.0.655
+    export RERUN_UPSTREAM=/opt/repattack/upstream
+    export RERUN_IMAGE=repattack-v2
+    export PATH=/opt/repattack/venv/bin:/opt/repattack/jdk/bin:$PATH
+
+%labels
+    org.opencontainers.image.title repattack-v2
+    org.opencontainers.image.description Representation Assumptions as an Attack Surface - v2 rerun environment
+
+%help
+    Software only (Python venv, JDK, Joern, pinned upstream code). Run it from your checkout of the
+    repo (the current directory is bound automatically). See docs/REPRODUCE.md.
