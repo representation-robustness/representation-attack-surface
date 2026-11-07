@@ -70,6 +70,21 @@ The cost is that packed jobs share the GPU and their pinned cores, so each runs 
   five Vul-LMGGNN Big-Vul runs, the longest chain (12 h each). The earlier split-major order (all test splits,
   then all valid, then all train) left Big-Vul train for last.
 
+## Speed-ups deliberately not applied
+
+The rerun's purpose is to check that the same experiments reproduce the same values. Speed-ups that change what a
+model computes, or that would make the rerun differ from the reference run, are therefore out of scope.
+
+| Possible speed-up | GPU-hours | Wall-clock effect | Why not applied |
+|---|---|---|---|
+| Cache ReGVD's per-sample token graphs across epochs. Upstream rebuilds them on the CPU in every forward pass. | Not measured; a large share of ReGVD's ~87 reference GPU-hours | Small: ReGVD jobs already run packed beside GPU-bound jobs and are not on the longest chain | Modifies the upstream model's forward. Results would be identical, but the finished ReGVD runs would then differ in code from the rest. A candidate for future runs. |
+| Mixed precision for Vul-LMGGNN (fp32 in the reference run) | Not measured; Vul-LMGGNN totals ~87 reference GPU-hours | Up to ~half a day: Vul-LMGGNN Big-Vul is the longest chain | Changes the numerics, so a difference from the reference could not be separated from the precision change |
+| Larger batches or fewer epochs | large | large | Changes the training protocol (Table I) |
+| Multi-GPU data parallelism within a job | none | Shorter single jobs only when GPUs are idle | No idle GPUs here: packing already keeps all allowed GPUs busy |
+| More cores for the Joern graph builds | none | ~1 h earlier start for the graph models | The other cores belong to other users on this shared server |
+
+CodeBERT and CodeT5+ already train with mixed precision (`torch.cuda.amp`), in both runs.
+
 ## Lower bound on wall-clock time
 
 After the graphs are built, the GPU-bound jobs (CodeT5+, CodeBERT, Vul-LMGGNN) need ~160 reference GPU-hours. Each
@@ -93,7 +108,7 @@ RERUN_ROOT=<root> python -m pipeline.report.gpu_usage --ref <earlier root>
 The report's inputs, per-job manifests and logs (start/end, GPU, memory cap, peak memory), are in
 `$RERUN_ROOT/runs/manifests/` and `$RERUN_ROOT/logs/`.
 
-**Snapshot, 2026-11-07 14:40, 13.6 h into the rerun** (4 GPUs available at most, 2 for most of the time):
+**Snapshot, 2026-11-07 14:40, 13.6 h into the rerun** (full report: `docs/gpu_usage_2026-11-07.md`) (4 GPUs available at most, 2 for most of the time):
 - job-hours / occupied GPU-hours = **2.02×**;
 - GPU 3 averaged 3.1 of our jobs while occupied (four ReGVD runs);
 - ReGVD Big-Vul ran at 1.24× its solo time while packed four to a GPU, so ~3.1 / 1.24 ≈ 2.5× more ReGVD work per GPU-hour;

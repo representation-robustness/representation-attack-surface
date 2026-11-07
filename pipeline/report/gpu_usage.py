@@ -9,7 +9,9 @@ Reports:
   - per GPU: hours with >= 1 of our jobs, mean / max number of our jobs while occupied (packing factor);
   - job-hours / occupied GPU-hours = effective throughput multiplier from packing;
   - speed of each finished job against the same job in --ref (ratio > 1 = slower here), by family;
-  - deferrals, out-of-memory retries, failed jobs.
+  - deferrals, out-of-memory retries, jobs stopped by a signal (requeued), failed jobs.
+Counts are per manifest, i.e. per job name: a job that was stopped or ran out of memory and then finished counts
+once, as finished; only its last attempt is in runs/manifests/.
 """
 import argparse
 import json
@@ -78,7 +80,7 @@ def main():
     root = a.root or ROOT
     js = jobs(root)
     ok = [j for j in js if j["rc"] == 0]
-    L = [f"# GPU usage: `{root}`\n"]
+    L = [f"# GPU usage: `{root.name}`\n"]
     if not js:
         print("no GPU jobs found")
         return
@@ -86,8 +88,16 @@ def main():
     jh = sum(j["end"] - j["start"] for j in js if j["rc"] in (0, None)) / 3600
     occ = occupancy([j for j in js if j["rc"] in (0, None)])
     gh = sum(v[0] for v in occ.values())
+    def oom(job):
+        p = root / "logs" / f"{job}.log"
+        return p.exists() and "out of memory" in p.read_text(errors="replace")[-20000:]
+    bad = [j for j in js if j["rc"] not in (0, None, 75)]
+    stopped = sum(1 for j in bad if j["rc"] in (143, -15, 137, -9))  # SIGTERM/SIGKILL: stopped by us, requeued
+    ooms = sum(1 for j in bad if j["rc"] not in (143, -15, 137, -9) and oom(j["job"]))
+    failed = len(bad) - stopped - ooms
     L.append(f"wall clock {span:.1f} h; finished jobs {len(ok)}, running {sum(j['running'] for j in js)}, "
-             f"failed {sum(1 for j in js if j['rc'] not in (0, None, 75))}\n")
+             f"last attempt stopped by signal (requeued) {stopped}, last attempt out of memory (requeued larger) {ooms}, "
+             f"failed {failed}\n")
     L.append(f"job-hours {jh:.1f} on {gh:.1f} occupied GPU-hours: packing multiplier {jh / max(gh, 1e-9):.2f}x\n")
     L.append("\n| GPU | occupied h | mean jobs while occupied | max jobs |\n|---|---|---|---|")
     for g in sorted(occ):
