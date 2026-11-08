@@ -13,8 +13,10 @@ Built views are cached per (dataset, split, condition, view) under $RERUN_ROOT/c
 """
 from __future__ import annotations
 
+import fcntl
 import hashlib
 import json
+import os
 import re
 from collections import Counter
 from pathlib import Path
@@ -50,8 +52,12 @@ class Vocab:
         self.dir = ROOT / "cache" / "vocab" / dataset
         self.dir.mkdir(parents=True, exist_ok=True)
         tp, wp = self.dir / "types.json", self.dir / "w2v.model"
-        if not tp.exists() or not wp.exists():
-            self._fit(dataset, tp, wp)
+        # One fit per dataset even when several jobs start together: Word2Vec with several workers is not
+        # bit-reproducible, so concurrent fits would give jobs different embeddings. Others wait on the lock.
+        with open(self.dir / ".lock", "w") as lk:
+            fcntl.flock(lk, fcntl.LOCK_EX)
+            if not tp.exists() or not wp.exists():
+                self._fit(dataset, tp, wp)
         self.types = {t: i for i, t in enumerate(json.loads(tp.read_text()))}
         from gensim.models import Word2Vec
         self.w2v = Word2Vec.load(str(wp)).wv
@@ -105,15 +111,21 @@ def to_data(g: dict, vocab: Vocab, level: str, edges: list[str], features: str) 
 def load_view(dataset: str, split: str, condition: str, view: dict) -> list[Data]:
     key = hashlib.sha1(json.dumps(view, sort_keys=True).encode()).hexdigest()[:10]
     path = ROOT / "cache" / "views" / dataset / f"{split}_{condition}_{key}.pt"
-    if path.exists():
-        return torch.load(path, weights_only=False)
-    vocab = Vocab(dataset)
-    out = [d for g in load_graphs(dataset, split, condition)
-           if (d := to_data(g, vocab, view["level"], view["edges"], view["features"])) is not None]
     path.parent.mkdir(parents=True, exist_ok=True)
-    torch.save(out, path)
-    (path.with_suffix(".json")).write_text(json.dumps(view))
-    return out
+    # Concurrent jobs (several seeds start together) share one cache file: one builds it while the others wait on the
+    # lock, and the file appears atomically (tmp + rename), so no job ever reads a partially written file.
+    with open(path.with_suffix(".lock"), "w") as lk:
+        fcntl.flock(lk, fcntl.LOCK_EX)
+        if path.exists():
+            return torch.load(path, weights_only=False)
+        vocab = Vocab(dataset)
+        out = [d for g in load_graphs(dataset, split, condition)
+               if (d := to_data(g, vocab, view["level"], view["edges"], view["features"])) is not None]
+        tmp = path.with_suffix(f".tmp{os.getpid()}")
+        torch.save(out, tmp)
+        os.replace(tmp, path)
+        (path.with_suffix(".json")).write_text(json.dumps(view))
+        return out
 
 
 def node_features(batch, n_types: int, features: str) -> torch.Tensor:

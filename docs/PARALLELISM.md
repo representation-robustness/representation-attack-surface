@@ -137,3 +137,15 @@ change.
   normal priority, the same as the other users' processes (`RERUN_NICE=0 RERUN_IONICE=2`), still pinned to 2 cores per
   slot. Jobs already running stayed at nice 19, because an unprivileged user cannot raise a process's priority. Also,
   the restarted daemon now gives each adopted job the slot whose cores it is actually pinned to.
+- **Shared caches (20:45).** Packing let several seeds of one graph model start within minutes of each other. The
+  per-dataset vocabulary/Word2Vec cache, the graph-view cache and the CodeBERT [CLS] cache were written without a
+  lock, so concurrent first jobs each built them:
+  - a job that started while another was writing a view file read it half-written and crashed (Vul-LMGGNN Big-Vul s7,
+    `EOFError`; requeued);
+  - Word2Vec with 3 workers is not bit-reproducible (a refit on Devign differs by up to 10.8, mean 0.15 per
+    component). On Devign, Vul-LMGGNN s1337 and s42 both fitted it. From the cache file times, s1337 built its train
+    view before s42 overwrote the model, and its validation/test views after, so s1337 must be rerun. s42 used one
+    model throughout. All cached view files match the model on disk.
+
+  Builds are now under a file lock (one builder, the others wait and reuse it) and written atomically (temporary
+  file + rename). `tests/test_cache_locks.py` fails on the old code and passes on the new.

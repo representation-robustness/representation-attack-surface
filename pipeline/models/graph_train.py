@@ -11,6 +11,8 @@ learning on phase-1 graph embeddings), as in Chakraborty et al.
 """
 import argparse
 import copy
+import fcntl
+import os
 import time
 
 import numpy as np
@@ -58,6 +60,9 @@ def attach_cls(dataset, sets, dev):
     tok = enc = None
     for (split, cond), data in sets.items():
         path = ROOT / "cache" / "cls" / dataset / f"{split}_{cond}.pt"
+        path.parent.mkdir(parents=True, exist_ok=True)
+        lk = open(path.with_suffix(".lock"), "w")  # concurrent jobs: one encodes, the others wait and reuse it
+        fcntl.flock(lk, fcntl.LOCK_EX)
         if path.exists():
             cache = torch.load(path)
         else:
@@ -71,8 +76,10 @@ def attach_cls(dataset, sets, dev):
                 t = tok([r["func"] for r in chunk], max_length=512, truncation=True, padding=True, return_tensors="pt")
                 h = enc(input_ids=t.input_ids.to(dev), attention_mask=t.attention_mask.to(dev)).last_hidden_state[:, 0]
                 cache.update({r["id"]: v.cpu().half() for r, v in zip(chunk, h)})
-            path.parent.mkdir(parents=True, exist_ok=True)
-            torch.save(cache, path)
+            tmp = path.with_suffix(f".tmp{os.getpid()}")
+            torch.save(cache, tmp)
+            os.replace(tmp, path)
+        lk.close()
         for d in data:
             d.cb = cache[d.sid].float().unsqueeze(0)
 
