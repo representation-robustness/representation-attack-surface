@@ -115,12 +115,17 @@ def _prev_cap(job: str) -> int | None:
 
 def need_mib(job: str) -> int | None:
     """Expected peak GPU memory of a job: the largest `peak_gpu_mem_mib` logged by finished runs of the same
-    model and dataset (any seed), else of the same model on any dataset, in this root."""
+    model and dataset (any seed); else a `<model>_<dataset>` entry of runs/mem_estimates.json; else the peak of the
+    same model on any dataset; else a `<model>` entry."""
     import re as _re
     logs = LOCK_DIR.parent.parent / "logs"
     stem = _re.sub(r"_s\d+$", "", job)
     model = _re.sub(r"_(devign|diversevul|bigvul)$", "", stem)
+    est = LOCK_DIR.parent / "mem_estimates.json"  # optional {"<model>_<dataset>" or "<model>": MiB}, e.g. from nvidia-smi
+    e = json.loads(est.read_text()) if est.exists() else {}
     for pat in (f"{stem}_s*.log", f"{model}_*_s*.log"):
+        if pat != f"{stem}_s*.log" and e.get(stem):  # a per-dataset estimate beats another dataset's measured peak
+            return e[stem]
         peaks = []
         for f in logs.glob(pat):
             if _re.sub(r"_(devign|diversevul|bigvul)_s\d+$", "", f.stem) != model:
@@ -133,11 +138,7 @@ def need_mib(job: str) -> int | None:
                 peaks += [int(x) for x in _re.findall(r"peak_gpu_mem_mib=(\d+)", tail)]
         if peaks:
             return max(peaks)
-    est = LOCK_DIR.parent / "mem_estimates.json"  # optional {"<model>_<dataset>" or "<model>": MiB}, e.g. from nvidia-smi
-    if est.exists():
-        e = json.loads(est.read_text())
-        return e.get(stem) or e.get(model)
-    return None
+    return e.get(stem) or e.get(model)
 
 
 def _cap_for(job: str, budget: int) -> int:
