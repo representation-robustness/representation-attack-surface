@@ -22,7 +22,7 @@ those constraints and how to check that the scheduling was efficient.
 | `pipeline/plan.py` | The matrix: every job, its command, and the data jobs it depends on (`gpu_jobs()`). `enqueue` adds them to the queue. With `RERUN_PRIORITY_FROM=<earlier root>` each job carries the duration it took there (`est_h`). |
 | `pipeline/common/gpu_queue.py` | Daemon. Runs up to `RERUN_MAX_GPUS × RERUN_JOBS_PER_GPU` jobs, bounded by the slot core list `RERUN_SLOT_CPUS`. Each loop it launches the ready job with the largest `est_h` (longest-first). A job whose dependencies are not done waits. A job that finds no GPU room exits 75 and backs off 10 min, and the next job is tried. A packed job that runs out of GPU memory is requeued for a larger slot. After a restart, the daemon adopts jobs that are still running. |
 | `pipeline/common/gpu_guard.py` | Placement. See below. |
-| `pipeline/common/runjob.sh` | Runs one job with `nice 19` and idle I/O, pinned to its slot's cores and thread-capped. It acquires and releases the GPU lock, applies the memory cap (`torch.cuda.set_per_process_memory_fraction`), and writes a log and a provenance manifest. |
+| `pipeline/common/runjob.sh` | Runs one job at `nice $RERUN_NICE` (default 19) and I/O class `$RERUN_IONICE` (default idle), pinned to its slot's cores and thread-capped. It acquires and releases the GPU lock, applies the memory cap (`torch.cuda.set_per_process_memory_fraction`), and writes a log and a provenance manifest. |
 | `tools/full_rerun.example.sh` | The unattended driver used for the 2026-11-07 rerun, with the settings used. |
 | `pipeline/report/gpu_usage.py` | Efficiency report from manifests and logs (below). |
 | `tests/test_gpu_guard.py` | Packing and admission rules on a mocked GPU. |
@@ -132,3 +132,8 @@ change.
 - **Incident:** an in-place edit of `runjob.sh` while jobs ran broke the final step of three running jobs (bash
   reads scripts incrementally). Their outputs were complete, and their manifests were restored and marked
   `"recovered"`. Never edit `runjob.sh` while jobs run.
+- **CPU priority (20:15).** Other users' processes kept the 32 cores fully loaded (load ≈ 55), and our nice-19 jobs got
+  CPU time last: epochs ran 1.5–2.3× slower and GPUs 3–6 dropped to 0–50% utilization. From then on, new jobs ran at
+  normal priority, the same as the other users' processes (`RERUN_NICE=0 RERUN_IONICE=2`), still pinned to 2 cores per
+  slot. Jobs already running stayed at nice 19, because an unprivileged user cannot raise a process's priority. Also,
+  the restarted daemon now gives each adopted job the slot whose cores it is actually pinned to.

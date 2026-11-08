@@ -3,7 +3,7 @@
 #
 #   pipeline/common/runjob.sh [--gpus N] JOB_NAME -- cmd args...
 #
-# - CPU: nice 19 + idle I/O class; BLAS/torch thread pools capped at $RERUN_THREADS (default 8);
+# - CPU: nice $RERUN_NICE (default 19) + I/O class $RERUN_IONICE (default 3 = idle); BLAS/torch thread pools capped at $RERUN_THREADS (default 8);
 #   optional hard cap: RERUN_CPUS="28-31" pins the job (and all its children) to those cores.
 # - GPU (--gpus N): acquire via gpu_guard (free = no other user's process); exit 75 if none
 #   so the caller can defer. The lock is released on exit.
@@ -52,7 +52,7 @@ START=$(date -Is)
 set +e
 PIN=()
 [[ -n "${RERUN_CPUS:-}" ]] && PIN=(taskset -c "$RERUN_CPUS")
-"${PIN[@]}" nice -n 19 ionice -c3 "$@" >"$LOG" 2>&1
+"${PIN[@]}" nice -n "${RERUN_NICE:-19}" ionice -c"${RERUN_IONICE:-3}" "$@" >"$LOG" 2>&1
 RC=$?
 set -e
 

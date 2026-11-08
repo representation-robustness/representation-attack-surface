@@ -81,6 +81,28 @@ def status() -> None:
         print(f"{d:8s} {len(names):3d}  {' '.join(names[:12])}{' ...' if len(names) > 12 else ''}")
 
 
+def _cpuset(spec: str) -> set[int]:
+    out = set()
+    for part in spec.split(","):
+        a, _, b = part.partition("-")
+        out |= set(range(int(a), int(b or a) + 1))
+    return out
+
+
+def _slot_of(pid: int):
+    """Slot whose core list matches the CPU affinity of a running job's processes (runjob.sh pins its child)."""
+    try:
+        kids = Path(f"/proc/{pid}/task/{pid}/children").read_text().split()
+        for k in kids:
+            aff = os.sched_getaffinity(int(k))
+            for s in range(MAX_SLOTS):
+                if aff == _cpuset(SLOT_CPUS[s]):
+                    return s
+    except (OSError, ValueError):
+        pass
+    return None
+
+
 class _Adopted:
     """A job launched by an earlier daemon: finished when its runjob pid exits; exit code from its manifest."""
 
@@ -106,7 +128,9 @@ def run() -> None:
         pid = json.loads(lk.read_text())["pid"] if lk.exists() else None
         if pid and Path(f"/proc/{pid}").exists():  # daemon restarted while this job runs: adopt it, don't rerun it
             used = {sl for _, sl in procs.values()}
-            procs[stale.stem] = (_Adopted(pid, stale.stem), next(s for s in range(MAX_SLOTS) if s not in used))
+            mine = _slot_of(pid)  # the slot whose cores the job is actually pinned to
+            slot = mine if mine is not None and mine not in used else next(s for s in range(MAX_SLOTS) if s not in used)
+            procs[stale.stem] = (_Adopted(pid, stale.stem), slot)
             print(f"{time.strftime('%F %T')} adopted running {stale.stem} (pid {pid})", flush=True)
         else:  # its process is gone: retry it
             stale.rename(Q / "pending" / stale.name)
