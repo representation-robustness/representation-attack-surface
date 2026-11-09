@@ -68,6 +68,17 @@ class TestPacking(unittest.TestCase):
                 self.assertEqual(g.acquire(1, "b", os.getpid())[0], [4])  # GPU 4 free: spread, don't pack onto 6
                 self.assertEqual(g.acquire(1, "c", os.getpid())[0], [6])  # both held (MAX_OURS = 2): pack
 
+    def test_spread_to_idle_shared_gpu_before_packing(self):
+        snap = {4: {"bus": "b4", "used": 4766, "total": 49140, "util": 0, "has_procs": True},
+                6: {"bus": "b6", "used": 4766, "total": 49140, "util": 0, "has_procs": True}}
+        self.others[4] = 4766
+        idle = lambda excl: {g: 38230 for g in (4, 6) if g not in excl}  # noqa: E731
+        with mock.patch.object(g, "MAX_OURS", 2), mock.patch.object(g, "gpu_snapshot", lambda: snap), \
+                mock.patch.object(g, "idle_shared_gpus", idle):
+            first = g.acquire(1, "a", os.getpid())[0]
+            self.assertEqual(g.acquire(1, "b", os.getpid())[0], [({4, 6} - set(first)).pop()])  # spread, don't pack
+            self.assertIn(g.acquire(1, "c", os.getpid())[0][0], (4, 6))  # both held (MAX_OURS = 2): pack
+
     def test_exclusive(self):
         self.assertEqual(g.acquire(1, "a", os.getpid(), exclusive=True), ([6], 38230))
         self.assertIsNone(g.acquire(1, "b", os.getpid()))

@@ -42,8 +42,8 @@ those constraints and how to check that the scheduling was efficient.
 3. **Packing.** Up to `RERUN_JOBS_PER_GPU` of our jobs share a GPU we hold.
    - **Cap per job:** 1.25 × the job's measured peak memory + 1 GiB. The peak is the largest `peak_gpu_mem_mib` logged by earlier runs of the same model, and `runs/mem_estimates.json` covers models not yet measured. An unmeasured job gets half the budget.
    - **Admission:** a job is admitted only while the caps on that GPU fit in the budget, so our total never exceeds the budget.
-   - **Spread first:** while we hold fewer than `RERUN_MAX_GPUS` GPUs and an allowed GPU is completely free, a job
-     takes that GPU instead of packing next to ours.
+   - **Spread first:** while we hold fewer than `RERUN_MAX_GPUS` GPUs, a job takes an allowed GPU that is
+     completely free, or else an idle-shared one (same rules as above), instead of packing next to ours.
    - **Best fit:** otherwise, large holes are kept for large jobs.
    - **No growth by others:** nothing more is added once the other users' memory on that GPU has grown.
 4. **Out of memory.** A job that ran out of memory under a packed cap is retried with ≥ 1.4 × its old cap: in a packed slot if one fits, otherwise alone on a GPU.
@@ -153,5 +153,6 @@ change.
   file + rename). `tests/test_cache_locks.py` fails on the old code and passes on the new.
 - **Spread before packing (2026-11-09 12:20).** The guard packed a job onto a GPU we already held before taking a new
   free one. With GPU-bound jobs this left an allowed GPU idle while three CodeBERT runs shared the other three. Free
-  allowed GPUs are now taken first. Per-job memory estimates for models whose only measured peak is on another
+  allowed GPUs are now taken first. At 13:45 the same applied to an idle-shared GPU (another user's idle processes,
+  4.7 GB): it too is now preferred over packing. Per-job memory estimates for models whose only measured peak is on another
   dataset are in `runs/mem_estimates.json`.

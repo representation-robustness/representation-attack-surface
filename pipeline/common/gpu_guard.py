@@ -210,10 +210,12 @@ def acquire(n: int, job: str, owner_pid: int, exclusive: bool = False) -> tuple[
         budget, others = None, 0
         # Spread before packing: while we hold fewer than MAX_OURS GPUs and an allowed GPU is completely free, take it
         # rather than squeezing a job next to ours (packing GPU-bound jobs slows each of them).
-        spread = None
+        spread, shared_pre = None, None
         if packing and len(ours) < MAX_OURS:
             spread = [g for g in free_gpus() if g not in ours and (ALLOWED is None or g in ALLOWED)]
-        if packing and not spread and (got := _pack(locks, job, min_cap)):
+            if not spread and SHARE_IDLE:  # no free GPU: an idle-shared one (same rules as below) also beats packing
+                shared_pre = idle_shared_gpus(ours | ({g for g in gpu_snapshot()} - ALLOWED if ALLOWED is not None else set()))
+        if packing and not spread and not shared_pre and (got := _pack(locks, job, min_cap)):
             pick, cap = [got[0]], got[1]
             budget = next(d["budget_mib"] for d in locks.values() if d["gpus"] == pick and d.get("budget_mib"))
             others = max(d.get("others_mib", 0) for d in locks.values() if d["gpus"] == pick)
@@ -232,7 +234,7 @@ def acquire(n: int, job: str, owner_pid: int, exclusive: bool = False) -> tuple[
                     cap = max(_cap_for(job, budget), min_cap)
                     exclusive = exclusive or cap > budget
                     cap = budget if exclusive else cap
-            elif n == 1 and SHARE_IDLE and (shared := idle_shared_gpus(excl)):
+            elif n == 1 and SHARE_IDLE and (shared := shared_pre if shared_pre is not None else idle_shared_gpus(excl)):
                 g = max(shared, key=shared.get)  # most free memory
                 pick, budget, others = [g], shared[g], others_mib()[g]
                 if budget < min_cap:
