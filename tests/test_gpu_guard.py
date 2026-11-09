@@ -58,6 +58,16 @@ class TestPacking(unittest.TestCase):
                 self.assertEqual(g.acquire(1, j, os.getpid()), ([6], int(3196 * 1.25) + 1024))
             self.assertIsNone(g.acquire(1, "r3", os.getpid()))  # a third would exceed the budget (MAX_OURS = 1 GPU)
 
+    def test_spread_to_free_gpu_before_packing(self):
+        snap = {4: {"bus": "b4", "used": 4, "total": 49140, "util": 0, "has_procs": False},
+                6: {"bus": "b6", "used": 4766, "total": 49140, "util": 0, "has_procs": True}}
+        self.others[4] = 0
+        with mock.patch.object(g, "MAX_OURS", 2), mock.patch.object(g, "gpu_snapshot", lambda: snap):
+            self.assertEqual(g.acquire(1, "a", os.getpid())[0], [6])      # GPU 4 not free yet: idle-shared GPU 6
+            with mock.patch.object(g, "free_gpus", lambda: [4]):
+                self.assertEqual(g.acquire(1, "b", os.getpid())[0], [4])  # GPU 4 free: spread, don't pack onto 6
+                self.assertEqual(g.acquire(1, "c", os.getpid())[0], [6])  # both held (MAX_OURS = 2): pack
+
     def test_exclusive(self):
         self.assertEqual(g.acquire(1, "a", os.getpid(), exclusive=True), ([6], 38230))
         self.assertIsNone(g.acquire(1, "b", os.getpid()))

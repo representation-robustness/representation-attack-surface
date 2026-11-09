@@ -208,14 +208,19 @@ def acquire(n: int, job: str, owner_pid: int, exclusive: bool = False) -> tuple[
             min_cap, exclusive = int(prev * 1.4), False
         packing = JOBS_PER_GPU > 1 and n == 1 and not exclusive
         budget, others = None, 0
-        if packing and (got := _pack(locks, job, min_cap)):
+        # Spread before packing: while we hold fewer than MAX_OURS GPUs and an allowed GPU is completely free, take it
+        # rather than squeezing a job next to ours (packing GPU-bound jobs slows each of them).
+        spread = None
+        if packing and len(ours) < MAX_OURS:
+            spread = [g for g in free_gpus() if g not in ours and (ALLOWED is None or g in ALLOWED)]
+        if packing and not spread and (got := _pack(locks, job, min_cap)):
             pick, cap = [got[0]], got[1]
             budget = next(d["budget_mib"] for d in locks.values() if d["gpus"] == pick and d.get("budget_mib"))
             others = max(d.get("others_mib", 0) for d in locks.values() if d["gpus"] == pick)
         else:
             if len(ours) + n > MAX_OURS:
                 return None
-            cand = [g for g in free_gpus() if g not in ours and (ALLOWED is None or g in ALLOWED)]
+            cand = spread if spread is not None else [g for g in free_gpus() if g not in ours and (ALLOWED is None or g in ALLOWED)]
             excl = ours | ({g for g in gpu_snapshot()} - ALLOWED if ALLOWED is not None else set())
             cap = None
             if len(cand) >= n:
