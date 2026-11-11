@@ -25,4 +25,4 @@ codet5plus:
   pooling: mean
 
 # Datasets whose training sampler is class-balanced (paper: "weighted sampling where applicable").
-balanced_sampler_datasets: [bigvul]
+balanced_sampler_datasets: [bigvul, primevul]

@@ -13,6 +13,7 @@ class TestPacking(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.p = [mock.patch.object(g, "LOCK_DIR", Path(self.tmp.name) / "gpu_locks"), mock.patch.object(g, "JOBS_PER_GPU", 2),
                   mock.patch.object(g, "MAX_OURS", 1), mock.patch.object(g, "ALLOWED", None),
+                  mock.patch.object(g, "SHARE_IDLE", True),  # test only the mocked sharing scenario
                   mock.patch.object(g, "free_gpus", lambda: []),
                   mock.patch.object(g, "gpu_snapshot", lambda: {6: {"bus": "b6", "used": 4766, "total": 49140, "util": 0, "has_procs": True}}),
                   mock.patch.object(g, "idle_shared_gpus", lambda excl: {6: 38230} if 6 not in excl else {})]

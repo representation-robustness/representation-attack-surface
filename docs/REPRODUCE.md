@@ -146,4 +146,5 @@ runs/manifests/<job>.json        command, exit code, git commit, pip-freeze hash
 ## 8. Not covered by `reproduce.sh` yet
 
 - **DeepWukong** runs on the host only, via `./reproduce.sh deepwukong` (see README). The authors' `Data.7z` has to be downloaded by hand. The stage takes ~3.5 h on 4 cores and ~4 GPU-hours.
-- **PrimeVul** will be added after the main results.
+- **PrimeVul** uses the original default release; see the README extension instructions.
+  Use an isolated `RERUN_ROOT` and `RERUN_DATASETS=primevul`. Pilot artifacts must use a separate root.

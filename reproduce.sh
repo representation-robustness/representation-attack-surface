@@ -119,12 +119,14 @@ deepwukong() {
 
 # Every neural model, 1 epoch on a tiny Devign subset, on CPU; nothing is saved.
 smoke() {
+  local dataset=${RERUN_DATASETS:-devign}
+  [[ $dataset != *,* ]] || { echo "smoke: select one RERUN_DATASETS dataset"; return 2; }
   local run="nice -n 19 taskset -c $RERUN_CPUS $PY -m"
-  for m in codebert codet5plus; do echo "-- $m"; $run pipeline.models.transformer --model $m --dataset devign --seed 42 --smoke; done
-  echo "-- regvd"; $run pipeline.models.regvd --dataset devign --seed 42 --smoke
-  echo "-- lmggnn"; $run pipeline.models.lmggnn --dataset devign --seed 42 --smoke
+  for m in codebert codet5plus; do echo "-- $m"; $run pipeline.models.transformer --model $m --dataset "$dataset" --seed 42 --smoke; done
+  echo "-- regvd"; $run pipeline.models.regvd --dataset "$dataset" --seed 42 --smoke
+  echo "-- lmggnn"; $run pipeline.models.lmggnn --dataset "$dataset" --seed 42 --smoke
   for m in reveal reveal_struct devign_ggnn ecg_rgcn angle vulgnn vulgnn_struct_cb; do
-    echo "-- $m"; $run pipeline.models.graph_train --model $m --dataset devign --seed 42 --smoke
+    echo "-- $m"; $run pipeline.models.graph_train --model $m --dataset "$dataset" --seed 42 --smoke
   done
   echo "smoke: all models OK"
 }

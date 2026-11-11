@@ -15,13 +15,14 @@ import random
 from pipeline.models.common import ROOT, load_text
 
 FAMILIES = ["identifier", "deadcode", "controlflow"]
-DATASETS = ["devign", "diversevul", "bigvul"]
+DATASETS = ["devign", "diversevul", "bigvul", "primevul"]
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--per-cell", type=int, default=10)
     ap.add_argument("--seed", type=int, default=2026)
+    ap.add_argument("--datasets", nargs="+", choices=DATASETS, default=DATASETS)
     args = ap.parse_args()
     rng = random.Random(args.seed)
     out = ROOT / "results" / "audit"
@@ -30,7 +31,9 @@ def main():
              f"Seed {args.seed}; {args.per_cell} validly transformed test functions per dataset x family.",
              "Mark each item: [x] semantics preserved, or [ ] and write the problem under it.", ""]
     index = []
-    for ds in DATASETS:
+    for ds in args.datasets:
+        if not (ROOT / "data" / ds / "clean/test.jsonl").exists():
+            continue
         clean = {r["id"]: r["func"] for r in load_text(ds, "test")}
         for fam in FAMILIES:
             valid = [json.loads(l)["id"] for l in open(ROOT / "data" / ds / "validity" / "test" / f"{fam}.jsonl")

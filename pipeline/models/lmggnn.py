@@ -114,7 +114,7 @@ def main():
     opt = torch.optim.AdamW(model.parameters(), lr=LR, weight_decay=WD)
     ytr = np.array([int(d.y) for d in sets[("train", "clean")]])
     sampler = None
-    if args.dataset == "bigvul":
+    if args.dataset in ("bigvul", "primevul"):
         w = np.where(ytr == 1, 0.5 / ytr.sum(), 0.5 / (len(ytr) - ytr.sum()))
         sampler = WeightedRandomSampler(w, len(w), True, generator=torch.Generator().manual_seed(args.seed))
     yva = np.array([int(d.y) for d in sets[("valid", "clean")]])

@@ -120,7 +120,7 @@ def need_mib(job: str) -> int | None:
     import re as _re
     logs = LOCK_DIR.parent.parent / "logs"
     stem = _re.sub(r"_s\d+$", "", job)
-    model = _re.sub(r"_(devign|diversevul|bigvul)$", "", stem)
+    model = _re.sub(r"_(devign|diversevul|bigvul|primevul)$", "", stem)
     est = LOCK_DIR.parent / "mem_estimates.json"  # optional {"<model>_<dataset>" or "<model>": MiB}, e.g. from nvidia-smi
     e = json.loads(est.read_text()) if est.exists() else {}
     for pat in (f"{stem}_s*.log", f"{model}_*_s*.log"):
@@ -128,7 +128,7 @@ def need_mib(job: str) -> int | None:
             return e[stem]
         peaks = []
         for f in logs.glob(pat):
-            if _re.sub(r"_(devign|diversevul|bigvul)_s\d+$", "", f.stem) != model:
+            if _re.sub(r"_(devign|diversevul|bigvul|primevul)_s\d+$", "", f.stem) != model:
                 continue
             try:
                 tail = f.read_text(errors="replace")[-20000:]

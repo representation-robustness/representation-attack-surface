@@ -46,7 +46,7 @@ def main():
     lines = [f"# Rerun vs reference\n\nreference: `{a.ref}`  \nrerun: `{a.new}`\n"]
     summary = []
     allrows = []
-    for ds in ("devign", "diversevul", "bigvul"):
+    for ds in ("devign", "diversevul", "bigvul", "primevul"):
         r, n = stats(a.ref, ds), stats(a.new, ds)
         keys = sorted(r.keys() & n.keys())
         if not keys:
@@ -83,7 +83,7 @@ def main():
     for name, key, cols in [("table_ablation_{}.csv", ("base", "variant"), ["delta_ren", "diff_vs_base"]),
                             ("table_minbudget_{}.csv", ("model",), ["asr1", "asr3", "mean_budget"]),
                             ("table_mitigation_devign.csv", ("variant",), ["clean_f1", "max_abs_delta"])]:
-        for ds in (["devign"] if "{}" not in name else ["devign", "diversevul", "bigvul"]):
+        for ds in (["devign"] if "{}" not in name else ["devign", "diversevul", "bigvul", "primevul"]):
             fn = name.format(ds)
             R = {tuple(x[k] for k in key): x for x in read_csv(a.ref, fn)}
             N = {tuple(x[k] for k in key): x for x in read_csv(a.new, fn)}

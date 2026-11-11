@@ -82,7 +82,7 @@ def main():
 
     tr = encode(tok, train)
     gen = torch.Generator().manual_seed(args.seed)
-    if args.dataset in ("bigvul",):
+    if args.dataset in ("bigvul", "primevul"):
         y = np.array([r["target"] for r in train])
         w = np.where(y == 1, 0.5 / y.sum(), 0.5 / (len(y) - y.sum()))
         loader = DataLoader(tr, batch_size=BATCH, sampler=WeightedRandomSampler(w, len(w), True, generator=gen))

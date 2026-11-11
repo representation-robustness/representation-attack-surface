@@ -303,7 +303,7 @@ def cf_sensitivity_table(ds):
         cells = []
         for c in conds:
             r = by[(m, c)]
-            sigr = {"significant": (r.get("q", 1) < 0.05) if r["p"] is not None else (r["lo"] > 0 or r["hi"] < 0)}
+            sigr = {"significant": (r.get("q", 1) < 0.05) if r["p"] is not None else (r["lo"] is not None and r["hi"] is not None and (r["lo"] > 0 or r["hi"] < 0))}
             cells += [sig(f"{r['main_delta']:+.2f}", st.get((m, c))), sig(f"{r['delta']:+.2f}", sigr)]
             csv.append(f"{ds},{m},{c},{r['n']},{r['delta']:.4f},{r.get('q', '')},{r['main_delta']}")
         tex.append(f"{NAMES.get(m, m)} & " + " & ".join(cells) + r" \\")
@@ -334,8 +334,14 @@ def edit_cost_table():
     tex = [r"\begin{tabular}{llrrrrrr}", r"\toprule",
            r"Dataset & Condition & Tokens & Ids & Sites & $\Delta$nodes\,\% & $\Delta$edges\,\% & $\Delta$CFG \\", r"\midrule"]
     for ds, nice in DATASETS.items():
+        if not (ROOT / "data" / ds / "graphs/test/clean.jsonl.gz").exists():
+            continue
         base = sizes(ds, "clean")
         for k, c in enumerate(CONDITIONS):
+            if not all(p.exists() for p in (
+                    ROOT / "data" / ds / "graphs/test" / f"{c}.jsonl.gz",
+                    ROOT / "data" / ds / "validity/test" / f"{c}.jsonl")):
+                continue
             v = validity(ds, c)
             ok = {i: cost for i, (valid, cost) in v.items() if valid}
             g = sizes(ds, c)
@@ -385,21 +391,24 @@ def pattern_density():
     from pipeline.models.common import load_text
     rx = {k: re.compile(v) for k, v in PATTERNS.items()}
     res = {}
-    for ds in DATASETS:
+    datasets = {ds: name for ds, name in DATASETS.items()
+                if (ROOT / "data" / ds / "clean/train.jsonl").exists()}
+    for ds in datasets:
         rows = load_text(ds, "train")
-        key = next(k for k in ("func", "code", "source") if k in rows[0])
+        key = next((k for k in ("func", "code", "source") if rows and k in rows[0]), "func")
         for cls in (1, 0):
             fs = [STRIP.sub(" ", r[key]) for r in rows if r["target"] == cls]
-            res[(ds, cls)] = {k: 1000 * sum(len(r.findall(f)) for f in fs) / len(fs) for k, r in rx.items()} | {"n": len(fs)}
-    tex = [r"\begin{tabular}{l" + "rr" * len(DATASETS) + "}", r"\toprule",
-           "Pattern & " + " & ".join(rf"\multicolumn{{2}}{{c}}{{{n}}}" for n in DATASETS.values()) + r" \\",
-           " & " + " & ".join(["Vul & Non-vul"] * len(DATASETS)) + r" \\", r"\midrule"]
-    csv = ["pattern," + ",".join(f"{ds}_vul,{ds}_nonvul" for ds in DATASETS)]
+            res[(ds, cls)] = {k: 1000 * sum(len(r.findall(f)) for f in fs) / len(fs) if fs else float("nan")
+                              for k, r in rx.items()} | {"n": len(fs)}
+    tex = [r"\begin{tabular}{l" + "rr" * len(datasets) + "}", r"\toprule",
+           "Pattern & " + " & ".join(rf"\multicolumn{{2}}{{c}}{{{n}}}" for n in datasets.values()) + r" \\",
+           " & " + " & ".join(["Vul & Non-vul"] * len(datasets)) + r" \\", r"\midrule"]
+    csv = ["pattern," + ",".join(f"{ds}_vul,{ds}_nonvul" for ds in datasets)]
     for k in PATTERNS:
-        vals = [res[(ds, c)][k] for ds in DATASETS for c in (1, 0)]
+        vals = [res[(ds, c)][k] for ds in datasets for c in (1, 0)]
         tex.append(f"\\texttt{{{k}}} & " + " & ".join(f"{v:,.0f}" for v in vals) + r" \\")
         csv.append(k + "," + ",".join(f"{v:.2f}" for v in vals))
-    csv.append("n_functions," + ",".join(str(res[(ds, c)]["n"]) for ds in DATASETS for c in (1, 0)))
+    csv.append("n_functions," + ",".join(str(res[(ds, c)]["n"]) for ds in datasets for c in (1, 0)))
     tex += [r"\bottomrule", r"\end{tabular}"]
     write("table_pattern_density", tex, csv)
 

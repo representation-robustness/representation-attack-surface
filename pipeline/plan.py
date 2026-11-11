@@ -19,13 +19,13 @@ import sys
 from pipeline.models.common import REPO, ROOT
 
 PY = os.environ.get("RERUN_PY", sys.executable)
-DATASETS = ["devign", "diversevul", "bigvul"]
+DATASETS = ["devign", "diversevul", "bigvul", "primevul"]
 SPLITS = ["test", "valid", "train"]
 ALL_CONDS = "clean,identifier,deadcode,controlflow,ren_dead,ren_cf,dead_cf,compound"
 SEEDS = [42, 7, 100, 999, 1337]
 FAMILIES = ["identifier", "deadcode", "controlflow"]
 # Graph conditions per split: test needs every condition; training augmentation (Devign only) needs the families.
-GRAPH_ORDER = ["bigvul", "devign", "diversevul"]
+GRAPH_ORDER = ["bigvul", "devign", "diversevul", "primevul"]
 GRAPH_CONDS = {("devign", "train"): "clean," + ",".join(FAMILIES)}
 GRAPH_MODELS = ["reveal", "reveal_struct", "devign_ggnn", "ecg_rgcn", "ecg_rgcn_struct", "angle", "angle_struct",
                 "vulgnn", "vulgnn_struct", "vulgnn_struct_cb"]
@@ -46,6 +46,7 @@ def cpu_jobs():
     """(stage, name, cmd, env) in run order."""
     jobs = [("fetch", "fetch_devign", m("pipeline.plan", "fetch-devign"), {})]
     jobs.append(("data", "prepare_clean", m("pipeline.data.prepare"), {}))
+    jobs.append(("data", "prepare_primevul", m("pipeline.data.prepare", "--datasets", "primevul"), {}))
     # Transformed test sets for every dataset; Devign train/valid too (training-data controls).
     for ds, sp in [(ds, "test") for ds in DATASETS] + [("devign", "train"), ("devign", "valid")]:
         jobs.append(("transforms", f"transform_{ds}_{sp}",
@@ -63,13 +64,31 @@ def cpu_jobs():
         jobs.append(("cpu_models", f"tfidf_{ds}", m("pipeline.models.tfidf_lr", "--dataset", ds), {}))
         jobs.append(("cpu_models", f"cpglr_{ds}", m("pipeline.models.cpg_lr", "--dataset", ds), {}))
     jobs.append(("results", "refresh", m("pipeline.report.refresh"), {}))
+    selected_ds = os.environ.get("RERUN_DATASETS")
+    if selected_ds:
+        chosen = selected_ds.split(",")
+        unknown = set(chosen) - set(DATASETS)
+        if unknown:
+            raise ValueError(f"Unknown datasets: {sorted(unknown)}")
+        filtered = []
+        for stage, name, cmd, env in jobs:
+            if name == "prepare_clean":
+                legacy = [d for d in ("devign", "bigvul", "diversevul") if d in chosen]
+                if legacy:
+                    filtered.append((stage, name, cmd + ["--datasets", *legacy], env))
+            elif name == "audit_sample":
+                filtered.append((stage, name, cmd + ["--datasets", *chosen], env))
+            elif name in ("semantic_tests", "refresh") or any(
+                    name.endswith("_" + d) or "_" + d + "_" in name for d in chosen):
+                filtered.append((stage, name, cmd, env))
+        return filtered
     return jobs
 
 
 def gpu_jobs():
     """(name, cmd, requires) for every neural run."""
     out = []
-    text = lambda ds: ["prepare_clean", f"transform_{ds}_test"]  # noqa: E731
+    text = lambda ds: ["prepare_primevul" if ds == "primevul" else "prepare_clean", f"transform_{ds}_test"]  # noqa: E731
     graphs = lambda ds: text(ds) + [f"graphs_{ds}_{sp}" for sp in SPLITS]  # noqa: E731
     for seed in SEEDS:
         for ds in DATASETS:

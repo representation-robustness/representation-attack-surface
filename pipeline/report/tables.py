@@ -15,7 +15,7 @@ import yaml
 from pipeline.models.common import CONDITIONS, REPO, ROOT
 
 OUT = ROOT / "results" / "tables"
-DATASETS = {"devign": "Devign", "diversevul": "DiverseVul", "bigvul": "Big-Vul"}
+DATASETS = {"devign": "Devign", "diversevul": "DiverseVul", "bigvul": "Big-Vul", "primevul": "PrimeVul"}
 COND_HDR = ["$\\Delta$Ren", "$\\Delta$Dead", "$\\Delta$CF", "$\\Delta$R+D", "$\\Delta$R+CF", "$\\Delta$D+CF", "$\\Delta$Cmp"]
 COND_SHORT = ["Ren", "Dead", "CF", "R+D", "R+CF", "D+CF", "Cmp"]
 # Main rows are each detector as its paper specifies its inputs; the "-S" rows are the same architectures
@@ -38,8 +38,13 @@ def validity_table():
              "Dataset & Condition & $n$ & Func.\\% & Changed\\% & Valid\\% & Valid$\\mid$Chg.\\% \\\\", "\\midrule"]
     csv = ["dataset,condition,n,func_found,changed,valid,valid_given_changed"]
     for ds, nice in DATASETS.items():
-        s = json.loads((ROOT / "data" / ds / "validity" / "test" / "summary.json").read_text())["conditions"]
+        path = ROOT / "data" / ds / "validity" / "test" / "summary.json"
+        if not path.exists():
+            continue
+        s = json.loads(path.read_text())["conditions"]
         for i, (c, short) in enumerate(zip(CONDITIONS, COND_SHORT)):
+            if c not in s:
+                continue
             v = s[c]
             vals = [100 * v["rate_func_found"], 100 * v["rate_changed"], 100 * v["rate_valid"],
                     100 * v["rate_valid_given_changed"]]

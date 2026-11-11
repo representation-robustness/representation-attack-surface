@@ -7,6 +7,7 @@
 Writes $RERUN_ROOT/data/<dataset>/clean/{train,valid,test}.jsonl with records
 {"id", "func", "target"} and a manifest with input/output sha256 and counts.
 """
+import argparse
 import hashlib
 import json
 import os
@@ -64,7 +65,35 @@ def released(dataset: str, subdir: str):
     write(dataset, splits, [d / f"{s}.jsonl" for s in SPLITS])
 
 
+def primevul():
+    """Authors' original default splits; preserve release order and labels."""
+    d = ROOT / "data/primevul/raw"
+    splits = {}
+    for split in SPLITS:
+        recs = []
+        with open(d / f"primevul_{split}.jsonl") as f:
+            for i, line in enumerate(f):
+                r = json.loads(line)
+                if not isinstance(r["func"], str) or r["target"] not in (0, 1):
+                    raise ValueError(f"Invalid PrimeVul record: {split}:{i}")
+                recs.append({"id": f"primevul_{split}_{i:06d}", "func": r["func"], "target": int(r["target"])})
+        splits[split] = recs
+    write("primevul", splits, [d / f"primevul_{s}.jsonl" for s in SPLITS])
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--datasets", nargs="+", choices=["devign", "bigvul", "diversevul", "primevul"],
+                    default=["devign", "bigvul", "diversevul"])
+    args = ap.parse_args()
+    for ds in args.datasets:
+        if ds == "devign":
+            devign()
+        elif ds == "primevul":
+            primevul()
+        else:
+            released(ds, "diversevul_dataset" if ds == "diversevul" else ds)
+
+
 if __name__ == "__main__":
-    devign()
-    released("bigvul", "bigvul")
-    released("diversevul", "diversevul_dataset")
+    main()

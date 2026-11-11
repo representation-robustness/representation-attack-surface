@@ -122,9 +122,17 @@ It needs the authors' preprocessed CWE-119 archive: download `Data.7z` from the 
 It writes `results/tables/table_deepwukong{,_pipeline}.{tex,csv}`. The same run also evaluates the submitted
 version's transforms (`legacy/`) through the identical pipeline, rows `v1_*`, so the two can be compared directly.
 
-## Not included
+## PrimeVul extension
 
-- **PrimeVul.**
+PrimeVul uses the authors' original default (unpaired) train/valid/test release. Place
+`primevul_{train,valid,test}.jsonl` under `$RERUN_ROOT/data/primevul/raw/`.
+Use a separate `RERUN_ROOT` and set `RERUN_DATASETS=primevul` for CPU and GPU stages;
+`data` prepares only PrimeVul. `RERUN_SEEDS=42` selects the preliminary neural seed.
+`RERUN_DATASETS=primevul ./reproduce.sh smoke` checks PrimeVul on CPU.
+The standalone loader also accepts `python -m pipeline.data.prepare --datasets primevul`.
+PrimeVul uses the same class-balanced training sampler as Big-Vul.
+The full original splits are retained; no training subsampling is enabled.
+
 
 ## License
 
