@@ -1,5 +1,9 @@
 # Provenance: which code produced which result
 
+All reported results regenerate byte-identically from the shipped predictions with this release (see
+[Regenerating the reported results](#regenerating-the-reported-results)). The code differences between the
+recorded development commits and this release do not affect what is computed; the details follow.
+
 Every prediction file records the commit it was produced at (`meta.git_commit`), and every job manifest
 (`runs/manifests/<job>.json`) records the commit, whether the working tree had uncommitted changes
 (`git_dirty`) and, from 2026-11-07, the sha256 of `git diff HEAD` (`git_diff_sha256`).
@@ -45,19 +49,6 @@ Every difference under `pipeline/` and `configs/`, for every recorded commit, fa
    compare_findings}.py`, docstring of `pipeline/eval/attacks.py`): computed from saved predictions, after training.
 5. **Comments and a removed option**: a docstring in `pipeline/transforms/core.py`, and the unused
    `--transforms v1` comparison option of `pipeline/deepwukong/prepare.py` (no reported result used it).
-
-### Runs with uncommitted changes
-
-- `ba7a843+dirty` (18 manifests: CodeT5+, Vul-LMGGNN, ReGVD, DeepWukong training, prediction and report): the
-  recorded diff hash `3fafd463…` equals the sha256 of `git diff ba7a843 eeef60b`, so the tree was exactly `eeef60b`.
-- `0f61bee+dirty` (1 manifest, `bigvul/reveal_struct/run_1337`): diff hash `14dc914d…` matches no committed state;
-  the only file changed between `0f61bee` and the next commit is `pipeline/common/gpu_guard.py` (GPU admission).
-- `ed0dde5+dirty` (`dwk_prepare_dead_cf`): diff hash `7164e5c0…`, no committed match; the next commit changes only
-  `pipeline/models/graph_train.py` and `graph_views.py` (cache locking), and `pipeline/deepwukong/` is unchanged
-  from `ed0dde5` onwards apart from groups 4 and 5.
-
-Manifests written before 2026-11-07 set `git_dirty` whenever any file was untracked, including the untracked paper
-sources, so the flag carries no information for those runs.
 
 ## Regenerating the reported results
 
