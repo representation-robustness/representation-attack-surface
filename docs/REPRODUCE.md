@@ -79,7 +79,7 @@ SIF=$RERUN_ROOT/images/repattack-v2.sif
 | `smoke` | every neural model, 1 epoch on a tiny Devign subset, CPU | ~10 min |
 | `predictions` | instead of `gpu_models`: downloads the reported per-sample predictions (342 MB, checksum-verified) | minutes |
 | `gpu_models` | queues 325 neural runs (5 seeds; 60 of them PrimeVul) and starts the GPU queue. Inside a container the queue runs in the foreground (use tmux) and keeps polling until you stop it | ~285 GPU-hours for the 265 non-PrimeVul runs (reference run); PrimeVul not measured |
-| `results` | metrics → statistics → attacks/transfer → tables | ~6 min |
+| `results` | metrics → statistics → attacks/transfer → tables | ~20 min |
 
 `python -m pipeline.plan list` prints every job with its exact command and whether it is done.
 The plan module (`pipeline/plan.py`) is the single definition of the experiment matrix.

@@ -15,6 +15,25 @@ Every reported result is in this repository under `results/` as generated tables
 [docs/PAPER_MAP.md](docs/PAPER_MAP.md) maps each table, figure and in-text number to its file, e.g.
 `results/tables/table_robustness_devign.tex` (Table 2) or `results/tables/paper_numbers.md` (in-text numbers).
 
+## Regenerate every table from the data bundle (no GPU, no CPU-heavy stages)
+
+The data bundle (Zenodo: [10.5281/zenodo.24335530](https://doi.org/10.5281/zenodo.24335530), `rerun_bundle.zip`, 5.2 GB, sha256 `7238e15786214c9268298c60630f5ec2c533f80413a1acf577c761f4d3d6c1b8`)
+contains the clean splits, transformed functions, validity records and Joern graphs of all four datasets, the
+per-sample predictions of every run (DeepWukong included), the DeepWukong report inputs, and the per-job manifests
+and logs. Its folder is a ready `RERUN_ROOT`:
+
+```bash
+unzip rerun_bundle.zip -d /path/to/ && export RERUN_ROOT=/path/to/rerun_bundle
+(cd $RERUN_ROOT && sha256sum -c --quiet SHA256SUMS)
+env/build_image.sh && SIF=$RERUN_ROOT/images/repattack-v2.sif     # or a host venv (docs/REPRODUCE.md §5)
+./reproduce.sh --sif $SIF results                                 # ~20 min
+diff -r results/tables $RERUN_ROOT/results/tables                 # from the repository root
+```
+
+`results` regenerates every metrics, stats, attack and table file, including the DeepWukong per-function stats and
+`paper_numbers`. `python -m pipeline.deepwukong.report` (with `PYTHONPATH=.`) regenerates the DeepWukong tables.
+Only the whitespace probe needs trained checkpoints, which the bundle does not include.
+
 ## Quick start (full reproduction)
 
 All inputs come with the repository or are downloaded and checksum-verified: Big-Vul, DiverseVul and PrimeVul
@@ -75,7 +94,7 @@ CodeBERT/CodeT5+ checkpoints on a GPU).
 | `smoke` | every neural model, 1 epoch on a tiny Devign subset, CPU; checks the environment before GPU time is spent | ~10 min |
 | `predictions` | instead of `gpu_models`: download the reported predictions (342 MB, checksum-verified) | minutes |
 | `gpu_models` | queues every neural run (5 seeds) and starts the GPU queue (foreground inside a container) | see Requirements |
-| `results` | metrics → paired t-tests + Benjamini–Hochberg → attacks and transfer → every paper table and figure | ~6 min |
+| `results` | metrics → paired t-tests + Benjamini–Hochberg → attacks and transfer → every paper table and figure | ~20 min |
 | `verify [REF]` | reruns a deterministic slice and compares it id by id with `REF`, the `RERUN_ROOT` of an earlier complete run of yours (e.g. on another machine) | ~20 min |
 
 Stages are resumable: finished jobs (exit code 0 in `runs/manifests/`) are skipped.

@@ -1,7 +1,7 @@
 # Where each paper result comes from
 
 Every table, figure and in-text number is generated from saved per-sample predictions. None is copied by hand.
-`./reproduce.sh results` regenerates all of them (≈6 min on 4 cores); `./reproduce.sh deepwukong` builds the
+`./reproduce.sh results` regenerates all of them (≈20 min); `./reproduce.sh deepwukong` builds the
 case study. Paths are relative to `$RERUN_ROOT`.
 
 | Paper element | Generated file | Code | Inputs |
