@@ -15,7 +15,7 @@ is in [`DEVIATIONS.md`](DEVIATIONS.md). Run `./reproduce.sh test` first (< 1 min
 | Container | [Apptainer](https://apptainer.org) ≥ 1.3 (no root needed, see below), **or** Docker, **or** neither (host venv, §5) |
 | GPU | any NVIDIA GPU with ≥ 24 GB, driver ≥ 530 (CUDA 12.1 wheels). 2 GPUs by default (`RERUN_MAX_GPUS`) |
 | Disk | Full run: ~150 GB under `RERUN_ROOT` for Devign, DiverseVul and Big-Vul (data and graphs ~4 GB, feature caches ~105 GB, checkpoints ~25 GB), more with PrimeVul; no-GPU route (`predictions` instead of `gpu_models`) ~10 GB. Image: 4.7 GB |
-| Inputs | Big-Vul, DiverseVul and PrimeVul are in `datasets/` and unpacked by the `fetch` stage. Devign is downloaded automatically. All are checksum-verified |
+| Inputs | Big-Vul, DiverseVul and PrimeVul are in `datasets/` and unpacked by the `fetch` stage. Devign is downloaded automatically. All are checksum-verified. Every derived input (clean splits, transformed functions, validity records, graphs, predictions) is also in the data bundle on Zenodo, [10.5281/zenodo.24335530](https://doi.org/10.5281/zenodo.24335530); see the README |
 | Network | GitHub, PyPI, download.pytorch.org, data.pyg.org, Hugging Face, Google Drive (first run only) |
 
 ## 2. Get the image
@@ -23,7 +23,8 @@ is in [`DEVIATIONS.md`](DEVIATIONS.md). Run `./reproduce.sh test` first (< 1 min
 **Build it** (rootless; about 30 minutes):
 
 ```bash
-git clone <this repo> && cd representation-attack-surface
+# download the repository from the anonymous mirror linked from the paper, unpack it, then:
+cd representation-attack-surface
 export RERUN_ROOT=/path/with/space/rerun          # all data, logs and results go here
 env/build_image.sh                                # -> $RERUN_ROOT/images/repattack-v2.sif
 ```

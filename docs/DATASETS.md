@@ -21,5 +21,8 @@ Every input is pinned by sha256; `pipeline/data/prepare.py` records input and ou
 | PrimeVul | Ding et al. 2025 (ICSE), authors' original default (unpaired) release | Shipped in `datasets/primevul/` (xz); unpacked to `$RERUN_ROOT/data/primevul/raw/` and checksum-verified by `fetch` | MIT (upstream repository) |
 | SARD CWE-119 | DeepWukong authors' preprocessed archive | Manual download of `Data.7z` (see README), sha256 checked | As released by the DeepWukong authors (not redistributed) |
 
+The data bundle on Zenodo, [10.5281/zenodo.24335530](https://doi.org/10.5281/zenodo.24335530) (`rerun_bundle.zip`, see the README), contains the clean splits of all
+four datasets, built from these inputs, together with the transformed functions, validity records, graphs and predictions.
+
 PrimeVul is used as released: every row, the official split, no subsampling. Its training sampler is the
 class-balanced sampler also used for Big-Vul; validation and test keep their natural prevalence.

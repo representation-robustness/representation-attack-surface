@@ -40,7 +40,8 @@ All inputs come with the repository or are downloaded and checksum-verified: Big
 are in `datasets/` (xz, 87 MB), Devign and the upstream detector code are fetched at pinned versions.
 
 ```bash
-git clone <repo-url> && cd representation-attack-surface   # or unpack the anonymized archive
+# download the repository from the anonymous mirror linked from the paper, unpack it, then:
+cd representation-attack-surface
 export RERUN_ROOT=/path/with/space/rerun          # all data, logs and results go here (default: ../rerun)
 env/build_image.sh                                 # rootless Apptainer image, ~30 min -> $RERUN_ROOT/images/
 SIF=$RERUN_ROOT/images/repattack-v2.sif
