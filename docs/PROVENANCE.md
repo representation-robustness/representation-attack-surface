@@ -4,8 +4,8 @@ Every prediction file records the commit it was produced at (`meta.git_commit`),
 (`runs/manifests/<job>.json`) records the commit, whether the working tree had uncommitted changes
 (`git_dirty`) and, from 2026-11-07, the sha256 of `git diff HEAD` (`git_diff_sha256`).
 
-The runs were made in the development repository. This repository is published as a single anonymized release
-commit, so the recorded hashes are development hashes that do not appear in its history. This file states, for
+The runs were made in the development repository. This repository is published as an anonymized release (one
+release commit plus later documentation updates), so the recorded hashes are development hashes that do not appear in its history. This file states, for
 each recorded commit, how its `pipeline/` and `configs/` differ from the release (checked with
 `git diff <commit> -- pipeline configs` in the development repository), and how the released results were checked.
 
@@ -63,10 +63,11 @@ sources, so the flag carries no information for those runs.
 
 From the predictions, the release regenerates the reported results byte-identically:
 
-- `./reproduce.sh results` writes every stats, metrics, attack and table file of the four datasets: 211 of 211
-  files identical to `results/`.
+- `./reproduce.sh results` writes every stats, metrics, attack and table file of the four datasets, plus the
+  DeepWukong per-function stats: 211 of 211 files identical to `results/`.
 - From the release asset (`./reproduce.sh predictions`, which has no DeepWukong predictions), the same stage gives
-  identical files except the `deepwukong_paired_f1_sd` entry of `paper_numbers.{json,md}`, which stays empty.
+  identical files except the `deepwukong_paired_f1_sd` entry of `paper_numbers.{json,md}`, which stays empty, and
+  `results/stats/deepwukong_function_level.json`, which is not written (both need the DeepWukong predictions).
 - `python -m pipeline.deepwukong.report` regenerates the DeepWukong tables and `results/stats/deepwukong.json`.
 
 Not covered by this check: the whitespace probe (re-scores checkpoints on a GPU), and the audit sample, which the

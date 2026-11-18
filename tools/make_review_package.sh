@@ -3,7 +3,8 @@
 #
 #   tools/make_review_package.sh OUT_DIR
 #
-# OUT_DIR/repo/       `git archive HEAD` of this repository, without docs/RERUN_JOURNAL.md (internal log)
+# OUT_DIR/README.md   how to use the package
+# OUT_DIR/repo/       `git archive HEAD` of this repository
 # OUT_DIR/results/    results/{tables,figures,stats,metrics,attacks,audit,preds} from $RERUN_ROOT
 # OUT_DIR/runs/       per-job manifests;  OUT_DIR/logs/  per-job logs
 # Absolute paths, the host name and user names are replaced by placeholders in the copies. The package is
@@ -16,8 +17,21 @@ RERUN_ROOT=${RERUN_ROOT:-$(cd "$REPO/.." && pwd)/rerun}
 IDENTIFYING=${IDENTIFYING:-}
 [[ -e $OUT ]] && { echo "$OUT exists; choose a new directory"; exit 1; }
 mkdir -p "$OUT/repo"
+cat > "$OUT/README.md" <<'EOR'
+# Review package
+
+- `repo/`: the artifact repository (start with `repo/README.md` and `repo/docs/PAPER_MAP.md`).
+- `results/`: the reported results, including `results/preds/`, the per-sample predictions of every run
+  (Devign, DiverseVul, Big-Vul, PrimeVul and DeepWukong).
+- `runs/manifests/`, `logs/`: per-job provenance and logs (paths and host names replaced by placeholders).
+
+To regenerate the tables without GPUs, follow "Rebuild every table without GPUs" in `repo/README.md`, but instead of
+the `predictions` stage copy the predictions into place: `mkdir -p $RERUN_ROOT/results && cp -r results/preds
+$RERUN_ROOT/results/`. With the DeepWukong predictions present, the `results` stage also needs the DeepWukong data
+(`./reproduce.sh deepwukong`); without it, remove `$RERUN_ROOT/results/preds/deepwukong` first.
+EOR
 git -C "$REPO" archive HEAD | tar -x -C "$OUT/repo"
-rm -f "$OUT/repo/docs/RERUN_JOURNAL.md"
+rm -f "$OUT/repo/docs/RERUN_JOURNAL.md"   # only present in a development checkout
 mkdir -p "$OUT/results"
 for d in tables figures stats metrics attacks audit preds; do
   if [[ -d $RERUN_ROOT/results/$d ]]; then cp -r "$RERUN_ROOT/results/$d" "$OUT/results/"; fi

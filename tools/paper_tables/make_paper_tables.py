@@ -1,4 +1,6 @@
-"""Drop-in LaTeX for paper Tables III-X from the RERUN_ROOT results (read-only on results; writes OUT only).
+"""Drop-in LaTeX for the paper's robustness, ablation, minimum-budget, transfer, mitigation and DeepWukong tables
+(paper Tables 2-4, 7, 8, 10, 11, 13; output file names keep an earlier numbering) from the RERUN_ROOT results
+(read-only on results; writes OUT only). Needs the DeepWukong predictions for the last table.
 Run: RERUN_ROOT=<rerun root> PYTHONPATH=<repo> <venv python> make_paper_tables.py OUT_DIR"""
 import os
 import csv, glob, gzip, json, sys

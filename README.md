@@ -10,7 +10,8 @@ predictions. [docs/PAPER_MAP.md](docs/PAPER_MAP.md) maps each one to the file an
 
 ## Check the reported numbers (no setup)
 
-Every reported result is in this repository under `results/`, exactly as the paper uses it.
+Every reported result is in this repository under `results/` as generated tables, statistics and JSON
+(the paper's LaTeX layout of the tables and the combined heatmap figure are made from them by `tools/paper_tables/`).
 [docs/PAPER_MAP.md](docs/PAPER_MAP.md) maps each table, figure and in-text number to its file, e.g.
 `results/tables/table_robustness_devign.tex` (Table 2) or `results/tables/paper_numbers.md` (in-text numbers).
 
@@ -37,18 +38,19 @@ Without `--sif`, the same commands use a host install (see [docs/REPRODUCE.md](d
 ## Rebuild every table without GPUs
 
 The `predictions` stage downloads the per-sample predictions behind the reported results (342 MB release asset,
-checksum-verified) instead of training. From them, `results` regenerates every metrics, stats and attack file of
-the four datasets and the robustness, ablation, attack, transfer, mitigation, flip, interval, precision/recall, validity and edit-cost
-tables byte-identically. It needs ~10 GB of disk; the CPU stages take ~5–6 h on 4 cores for Devign, DiverseVul and
+checksum-verified) instead of training. From them, `results` regenerates byte-identically every metrics, stats and
+attack file of the four datasets (including the statistics behind the interval and precision/recall tables, Tables
+17–18) and the robustness, ablation, attack, transfer, mitigation, flip, validity and edit-cost tables. It needs
+network access (Devign download, the release asset), the image from Quick start, and ~10 GB of disk; the CPU stages take ~5–6 h on 4 cores for Devign, DiverseVul and
 Big-Vul (measured), plus several hours for PrimeVul's graphs (not measured on the reference machine):
 
 ```bash
 for s in check fetch data transforms graphs predictions results; do ./reproduce.sh --sif $SIF $s; done
-diff -r results/tables $RERUN_ROOT/results/tables     # compare with the shipped snapshot
+diff -r results/tables $RERUN_ROOT/results/tables     # run from the repository root: compare with the snapshot
 ```
 
-Expected differences: `paper_numbers.{json,md}` leave `deepwukong_paired_f1_sd` empty, and the DeepWukong and
-whitespace-probe tables are only in `results/tables`. Both come from stages this route does not run: DeepWukong
+Expected differences: `paper_numbers.{json,md}` leave `deepwukong_paired_f1_sd` empty, the DeepWukong and
+whitespace-probe tables are only in `results/tables`, and `results/stats/deepwukong*.json` are not produced. Both come from stages this route does not run: DeepWukong
 (own data and stage, below) and the whitespace probe (`pipeline/eval/whitespace_probe.py`, which re-scores trained
 CodeBERT/CodeT5+ checkpoints on a GPU).
 
@@ -133,7 +135,7 @@ are a release asset (`./reproduce.sh predictions`).
 ```
 reproduce.sh        single entry point
 pipeline/           data, transforms, graphs, models, evaluation, report
-configs/            model hyperparameters (Table I is generated from these)
+configs/            model hyperparameters (Table 1 is generated from these)
 env/                Apptainer / Docker recipes, lock files, installer
 tests/              unit tests (python -m unittest)
 datasets/           Big-Vul, DiverseVul and PrimeVul inputs (xz) with SHA256SUMS

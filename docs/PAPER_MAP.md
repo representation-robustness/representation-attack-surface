@@ -12,6 +12,8 @@ case study. Paths are relative to `$RERUN_ROOT`.
 | Table 15 edit cost | `results/tables/table_edit_cost.{tex,csv}` | `analyses.py:edit_cost_table` | validity + graphs |
 | Robustness tables (Devign, DiverseVul, Big-Vul, PrimeVul) | `results/tables/table_robustness_<ds>.tex`; paper layout by `tools/paper_tables/make_paper_tables.py`, `make_table_primevul.py` | `tables.py:robustness_table` | `results/stats/<ds>_valid.json` |
 | Same, all samples (unchanged or invalid included) | `results/stats/<ds>_all.{json,csv}` | `pipeline/eval/stats.py` | `results/metrics/` |
+| Confusion counts per run (tp, fp, fn, tn) and per-run metrics for every condition | `results/metrics/<ds>/<model>.json` (`per_run[*].valid` / `.all`) | `pipeline/eval/metrics.py` | `results/preds/` |
+| Share of original test functions that already produce compiler errors without their project headers (98.4–99.0%, §2 and Appendix A) | `orig_compile_errors` in `$RERUN_ROOT/data/<ds>/validity/test/<condition>.jsonl` (written by the `transforms` stage; Devign 99.0, DiverseVul 98.5, Big-Vul 98.4, PrimeVul 98.4) | `pipeline/transforms/validate.py` | clean splits |
 | Δ precision / recall / PR-AUC / ROC-AUC, calibration (ECE, Brier), 95% CI, raw and BH p | `results/stats/<ds>_valid.csv` | `pipeline/eval/stats.py`, `metrics.py` | `results/preds/` |
 | ΔF1 heatmaps (four-dataset figure) | `results/figures/fig_heatmap_<ds>.pdf`; combined figure `results/figures/fig_heatmaps_all4_small.pdf` (`tools/paper_tables/make_fig_heatmaps4.py`) | `pipeline/report/analyses.py:heatmaps` | stats |
 | DeepWukong ROC figure | `results/figures/roc_deepwukong_obfuscation.pdf` | `tools/paper_tables/make_fig_deepwukong.py` | `results/preds/deepwukong/` |
@@ -22,7 +24,7 @@ case study. Paths are relative to `$RERUN_ROOT`.
 | Control-flow conditions without fallback-only rewrites (sensitivity) | `results/tables/table_cf_sensitivity_<ds>.{tex,csv}` | `analyses.py:cf_sensitivity_table` | preds + validity |
 | Identifier-exposure ablation | `results/tables/table_ablation_<ds>.{tex,csv}` | `analyses.py:ablation_table` | metrics + stats |
 | Minimum-budget analysis (oracle) and fixed-policy rates (Table 8; ASR@1, ASR@2, mean k for Devign: Table 9) | `results/tables/table_minbudget_<ds>.{tex,csv}` (`fixed_<c>` = operational rate over X_f; `_coverage`, `_conditional` also given), `results/attacks/<ds>/minbudget_<model>.json` | `pipeline/eval/attacks.py`, `analyses.py:minbudget_table` | preds + validity |
-| Transfer (TASR) | `results/tables/table_transfer_<ds>.{tex,csv}`, `results/attacks/<ds>/transfer.json` | `attacks.py:transfer`, `analyses.py:transfer_table` | preds + validity |
+| Transfer (TASR; Table 10 is the 7×7 neural-detector subset of the Devign csv, `tasr_mean` at two decimals) | `results/tables/table_transfer_<ds>.{tex,csv}`, `results/attacks/<ds>/transfer.json` | `attacks.py:transfer`, `analyses.py:transfer_table` | preds + validity |
 | Robustness training, volume control, held-out family | `results/tables/table_mitigation_devign.{tex,csv}` | `analyses.py:mitigation_table` | stats |
 | DeepWukong detection deltas | `results/tables/table_deepwukong.{tex,csv}` | `pipeline/deepwukong/report.py` | `results/preds/deepwukong/` |
 | DeepWukong pipeline instrumentation (seed loss, slice change, pollution, topology) | `results/tables/table_deepwukong_pipeline.{tex,csv}` | `pipeline/deepwukong/report.py` | `data/deepwukong/work/<cond>/index.jsonl` |

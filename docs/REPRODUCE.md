@@ -1,4 +1,4 @@
-# Reproducing the v2 results
+# Reproducing the results
 
 Everything in the paper's tables is produced by one script, `./reproduce.sh`, from pinned software and
 checksummed inputs. Numbers are never copied by hand: every table cell is computed from saved per-sample
@@ -71,15 +71,15 @@ SIF=$RERUN_ROOT/images/repattack-v2.sif
 
 | Stage | What it does | Wall-clock in the reference run (4 cores) |
 |---|---|---|
-| `fetch` | Devign `function.json` from Google Drive, sha256-checked | < 1 min |
+| `fetch` | Devign `function.json` from Google Drive; unpacks Big-Vul, DiverseVul and PrimeVul from `datasets/`; all sha256-checked | < 5 min |
 | `data` | canonical clean splits with stable ids (Devign = CodeXGLUE split) | < 1 min |
-| `transforms` | v3 transforms for 7 conditions + gcc/g++ validity gate + 84 executable semantic tests + 90-diff audit sheet | ~15 min |
+| `transforms` | transformations for 7 conditions + gcc/g++ validity gate + 84 executable semantic tests + 90-diff audit sheet | ~15 min |
 | `graphs` | Joern CPGs for every split/condition (largest method per file) | ~5 h for three datasets; PrimeVul adds several hours |
 | `cpu_models` | TF-IDF+LR and CPG+LR, 30 subsampled runs each | ~30 min |
 | `smoke` | every neural model, 1 epoch on a tiny Devign subset, CPU | ~10 min |
 | `predictions` | instead of `gpu_models`: downloads the reported per-sample predictions (342 MB, checksum-verified) | minutes |
 | `gpu_models` | queues 325 neural runs (5 seeds; 60 of them PrimeVul) and starts the GPU queue. Inside a container the queue runs in the foreground (use tmux) and keeps polling until you stop it | ~285 GPU-hours for the 265 non-PrimeVul runs (reference run); PrimeVul not measured |
-| `results` | metrics → statistics → attacks/transfer → tables | 5 min |
+| `results` | metrics → statistics → attacks/transfer → tables | ~6 min |
 
 `python -m pipeline.plan list` prints every job with its exact command and whether it is done.
 The plan module (`pipeline/plan.py`) is the single definition of the experiment matrix.
@@ -140,7 +140,7 @@ runs/manifests/<job>.json        command, exit code, git commit, pip-freeze hash
   - Expect per-seed F1 to differ by tenths of a point. Five-seed means and the significance decisions should agree.
   - Pretrained checkpoints are pinned to exact Hugging Face commits (`pipeline/models/common.py`, `HF_REVISIONS`).
 
-## 8. Not covered by `reproduce.sh` yet
+## 8. Notes on specific parts
 
 - **DeepWukong** runs on the host only, via `./reproduce.sh deepwukong` (see README). The authors' `Data.7z` has to be downloaded by hand. The stage takes ~3.5 h on 4 cores and ~4 GPU-hours.
 - **PrimeVul** runs with the other datasets (inputs in `datasets/primevul/`). `RERUN_DATASETS=primevul` runs it alone.
