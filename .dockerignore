@@ -1,0 +1,3 @@
+# Images need only env/; never send data, results or paper/ to a build context
+*
+!env/

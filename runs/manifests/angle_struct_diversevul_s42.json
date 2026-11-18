@@ -1,0 +1,27 @@
+{
+  "job": "angle_struct_diversevul_s42",
+  "cmd": [
+    "$RERUN_ROOT/venvs/main/bin/python",
+    "-m",
+    "pipeline.models.graph_train",
+    "--model",
+    "angle_struct",
+    "--dataset",
+    "diversevul",
+    "--seed",
+    "42"
+  ],
+  "start": "2026-11-09T12:42:00-06:00",
+  "end": "2026-11-09T12:53:07-06:00",
+  "exit_code": 0,
+  "gpus": "3",
+  "gpu_mem_cap_mib": "3309",
+  "threads": 2,
+  "host": "HOST",
+  "git_commit": "0f61beeaedd1955bce6d2284435c1126273f6b8a",
+  "git_dirty": false,
+  "git_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "env_freeze_sha256": "a43367e711b8fdeb7ee81a99bb10ac490b7010a50a87da6168f559a552fdf14b",
+  "log": "$RERUN_ROOT/logs/angle_struct_diversevul_s42.log",
+  "container": ""
+}

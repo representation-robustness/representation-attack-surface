@@ -1,0 +1,27 @@
+{
+  "job": "reveal_struct_bigvul_s1337",
+  "cmd": [
+    "$RERUN_ROOT/venvs/main/bin/python",
+    "-m",
+    "pipeline.models.graph_train",
+    "--model",
+    "reveal_struct",
+    "--dataset",
+    "bigvul",
+    "--seed",
+    "1337"
+  ],
+  "start": "2026-11-09T13:26:29-06:00",
+  "end": "2026-11-09T13:44:20-06:00",
+  "exit_code": 0,
+  "gpus": "4",
+  "gpu_mem_cap_mib": "17849",
+  "threads": 2,
+  "host": "HOST",
+  "git_commit": "0f61beeaedd1955bce6d2284435c1126273f6b8a",
+  "git_dirty": true,
+  "git_diff_sha256": "14dc914d403310e411a8b2b668e6a24c5e9a363ccb942c7e5db3798a2fc32a32",
+  "env_freeze_sha256": "a43367e711b8fdeb7ee81a99bb10ac490b7010a50a87da6168f559a552fdf14b",
+  "log": "$RERUN_ROOT/logs/reveal_struct_bigvul_s1337.log",
+  "container": ""
+}

@@ -1,0 +1,27 @@
+{
+  "job": "regvd_ho_deadcode_controlflow_devign_s1337",
+  "cmd": [
+    "$RERUN_ROOT/venvs/main/bin/python",
+    "-m",
+    "pipeline.models.regvd",
+    "--dataset",
+    "devign",
+    "--seed",
+    "1337",
+    "--train-conditions",
+    "deadcode,controlflow"
+  ],
+  "start": "2026-11-08T21:11:53-06:00",
+  "end": "2026-11-08T23:16:27-06:00",
+  "exit_code": 0,
+  "gpus": "5",
+  "gpu_mem_cap_mib": "4601",
+  "threads": 2,
+  "host": "HOST",
+  "git_commit": "eeef60b9369c93be1dce5752152648ddba1502df",
+  "git_dirty": false,
+  "git_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "env_freeze_sha256": "a43367e711b8fdeb7ee81a99bb10ac490b7010a50a87da6168f559a552fdf14b",
+  "log": "$RERUN_ROOT/logs/regvd_ho_deadcode_controlflow_devign_s1337.log",
+  "container": ""
+}

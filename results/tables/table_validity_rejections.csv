@@ -1,0 +1,29 @@
+dataset,condition,n_test,unchanged,new_parse_errors,new_compile_errors,top_compile_error_kinds
+devign,identifier,2732,105,0,2,expected <Q>  <Q>  <Q>  <Q> or <Q> before <Q>:1;unknown type name <Q>:1;undeclared err:1
+devign,deadcode,2732,234,1,0,
+devign,controlflow,2732,103,0,2,expected <Q>  <Q>  <Q>  <Q> or <Q> before <Q> token:2;expected declaration specifiers or <Q> before <Q> token:2;undeclared NULL:2
+devign,ren_dead,2732,73,1,2,expected <Q>  <Q>  <Q>  <Q> or <Q> before <Q>:1;unknown type name <Q>:1;undeclared err:1
+devign,ren_cf,2732,65,0,4,expected <Q>  <Q>  <Q>  <Q> or <Q> before <Q> token:2;expected declaration specifiers or <Q> before <Q> token:2;undeclared NULL:2
+devign,dead_cf,2732,103,1,2,expected <Q>  <Q>  <Q>  <Q> or <Q> before <Q> token:2;expected declaration specifiers or <Q> before <Q> token:2;undeclared NULL:2
+devign,compound,2732,65,1,4,expected <Q>  <Q>  <Q>  <Q> or <Q> before <Q> token:2;expected declaration specifiers or <Q> before <Q> token:2;undeclared NULL:2
+diversevul,identifier,3661,203,0,7,invalid use of incomplete type <Q>:3;use of enum <Q> without previous declaration:1;expected <Q> before <Q> token:1
+diversevul,deadcode,3661,416,9,6,expected unqualified-id before <Q> token:2;expected <Q> before <Q>:2;<Q> without a previous <Q>:2
+diversevul,controlflow,3661,115,2,3,expected <Q> before <Q> token:3;base operand of <Q> is not a pointer:1;expected <Q> before <Q>:1
+diversevul,ren_dead,3661,140,8,10,expected unqualified-id before <Q> token:3;invalid use of incomplete type <Q>:3;expected declaration before <Q> token:2
+diversevul,ren_cf,3661,70,1,9,expected <Q> before <Q> token:3;invalid use of incomplete type <Q>:3;base operand of <Q> is not a pointer:1
+diversevul,dead_cf,3661,115,11,8,expected <Q> before <Q> token:3;expected unqualified-id before <Q> token:2;expected <Q> before <Q>:2
+diversevul,compound,3661,70,10,12,expected unqualified-id before <Q> token:3;expected <Q> before <Q> token:3;invalid use of incomplete type <Q>:3
+bigvul,identifier,18861,2533,0,23,<Q> has not been declared:10;invalid use of incomplete type <Q>:5;request for member <Q> in <Q>  which is of non-class type <Q>:2
+bigvul,deadcode,18861,3932,15,16,expected <Q> before <Q> token:4;<Q> without a previous <Q>:3;expected <Q>  <Q>  <Q>  <Q> or <Q> before <Q> token:3
+bigvul,controlflow,18861,639,1,14,expected <Q> before <Q> token:6;undeclared child_id:1;label <Q> used but not defined:1
+bigvul,ren_dead,18861,1634,13,35,<Q> has not been declared:10;invalid use of incomplete type <Q>:5;expected <Q> before <Q> token:4
+bigvul,ren_cf,18861,349,1,36,<Q> has not been declared:10;expected <Q> before <Q> token:6;invalid use of incomplete type <Q>:5
+bigvul,dead_cf,18861,639,19,27,expected <Q> before <Q> token:12;<Q> without a previous <Q>:3;expected primary-expression before <Q> token:3
+bigvul,compound,18861,349,17,46,expected <Q> before <Q> token:12;<Q> has not been declared:10;invalid use of incomplete type <Q>:5
+primevul,identifier,25911,2273,0,21,undeclared if:5;<Q> without a previous <Q>:4;request for member <Q> in <Q>  which is of non-class type <Q>:2
+primevul,deadcode,25911,4421,17,22,expected <Q> before <Q> token:10;<Q> without a previous <Q>:6;expected primary-expression before <Q> token:4
+primevul,controlflow,25911,1117,6,17,expected <Q> before <Q> token:7;expected identifier or <Q> before <Q> token:3;expected <Q>  <Q>  <Q>  <Q> or <Q> before <Q> token:3
+primevul,ren_dead,25911,1484,15,39,expected <Q> before <Q> token:10;<Q> without a previous <Q>:7;undeclared if:5
+primevul,ren_cf,25911,729,6,36,expected <Q> before <Q> token:7;undeclared if:5;<Q> without a previous <Q>:4
+primevul,dead_cf,25911,1117,20,35,expected <Q> before <Q> token:19;expected primary-expression before <Q> token:7;<Q> without a previous <Q>:5
+primevul,compound,25911,729,18,50,expected <Q> before <Q> token:18;expected primary-expression before <Q> token:6;<Q> without a previous <Q>:6

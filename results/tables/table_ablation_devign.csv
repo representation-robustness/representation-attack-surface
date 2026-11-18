@@ -1,0 +1,11 @@
+dataset,base,variant,n_runs,clean_f1,clean_sd,ren_f1,ren_sd,delta_ren,delta_ren_sd,p_bh,diff_vs_base,diff_p_welch
+devign,reveal,reveal,5,63.4750,0.3323,61.1579,1.0200,-2.3171,1.1347,0.02401,,
+devign,reveal,reveal_struct,5,62.0244,0.2843,62.0289,0.2798,0.0044,0.0158,0.8477,2.3215,0.01022
+devign,ecg_rgcn,ecg_rgcn,5,63.0975,0.4502,61.3686,0.6840,-1.7289,0.5984,0.008869,,
+devign,ecg_rgcn,ecg_rgcn_struct,5,62.4215,0.4460,62.4224,0.4691,0.0009,0.0311,0.9835,1.7298,0.002911
+devign,angle,angle,5,63.4736,0.2329,61.4350,1.3428,-2.0386,1.1966,0.03948,,
+devign,angle,angle_struct,5,61.8645,0.1030,61.8642,0.1184,-0.0003,0.0232,0.9835,2.0384,0.01894
+devign,vulgnn,vulgnn,5,62.8518,0.7289,61.4241,0.6364,-1.4276,0.8497,0.03948,,
+devign,vulgnn,vulgnn_struct,5,61.7533,0.2196,61.7458,0.2176,-0.0075,0.0168,0.7698,1.4201,0.02015
+devign,vulgnn_struct,vulgnn_struct,5,61.7533,0.2196,61.7458,0.2176,-0.0075,0.0168,0.7698,,
+devign,vulgnn_struct,vulgnn_struct_cb,5,61.8917,0.1207,61.3364,0.6620,-0.5552,0.6279,0.3791,-0.5477,0.1229

@@ -1,0 +1,20 @@
+\begin{tabular}{llrrrrr}
+\toprule
+Architecture & Variant & Clean F1 & Ren F1 & $\Delta$Ren & $q_{BH}$ & Diff. vs.\ base ($p$) \\
+\midrule
+REVEAL & full & 63.48\,$\pm$\,0.33 & 61.16\,$\pm$\,1.02 & $\mathbf{-2.32}$ & 0.024 &  \\
+ & node types only & 62.02\,$\pm$\,0.28 & 62.03\,$\pm$\,0.28 & $+0.00$ & 0.848 & $+2.32$ (0.01) \\
+\midrule
+ECG RGCN & full & 63.10\,$\pm$\,0.45 & 61.37\,$\pm$\,0.68 & $\mathbf{-1.73}$ & 0.00887 &  \\
+ & node types only & 62.42\,$\pm$\,0.45 & 62.42\,$\pm$\,0.47 & $+0.00$ & 0.984 & $+1.73$ (0.0029) \\
+\midrule
+ANGLE & full & 63.47\,$\pm$\,0.23 & 61.43\,$\pm$\,1.34 & $\mathbf{-2.04}$ & 0.0395 &  \\
+ & node types only & 61.86\,$\pm$\,0.10 & 61.86\,$\pm$\,0.12 & $-0.00$ & 0.984 & $+2.04$ (0.019) \\
+\midrule
+VulGNN & full & 62.85\,$\pm$\,0.73 & 61.42\,$\pm$\,0.64 & $\mathbf{-1.43}$ & 0.0395 &  \\
+ & node types only & 61.75\,$\pm$\,0.22 & 61.75\,$\pm$\,0.22 & $-0.01$ & 0.77 & $+1.42$ (0.02) \\
+\midrule
+VulGNN & node types only & 61.75\,$\pm$\,0.22 & 61.75\,$\pm$\,0.22 & $-0.01$ & 0.77 &  \\
+ & + CodeBERT [CLS] & 61.89\,$\pm$\,0.12 & 61.34\,$\pm$\,0.66 & $-0.56$ & 0.379 & $-0.55$ (0.12) \\
+\bottomrule
+\end{tabular}

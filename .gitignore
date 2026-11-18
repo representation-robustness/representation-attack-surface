@@ -1,0 +1,16 @@
+# Everything the pipeline produces lives under $RERUN_ROOT, outside the repo. results/ and runs/manifests/ in the
+# repo are an anonymized snapshot of the reported results (predictions: release asset, `./reproduce.sh predictions`).
+__pycache__/
+*.py[cod]
+*.log
+*.sif
+.venv*/
+.vscode/
+.claude/
+.DS_Store
+
+# Manuscript and reviews (private)
+paper/
+*.tex
+*.bib
+!results/**/*.tex

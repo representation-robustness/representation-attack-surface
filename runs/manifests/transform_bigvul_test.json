@@ -1,0 +1,27 @@
+{
+  "job": "transform_bigvul_test",
+  "cmd": [
+    "$RERUN_ROOT/venvs/main/bin/python",
+    "-m",
+    "pipeline.transforms.build",
+    "--dataset",
+    "bigvul",
+    "--split",
+    "test",
+    "--workers",
+    "4"
+  ],
+  "start": "2026-11-07T01:01:40-06:00",
+  "end": "2026-11-07T01:14:30-06:00",
+  "exit_code": 0,
+  "gpus": "",
+  "gpu_mem_cap_mib": "",
+  "threads": 4,
+  "host": "HOST",
+  "git_commit": "7d770f39e2b1cd7a5be2dc65daa2496fd050d3ad",
+  "git_dirty": false,
+  "git_diff_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "env_freeze_sha256": "a43367e711b8fdeb7ee81a99bb10ac490b7010a50a87da6168f559a552fdf14b",
+  "log": "$RERUN_ROOT/logs/transform_bigvul_test.log",
+  "container": ""
+}

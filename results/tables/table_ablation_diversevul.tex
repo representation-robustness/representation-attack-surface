@@ -1,0 +1,17 @@
+\begin{tabular}{llrrrrr}
+\toprule
+Architecture & Variant & Clean F1 & Ren F1 & $\Delta$Ren & $q_{BH}$ & Diff. vs.\ base ($p$) \\
+\midrule
+REVEAL & full & 73.26\,$\pm$\,0.66 & 65.68\,$\pm$\,2.43 & $\mathbf{-7.58}$ & 0.0119 &  \\
+ & node types only & 71.69\,$\pm$\,0.30 & 71.69\,$\pm$\,0.30 & $+0.00$ & -- & $+7.58$ (0.0034) \\
+\midrule
+ECG RGCN & full & 73.92\,$\pm$\,0.69 & 65.72\,$\pm$\,3.28 & $\mathbf{-8.21}$ & 0.0119 &  \\
+ & node types only & 72.41\,$\pm$\,0.37 & 72.42\,$\pm$\,0.40 & $+0.00$ & 0.839 & $+8.21$ (0.0034) \\
+\midrule
+ANGLE & full & 72.77\,$\pm$\,0.82 & 42.72\,$\pm$\,15.17 & $\mathbf{-30.05}$ & 0.019 &  \\
+ & node types only & 71.28\,$\pm$\,0.54 & 71.29\,$\pm$\,0.54 & $+0.01$ & 0.257 & $+30.05$ (0.011) \\
+\midrule
+VulGNN & full & 73.13\,$\pm$\,0.25 & 70.99\,$\pm$\,1.01 & $\mathbf{-2.14}$ & 0.0132 &  \\
+ & node types only & 71.18\,$\pm$\,0.28 & 71.18\,$\pm$\,0.28 & $+0.00$ & -- & $+2.14$ (0.0047) \\
+\bottomrule
+\end{tabular}

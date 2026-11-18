@@ -1,0 +1,290 @@
+{
+ "dataset": "primevul",
+ "model": "codebert",
+ "per_run": [
+  {
+   "run": 7,
+   "denominator": 173,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 55.68862275449102,
+     "evaded": 93,
+     "denominator": 167
+    },
+    "deadcode": {
+     "asr": 47.05882352941177,
+     "evaded": 80,
+     "denominator": 170
+    },
+    "controlflow": {
+     "asr": 17.058823529411764,
+     "evaded": 29,
+     "denominator": 170
+    },
+    "ren_dead": {
+     "asr": 69.41176470588235,
+     "evaded": 118,
+     "denominator": 170
+    },
+    "ren_cf": {
+     "asr": 58.23529411764706,
+     "evaded": 99,
+     "denominator": 170
+    },
+    "dead_cf": {
+     "asr": 50.588235294117645,
+     "evaded": 86,
+     "denominator": 170
+    },
+    "compound": {
+     "asr": 71.76470588235294,
+     "evaded": 122,
+     "denominator": 170
+    }
+   },
+   "asr_at_k": {
+    "1": 66.47398843930635,
+    "2": 78.03468208092485,
+    "3": 78.03468208092485
+   },
+   "mean_min_budget": 1.1481481481481481,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 14.385185185185184,
+    "occurrences_renamed": 128.93333333333334,
+    "sites": 1.9111111111111112,
+    "tokens_added": 39.46666666666667
+   }
+  },
+  {
+   "run": 42,
+   "denominator": 170,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 50.0,
+     "evaded": 82,
+     "denominator": 164
+    },
+    "deadcode": {
+     "asr": 34.131736526946106,
+     "evaded": 57,
+     "denominator": 167
+    },
+    "controlflow": {
+     "asr": 13.77245508982036,
+     "evaded": 23,
+     "denominator": 167
+    },
+    "ren_dead": {
+     "asr": 55.08982035928144,
+     "evaded": 92,
+     "denominator": 167
+    },
+    "ren_cf": {
+     "asr": 52.09580838323353,
+     "evaded": 87,
+     "denominator": 167
+    },
+    "dead_cf": {
+     "asr": 37.724550898203596,
+     "evaded": 63,
+     "denominator": 167
+    },
+    "compound": {
+     "asr": 54.49101796407186,
+     "evaded": 91,
+     "denominator": 167
+    }
+   },
+   "asr_at_k": {
+    "1": 55.294117647058826,
+    "2": 63.529411764705884,
+    "3": 64.11764705882354
+   },
+   "mean_min_budget": 1.146788990825688,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 17.477064220183486,
+    "occurrences_renamed": 194.88990825688074,
+    "sites": 1.5229357798165137,
+    "tokens_added": 28.844036697247706
+   }
+  },
+  {
+   "run": 100,
+   "denominator": 156,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 65.33333333333333,
+     "evaded": 98,
+     "denominator": 150
+    },
+    "deadcode": {
+     "asr": 37.5,
+     "evaded": 57,
+     "denominator": 152
+    },
+    "controlflow": {
+     "asr": 11.11111111111111,
+     "evaded": 17,
+     "denominator": 153
+    },
+    "ren_dead": {
+     "asr": 75.81699346405229,
+     "evaded": 116,
+     "denominator": 153
+    },
+    "ren_cf": {
+     "asr": 67.3202614379085,
+     "evaded": 103,
+     "denominator": 153
+    },
+    "dead_cf": {
+     "asr": 37.254901960784316,
+     "evaded": 57,
+     "denominator": 153
+    },
+    "compound": {
+     "asr": 81.04575163398692,
+     "evaded": 124,
+     "denominator": 153
+    }
+   },
+   "asr_at_k": {
+    "1": 71.7948717948718,
+    "2": 83.33333333333333,
+    "3": 84.61538461538461
+   },
+   "mean_min_budget": 1.1666666666666667,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 18.575757575757574,
+    "occurrences_renamed": 193.79545454545453,
+    "sites": 1.8106060606060606,
+    "tokens_added": 38.78787878787879
+   }
+  },
+  {
+   "run": 999,
+   "denominator": 139,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 57.89473684210526,
+     "evaded": 77,
+     "denominator": 133
+    },
+    "deadcode": {
+     "asr": 47.794117647058826,
+     "evaded": 65,
+     "denominator": 136
+    },
+    "controlflow": {
+     "asr": 12.5,
+     "evaded": 17,
+     "denominator": 136
+    },
+    "ren_dead": {
+     "asr": 67.6470588235294,
+     "evaded": 92,
+     "denominator": 136
+    },
+    "ren_cf": {
+     "asr": 58.8235294117647,
+     "evaded": 80,
+     "denominator": 136
+    },
+    "dead_cf": {
+     "asr": 52.94117647058823,
+     "evaded": 72,
+     "denominator": 136
+    },
+    "compound": {
+     "asr": 72.79411764705883,
+     "evaded": 99,
+     "denominator": 136
+    }
+   },
+   "asr_at_k": {
+    "1": 70.50359712230215,
+    "2": 81.29496402877697,
+    "3": 82.01438848920863
+   },
+   "mean_min_budget": 1.1491228070175439,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 14.157894736842104,
+    "occurrences_renamed": 148.50877192982455,
+    "sites": 2.0,
+    "tokens_added": 40.14035087719298
+   }
+  },
+  {
+   "run": 1337,
+   "denominator": 170,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 51.829268292682926,
+     "evaded": 85,
+     "denominator": 164
+    },
+    "deadcode": {
+     "asr": 36.96969696969697,
+     "evaded": 61,
+     "denominator": 165
+    },
+    "controlflow": {
+     "asr": 14.970059880239521,
+     "evaded": 25,
+     "denominator": 167
+    },
+    "ren_dead": {
+     "asr": 59.2814371257485,
+     "evaded": 99,
+     "denominator": 167
+    },
+    "ren_cf": {
+     "asr": 51.49700598802395,
+     "evaded": 86,
+     "denominator": 167
+    },
+    "dead_cf": {
+     "asr": 35.92814371257485,
+     "evaded": 60,
+     "denominator": 167
+    },
+    "compound": {
+     "asr": 60.47904191616767,
+     "evaded": 101,
+     "denominator": 167
+    }
+   },
+   "asr_at_k": {
+    "1": 57.05882352941177,
+    "2": 63.529411764705884,
+    "3": 64.11764705882354
+   },
+   "mean_min_budget": 1.1192660550458715,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 17.05504587155963,
+    "occurrences_renamed": 173.44036697247705,
+    "sites": 1.5137614678899083,
+    "tokens_added": 30.568807339449542
+   }
+  }
+ ],
+ "asr_at_k_mean": {
+  "1": 64.22507970659018,
+  "2": 73.94436059448938,
+  "3": 74.57994986063304
+ },
+ "asr_at_k_sd": {
+  "1": 7.630472373861149,
+  "2": 9.693518814849027,
+  "3": 9.83406786363554
+ },
+ "fixed_policy_mean": {
+  "identifier": 56.14919224452251,
+  "deadcode": 40.690874934622734,
+  "controlflow": 13.882489922116552,
+  "ren_dead": 65.4494148956988,
+  "ren_cf": 57.594379867715546,
+  "dead_cf": 42.887401667253734,
+  "compound": 68.11492700872765
+ }
+}

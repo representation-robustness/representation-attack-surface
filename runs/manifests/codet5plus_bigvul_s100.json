@@ -1,0 +1,27 @@
+{
+  "job": "codet5plus_bigvul_s100",
+  "cmd": [
+    "$RERUN_ROOT/venvs/main/bin/python",
+    "-m",
+    "pipeline.models.transformer",
+    "--model",
+    "codet5plus",
+    "--dataset",
+    "bigvul",
+    "--seed",
+    "100"
+  ],
+  "start": "2026-11-07T02:51:28-06:00",
+  "end": "2026-11-07T09:38:39-06:00",
+  "exit_code": 0,
+  "gpus": "6",
+  "gpu_mem_cap_mib": "38230",
+  "threads": 2,
+  "host": "HOST",
+  "git_commit": null,
+  "git_dirty": null,
+  "env_freeze_sha256": "a43367e711b8fdeb7ee81a99bb10ac490b7010a50a87da6168f559a552fdf14b",
+  "log": "$RERUN_ROOT/logs/codet5plus_bigvul_s100.log",
+  "container": "",
+  "recovered": "runjob.sh was edited in place while this job ran; the job itself finished (see the log's last lines: outputs saved) but runjob.sh's tail failed before writing this manifest. Manifest written by hand on 2026-11-07; start time from the queue/driver log, end time = log mtime, git_commit unknown (see the prediction file's meta)."
+}

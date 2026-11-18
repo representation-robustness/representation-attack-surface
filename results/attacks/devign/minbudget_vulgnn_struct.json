@@ -1,0 +1,270 @@
+{
+ "dataset": "devign",
+ "model": "vulgnn_struct",
+ "per_run": [
+  {
+   "run": 7,
+   "denominator": 1210,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1139
+    },
+    "deadcode": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1110
+    },
+    "controlflow": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1138
+    },
+    "ren_dead": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1155
+    },
+    "ren_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1157
+    },
+    "dead_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1137
+    },
+    "compound": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1156
+    }
+   },
+   "asr_at_k": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0
+   },
+   "mean_min_budget": null,
+   "mean_cost_of_min_sequence": {}
+  },
+  {
+   "run": 42,
+   "denominator": 1211,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1141
+    },
+    "deadcode": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1116
+    },
+    "controlflow": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1147
+    },
+    "ren_dead": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1157
+    },
+    "ren_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1159
+    },
+    "dead_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1146
+    },
+    "compound": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1158
+    }
+   },
+   "asr_at_k": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0
+   },
+   "mean_min_budget": null,
+   "mean_cost_of_min_sequence": {}
+  },
+  {
+   "run": 100,
+   "denominator": 1215,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1145
+    },
+    "deadcode": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1117
+    },
+    "controlflow": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1151
+    },
+    "ren_dead": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1161
+    },
+    "ren_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1163
+    },
+    "dead_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1150
+    },
+    "compound": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1162
+    }
+   },
+   "asr_at_k": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0
+   },
+   "mean_min_budget": null,
+   "mean_cost_of_min_sequence": {}
+  },
+  {
+   "run": 999,
+   "denominator": 1210,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 0.08787346221441125,
+     "evaded": 1,
+     "denominator": 1138
+    },
+    "deadcode": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1109
+    },
+    "controlflow": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1137
+    },
+    "ren_dead": {
+     "asr": 0.08665511265164645,
+     "evaded": 1,
+     "denominator": 1154
+    },
+    "ren_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1156
+    },
+    "dead_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1136
+    },
+    "compound": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1155
+    }
+   },
+   "asr_at_k": {
+    "1": 0.08264462809917356,
+    "2": 0.08264462809917356,
+    "3": 0.08264462809917356
+   },
+   "mean_min_budget": 1.0,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 1.0,
+    "occurrences_renamed": 2.0,
+    "sites": 0.0,
+    "tokens_added": 0.0
+   }
+  },
+  {
+   "run": 1337,
+   "denominator": 1212,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1142
+    },
+    "deadcode": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1116
+    },
+    "controlflow": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1148
+    },
+    "ren_dead": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1158
+    },
+    "ren_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1160
+    },
+    "dead_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1147
+    },
+    "compound": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1159
+    }
+   },
+   "asr_at_k": {
+    "1": 0.0,
+    "2": 0.0,
+    "3": 0.0
+   },
+   "mean_min_budget": null,
+   "mean_cost_of_min_sequence": {}
+  }
+ ],
+ "asr_at_k_mean": {
+  "1": 0.01652892561983471,
+  "2": 0.01652892561983471,
+  "3": 0.01652892561983471
+ },
+ "asr_at_k_sd": {
+  "1": 0.03695980128098826,
+  "2": 0.03695980128098826,
+  "3": 0.03695980128098826
+ },
+ "fixed_policy_mean": {
+  "identifier": 0.01757469244288225,
+  "deadcode": 0.0,
+  "controlflow": 0.0,
+  "ren_dead": 0.01733102253032929,
+  "ren_cf": 0.0,
+  "dead_cf": 0.0,
+  "compound": 0.0
+ }
+}

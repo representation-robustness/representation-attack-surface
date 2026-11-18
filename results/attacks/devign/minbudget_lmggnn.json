@@ -1,0 +1,290 @@
+{
+ "dataset": "devign",
+ "model": "lmggnn",
+ "per_run": [
+  {
+   "run": 7,
+   "denominator": 1050,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 9.877800407331975,
+     "evaded": 97,
+     "denominator": 982
+    },
+    "deadcode": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 967
+    },
+    "controlflow": {
+     "asr": 0.30456852791878175,
+     "evaded": 3,
+     "denominator": 985
+    },
+    "ren_dead": {
+     "asr": 1.2036108324974926,
+     "evaded": 12,
+     "denominator": 997
+    },
+    "ren_cf": {
+     "asr": 4.312938816449348,
+     "evaded": 43,
+     "denominator": 997
+    },
+    "dead_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 984
+    },
+    "compound": {
+     "asr": 0.40160642570281124,
+     "evaded": 4,
+     "denominator": 996
+    }
+   },
+   "asr_at_k": {
+    "1": 9.333333333333334,
+    "2": 9.80952380952381,
+    "3": 9.80952380952381
+   },
+   "mean_min_budget": 1.0485436893203883,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 6.70873786407767,
+    "occurrences_renamed": 67.14563106796116,
+    "sites": 0.1553398058252427,
+    "tokens_added": 0.5048543689320388
+   }
+  },
+  {
+   "run": 42,
+   "denominator": 1077,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 8.325074331020813,
+     "evaded": 84,
+     "denominator": 1009
+    },
+    "deadcode": {
+     "asr": 0.10111223458038422,
+     "evaded": 1,
+     "denominator": 989
+    },
+    "controlflow": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1011
+    },
+    "ren_dead": {
+     "asr": 0.8797653958944281,
+     "evaded": 9,
+     "denominator": 1023
+    },
+    "ren_cf": {
+     "asr": 3.90625,
+     "evaded": 40,
+     "denominator": 1024
+    },
+    "dead_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1010
+    },
+    "compound": {
+     "asr": 0.39100684261974583,
+     "evaded": 4,
+     "denominator": 1023
+    }
+   },
+   "asr_at_k": {
+    "1": 7.7994428969359335,
+    "2": 8.170844939647168,
+    "3": 8.170844939647168
+   },
+   "mean_min_budget": 1.0454545454545454,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 7.068181818181818,
+    "occurrences_renamed": 50.64772727272727,
+    "sites": 0.18181818181818182,
+    "tokens_added": 4.2727272727272725
+   }
+  },
+  {
+   "run": 100,
+   "denominator": 1033,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 10.466321243523316,
+     "evaded": 101,
+     "denominator": 965
+    },
+    "deadcode": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 944
+    },
+    "controlflow": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 966
+    },
+    "ren_dead": {
+     "asr": 0.3067484662576687,
+     "evaded": 3,
+     "denominator": 978
+    },
+    "ren_cf": {
+     "asr": 2.96220633299285,
+     "evaded": 29,
+     "denominator": 979
+    },
+    "dead_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 965
+    },
+    "compound": {
+     "asr": 0.3067484662576687,
+     "evaded": 3,
+     "denominator": 978
+    }
+   },
+   "asr_at_k": {
+    "1": 9.777347531461762,
+    "2": 10.26137463697967,
+    "3": 10.26137463697967
+   },
+   "mean_min_budget": 1.0471698113207548,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 8.471698113207546,
+    "occurrences_renamed": 84.4622641509434,
+    "sites": 0.18867924528301888,
+    "tokens_added": 0.0
+   }
+  },
+  {
+   "run": 999,
+   "denominator": 1082,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 7.283464566929134,
+     "evaded": 74,
+     "denominator": 1016
+    },
+    "deadcode": {
+     "asr": 0.1006036217303823,
+     "evaded": 1,
+     "denominator": 994
+    },
+    "controlflow": {
+     "asr": 0.2949852507374631,
+     "evaded": 3,
+     "denominator": 1017
+    },
+    "ren_dead": {
+     "asr": 0.4859086491739553,
+     "evaded": 5,
+     "denominator": 1029
+    },
+    "ren_cf": {
+     "asr": 3.012633624878523,
+     "evaded": 31,
+     "denominator": 1029
+    },
+    "dead_cf": {
+     "asr": 0.0984251968503937,
+     "evaded": 1,
+     "denominator": 1016
+    },
+    "compound": {
+     "asr": 0.2918287937743191,
+     "evaded": 3,
+     "denominator": 1028
+    }
+   },
+   "asr_at_k": {
+    "1": 6.931608133086876,
+    "2": 7.486136783733826,
+    "3": 7.486136783733826
+   },
+   "mean_min_budget": 1.0740740740740742,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 7.0246913580246915,
+    "occurrences_renamed": 78.23456790123457,
+    "sites": 0.19753086419753085,
+    "tokens_added": 0.0
+   }
+  },
+  {
+   "run": 1337,
+   "denominator": 997,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 6.323687031082529,
+     "evaded": 59,
+     "denominator": 933
+    },
+    "deadcode": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 921
+    },
+    "controlflow": {
+     "asr": 0.10706638115631692,
+     "evaded": 1,
+     "denominator": 934
+    },
+    "ren_dead": {
+     "asr": 0.21164021164021163,
+     "evaded": 2,
+     "denominator": 945
+    },
+    "ren_cf": {
+     "asr": 1.9027484143763214,
+     "evaded": 18,
+     "denominator": 946
+    },
+    "dead_cf": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 933
+    },
+    "compound": {
+     "asr": 0.10582010582010581,
+     "evaded": 1,
+     "denominator": 945
+    }
+   },
+   "asr_at_k": {
+    "1": 6.018054162487462,
+    "2": 6.118355065195587,
+    "3": 6.118355065195587
+   },
+   "mean_min_budget": 1.0163934426229508,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 5.540983606557377,
+    "occurrences_renamed": 30.83606557377049,
+    "sites": 0.08196721311475409,
+    "tokens_added": 0.0
+   }
+  }
+ ],
+ "asr_at_k_mean": {
+  "1": 7.971957211461072,
+  "2": 8.369247047016012,
+  "3": 8.369247047016012
+ },
+ "asr_at_k_sd": {
+  "1": 1.584503366289785,
+  "2": 1.6985512809794585,
+  "3": 1.6985512809794585
+ },
+ "fixed_policy_mean": {
+  "identifier": 8.455269515977553,
+  "deadcode": 0.0403431712621533,
+  "controlflow": 0.14132403196251236,
+  "ren_dead": 0.6175347110927513,
+  "ren_cf": 3.2193554377394085,
+  "dead_cf": 0.01968503937007874,
+  "compound": 0.29940212683493017
+ }
+}

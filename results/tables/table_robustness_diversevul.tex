@@ -1,0 +1,24 @@
+\begin{tabular}{llrrrrrrrrrr}
+\toprule
+Family & System & Runs & Clean F1 & $\Delta$Ren & $\Delta$Dead & $\Delta$CF & $\Delta$R+D & $\Delta$R+CF & $\Delta$D+CF & $\Delta$Cmp & Max$|\Delta|$ \\
+\midrule
+Whole-fn GNN & ECG RGCN & 5 & 73.22\,$\pm$\,0.66 & $\mathbf{-8.21}$ & $-0.60$ & $-0.74$ & $\mathbf{-6.61}$ & $\mathbf{-9.03}$ & $\mathbf{-0.98}$ & $\mathbf{-6.67}$ & 9.03 \\
+ & ANGLE & 5 & 71.98\,$\pm$\,0.71 & $\mathbf{-30.05}$ & $-10.08$ & $-1.51$ & $\mathbf{-46.03}$ & $\mathbf{-35.92}$ & $-12.43$ & $\mathbf{-48.61}$ & 48.61 \\
+ & VulGNN & 5 & 72.42\,$\pm$\,0.28 & $\mathbf{-2.14}$ & $-0.85$ & $-0.39$ & $\mathbf{-1.95}$ & $\mathbf{-2.06}$ & $\mathbf{-1.51}$ & $\mathbf{-2.03}$ & 2.14 \\
+ & REVEAL & 5 & 72.63\,$\pm$\,0.66 & $\mathbf{-7.58}$ & $\mathbf{-0.95}$ & $\mathbf{-0.57}$ & $\mathbf{-6.97}$ & $\mathbf{-5.83}$ & $\mathbf{-1.11}$ & $\mathbf{-5.87}$ & 7.58 \\
+\midrule
+Graph + LM & Vul-LMGGNN & 5 & 76.22\,$\pm$\,0.29 & $\mathbf{-0.90}$ & $\mathbf{-1.84}$ & $-0.17$ & $\mathbf{-2.32}$ & $\mathbf{-0.76}$ & $\mathbf{-1.72}$ & $\mathbf{-2.44}$ & 2.44 \\
+ & ReGVD & 5 & 75.30\,$\pm$\,0.38 & $\mathbf{-1.87}$ & $\mathbf{-1.18}$ & $\mathbf{-0.64}$ & $\mathbf{-4.09}$ & $\mathbf{-2.51}$ & $\mathbf{-1.42}$ & $\mathbf{-4.21}$ & 4.21 \\
+\midrule
+Transformer & CodeBERT & 5 & 76.25\,$\pm$\,0.19 & $\mathbf{-0.83}$ & $\mathbf{-0.43}$ & $\mathbf{-0.57}$ & $\mathbf{-1.54}$ & $\mathbf{-1.00}$ & $\mathbf{-0.71}$ & $\mathbf{-1.74}$ & 1.74 \\
+ & CodeT5+ & 5 & 76.82\,$\pm$\,0.56 & $-0.09$ & $-0.38$ & $-0.31$ & $\mathbf{-0.82}$ & $\mathbf{-0.44}$ & $-0.61$ & $\mathbf{-1.10}$ & 1.10 \\
+\midrule
+Non-neural & TF-IDF+LR & 30 & 72.17\,$\pm$\,0.35 & $-0.89$ & $-0.31$ & $-0.06$ & $-0.52$ & $-0.66$ & $-0.37$ & $-0.61$ & 0.89 \\
+ & CPG+LR & 30 & 70.86\,$\pm$\,0.36 & $-0.00$ & $\mathbf{-1.28}$ & $+0.04$ & $\mathbf{-1.14}$ & $+0.05$ & $\mathbf{-1.37}$ & $\mathbf{-1.34}$ & 1.37 \\
+\midrule
+Ablation: node types only & ECG RGCN-S & 5 & 71.80\,$\pm$\,0.36 & $+0.00$ & $\mathbf{-1.30}$ & $-0.65$ & $\mathbf{-1.19}$ & $-0.64$ & $\mathbf{-1.56}$ & $\mathbf{-1.54}$ & 1.56 \\
+ & ANGLE-S & 5 & 70.58\,$\pm$\,0.54 & $+0.01$ & $\mathbf{-1.40}$ & $+0.03$ & $\mathbf{-1.22}$ & $+0.04$ & $\mathbf{-1.32}$ & $\mathbf{-1.29}$ & 1.40 \\
+ & VulGNN-S & 5 & 70.55\,$\pm$\,0.39 & $+0.00$ & $-0.51$ & $-0.43$ & $-0.38$ & $-0.42$ & $-0.42$ & $-0.39$ & 0.51 \\
+ & REVEAL-S & 5 & 71.04\,$\pm$\,0.35 & $+0.00$ & $-0.86$ & $-0.44$ & $-0.73$ & $-0.42$ & $-1.15$ & $-1.12$ & 1.15 \\
+\bottomrule
+\end{tabular}

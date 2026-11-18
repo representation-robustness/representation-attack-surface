@@ -1,0 +1,27 @@
+{
+  "job": "codet5plus_bigvul_s999",
+  "cmd": [
+    "$RERUN_ROOT/venvs/main/bin/python",
+    "-m",
+    "pipeline.models.transformer",
+    "--model",
+    "codet5plus",
+    "--dataset",
+    "bigvul",
+    "--seed",
+    "999"
+  ],
+  "start": "2026-11-07T14:08:33-06:00",
+  "end": "2026-11-08T02:23:46-06:00",
+  "exit_code": 0,
+  "gpus": "5",
+  "gpu_mem_cap_mib": "26974",
+  "threads": 2,
+  "host": "HOST",
+  "git_commit": "ba7a84376e0806e5ea737916322cf2e81f6c3054",
+  "git_dirty": true,
+  "git_diff_sha256": "3fafd46314656653292529c3875826d9f3b5d0b31a0f00bd82576f3e11b018d9",
+  "env_freeze_sha256": "a43367e711b8fdeb7ee81a99bb10ac490b7010a50a87da6168f559a552fdf14b",
+  "log": "$RERUN_ROOT/logs/codet5plus_bigvul_s999.log",
+  "container": ""
+}

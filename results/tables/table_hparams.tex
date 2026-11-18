@@ -1,0 +1,21 @@
+\begin{tabular}{lrrrl}
+\toprule
+System & Batch & LR & Epochs (ES) & Node features \\
+\midrule
+REVEAL & 128 & 0.001 & 100 (5) & type+w2v \\
+REVEAL-S & 128 & 0.001 & 100 (5) & type \\
+Devign GGNN & 128 & 0.0001 & 100 (10) & type+w2v \\
+ECG RGCN & 128 & 0.0001 & 150 (20) & type+w2v \\
+ECG RGCN-S & 128 & 0.0001 & 150 (20) & type \\
+ANGLE & 32 & 0.0001 & 50 (10) & type+w2v \\
+ANGLE-S & 32 & 0.0001 & 50 (10) & type \\
+VulGNN & 400 & 0.0001 & 60 (15) & type+w2v \\
+VulGNN-S & 400 & 0.0001 & 60 (15) & type \\
+VulGNN-S + CodeBERT & 400 & 0.0001 & 60 (15) & type \\
+CodeBERT & 32 & 2e-05 & 5 (--) & tokens (max 400) \\
+CodeT5+ & 32 & 2e-05 & 10 (--) & tokens (max 512) \\
+ReGVD & 128 & 5e-4 & 100 (10) & GraphCodeBERT token graph \\
+Vul-LMGGNN & 8 & 2e-5 & 10 (--) & type + Word2Vec, CodeBERT \\
+TF-IDF+LR / CPG+LR & -- & -- & $C=1$ & n-grams / type histograms \\
+\bottomrule
+\end{tabular}

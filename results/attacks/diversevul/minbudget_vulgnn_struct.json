@@ -1,0 +1,290 @@
+{
+ "dataset": "diversevul",
+ "model": "vulgnn_struct",
+ "per_run": [
+  {
+   "run": 7,
+   "denominator": 1452,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1433
+    },
+    "deadcode": {
+     "asr": 0.9845288326300985,
+     "evaded": 14,
+     "denominator": 1422
+    },
+    "controlflow": {
+     "asr": 4.041811846689895,
+     "evaded": 58,
+     "denominator": 1435
+    },
+    "ren_dead": {
+     "asr": 0.9790209790209791,
+     "evaded": 14,
+     "denominator": 1430
+    },
+    "ren_cf": {
+     "asr": 4.036186499652053,
+     "evaded": 58,
+     "denominator": 1437
+    },
+    "dead_cf": {
+     "asr": 0.9129213483146067,
+     "evaded": 13,
+     "denominator": 1424
+    },
+    "compound": {
+     "asr": 0.9103641456582633,
+     "evaded": 13,
+     "denominator": 1428
+    }
+   },
+   "asr_at_k": {
+    "1": 4.40771349862259,
+    "2": 4.40771349862259,
+    "3": 4.40771349862259
+   },
+   "mean_min_budget": 1.0,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 0.0,
+    "occurrences_renamed": 0.0,
+    "sites": 1.96875,
+    "tokens_added": 10.734375
+   }
+  },
+  {
+   "run": 42,
+   "denominator": 1510,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1490
+    },
+    "deadcode": {
+     "asr": 0.06756756756756757,
+     "evaded": 1,
+     "denominator": 1480
+    },
+    "controlflow": {
+     "asr": 1.6096579476861168,
+     "evaded": 24,
+     "denominator": 1491
+    },
+    "ren_dead": {
+     "asr": 0.06720430107526881,
+     "evaded": 1,
+     "denominator": 1488
+    },
+    "ren_cf": {
+     "asr": 1.606425702811245,
+     "evaded": 24,
+     "denominator": 1494
+    },
+    "dead_cf": {
+     "asr": 0.0675219446320054,
+     "evaded": 1,
+     "denominator": 1481
+    },
+    "compound": {
+     "asr": 0.06729475100942127,
+     "evaded": 1,
+     "denominator": 1486
+    }
+   },
+   "asr_at_k": {
+    "1": 1.5894039735099337,
+    "2": 1.5894039735099337,
+    "3": 1.5894039735099337
+   },
+   "mean_min_budget": 1.0,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 0.0,
+    "occurrences_renamed": 0.0,
+    "sites": 2.2083333333333335,
+    "tokens_added": 0.0
+   }
+  },
+  {
+   "run": 100,
+   "denominator": 1494,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1473
+    },
+    "deadcode": {
+     "asr": 0.06825938566552901,
+     "evaded": 1,
+     "denominator": 1465
+    },
+    "controlflow": {
+     "asr": 0.47393364928909953,
+     "evaded": 7,
+     "denominator": 1477
+    },
+    "ren_dead": {
+     "asr": 0.06793478260869565,
+     "evaded": 1,
+     "denominator": 1472
+    },
+    "ren_cf": {
+     "asr": 0.47329276538201487,
+     "evaded": 7,
+     "denominator": 1479
+    },
+    "dead_cf": {
+     "asr": 0.06821282401091405,
+     "evaded": 1,
+     "denominator": 1466
+    },
+    "compound": {
+     "asr": 0.06802721088435375,
+     "evaded": 1,
+     "denominator": 1470
+    }
+   },
+   "asr_at_k": {
+    "1": 0.4685408299866131,
+    "2": 0.4685408299866131,
+    "3": 0.4685408299866131
+   },
+   "mean_min_budget": 1.0,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 0.0,
+    "occurrences_renamed": 0.0,
+    "sites": 1.7142857142857142,
+    "tokens_added": 0.0
+   }
+  },
+  {
+   "run": 999,
+   "denominator": 1462,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1443
+    },
+    "deadcode": {
+     "asr": 0.21008403361344538,
+     "evaded": 3,
+     "denominator": 1428
+    },
+    "controlflow": {
+     "asr": 4.441360166551006,
+     "evaded": 64,
+     "denominator": 1441
+    },
+    "ren_dead": {
+     "asr": 0.20847810979847117,
+     "evaded": 3,
+     "denominator": 1439
+    },
+    "ren_cf": {
+     "asr": 4.426002766251729,
+     "evaded": 64,
+     "denominator": 1446
+    },
+    "dead_cf": {
+     "asr": 0.48951048951048953,
+     "evaded": 7,
+     "denominator": 1430
+    },
+    "compound": {
+     "asr": 0.4871259568545581,
+     "evaded": 7,
+     "denominator": 1437
+    }
+   },
+   "asr_at_k": {
+    "1": 4.4459644322845415,
+    "2": 4.514363885088919,
+    "3": 4.514363885088919
+   },
+   "mean_min_budget": 1.0151515151515151,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 0.0,
+    "occurrences_renamed": 0.0,
+    "sites": 1.803030303030303,
+    "tokens_added": 3.5454545454545454
+   }
+  },
+  {
+   "run": 1337,
+   "denominator": 1394,
+   "fixed_policy": {
+    "identifier": {
+     "asr": 0.0,
+     "evaded": 0,
+     "denominator": 1378
+    },
+    "deadcode": {
+     "asr": 0.07304601899196493,
+     "evaded": 1,
+     "denominator": 1369
+    },
+    "controlflow": {
+     "asr": 4.492753623188406,
+     "evaded": 62,
+     "denominator": 1380
+    },
+    "ren_dead": {
+     "asr": 0.07283321194464676,
+     "evaded": 1,
+     "denominator": 1373
+    },
+    "ren_cf": {
+     "asr": 4.492753623188406,
+     "evaded": 62,
+     "denominator": 1380
+    },
+    "dead_cf": {
+     "asr": 0.14609203798392986,
+     "evaded": 2,
+     "denominator": 1369
+    },
+    "compound": {
+     "asr": 0.14587892049598833,
+     "evaded": 2,
+     "denominator": 1371
+    }
+   },
+   "asr_at_k": {
+    "1": 4.4476327116212335,
+    "2": 4.4476327116212335,
+    "3": 4.4476327116212335
+   },
+   "mean_min_budget": 1.0,
+   "mean_cost_of_min_sequence": {
+    "identifiers_renamed": 0.0,
+    "occurrences_renamed": 0.0,
+    "sites": 1.9516129032258065,
+    "tokens_added": 0.0
+   }
+  }
+ ],
+ "asr_at_k_mean": {
+  "1": 3.0718510892049826,
+  "2": 3.0855309797658577,
+  "3": 3.0855309797658577
+ },
+ "asr_at_k_sd": {
+  "1": 1.9065915061757968,
+  "2": 1.919119894334223,
+  "3": 1.919119894334223
+ },
+ "fixed_policy_mean": {
+  "identifier": 0.0,
+  "deadcode": 0.280697167693721,
+  "controlflow": 3.011903446680905,
+  "ren_dead": 0.2790942768896123,
+  "ren_cf": 3.0069322714570896,
+  "dead_cf": 0.3368517288903891,
+  "compound": 0.33573819698051693
+ }
+}

@@ -1,0 +1,9 @@
+dataset,base,variant,n_runs,clean_f1,clean_sd,ren_f1,ren_sd,delta_ren,delta_ren_sd,p_bh,diff_vs_base,diff_p_welch
+diversevul,reveal,reveal,5,73.2615,0.6600,65.6833,2.4344,-7.5782,2.7267,0.01194,,
+diversevul,reveal,reveal_struct,5,71.6925,0.2970,71.6925,0.2970,0.0000,0.0000,,7.5782,0.003412
+diversevul,ecg_rgcn,ecg_rgcn,5,73.9229,0.6889,65.7167,3.2799,-8.2062,2.9432,0.01194,,
+diversevul,ecg_rgcn,ecg_rgcn_struct,5,72.4121,0.3738,72.4160,0.3990,0.0038,0.0281,0.8386,8.2101,0.003364
+diversevul,angle,angle,5,72.7663,0.8225,42.7205,15.1666,-30.0458,15.0721,0.01897,,
+diversevul,angle,angle_struct,5,71.2782,0.5427,71.2853,0.5430,0.0071,0.0097,0.2569,30.0529,0.01117
+diversevul,vulgnn,vulgnn,5,73.1334,0.2470,70.9887,1.0101,-2.1448,0.8427,0.01318,,
+diversevul,vulgnn,vulgnn_struct,5,71.1803,0.2767,71.1803,0.2767,0.0000,0.0000,,2.1448,0.004708
