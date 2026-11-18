@@ -5,7 +5,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / identifier / devign_01457
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -45,7 +45,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / identifier / devign_01487
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -91,7 +91,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / identifier / devign_04196
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -275,7 +275,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / identifier / devign_07458
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -317,7 +317,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / identifier / devign_09508
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -443,7 +443,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / identifier / devign_10640
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -465,7 +465,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / identifier / devign_11167
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -526,7 +526,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / identifier / devign_13734
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -570,7 +570,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / identifier / devign_16614
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -904,7 +904,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / identifier / devign_25182
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -994,7 +994,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / deadcode / devign_02950
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1045,7 +1045,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / deadcode / devign_05361
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1094,7 +1094,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / deadcode / devign_07327
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1145,7 +1145,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / deadcode / devign_14589
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1184,7 +1184,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / deadcode / devign_14982
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1218,7 +1218,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / deadcode / devign_16792
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1268,7 +1268,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / deadcode / devign_19889
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1318,7 +1318,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / deadcode / devign_19999
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1369,7 +1369,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / deadcode / devign_23076
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1409,7 +1409,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / deadcode / devign_23786
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1460,7 +1460,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / controlflow / devign_01573
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1476,7 +1476,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / controlflow / devign_04781
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1785,7 +1785,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / controlflow / devign_09761
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1813,7 +1813,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / controlflow / devign_10738
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1855,7 +1855,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / controlflow / devign_10773
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1897,7 +1897,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / controlflow / devign_15368
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1937,7 +1937,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / controlflow / devign_16767
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1952,7 +1952,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / controlflow / devign_20282
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1967,7 +1967,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / controlflow / devign_21851
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1982,7 +1982,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## devign / controlflow / devign_26480
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -1997,7 +1997,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / identifier / diversevul_test_000334
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -2135,7 +2135,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / identifier / diversevul_test_000392
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -2178,7 +2178,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / identifier / diversevul_test_001493
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -2279,7 +2279,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / identifier / diversevul_test_001652
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -2333,7 +2333,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / identifier / diversevul_test_002245
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3185,7 +3185,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / identifier / diversevul_test_002431
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3242,7 +3242,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / identifier / diversevul_test_002776
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3402,7 +3402,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / identifier / diversevul_test_003143
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3418,7 +3418,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / identifier / diversevul_test_003245
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3454,7 +3454,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / identifier / diversevul_test_003499
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3490,7 +3490,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / deadcode / diversevul_test_000669
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3518,7 +3518,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / deadcode / diversevul_test_001334
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3569,7 +3569,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / deadcode / diversevul_test_001355
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3608,7 +3608,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / deadcode / diversevul_test_001435
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3627,7 +3627,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / deadcode / diversevul_test_002126
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3655,7 +3655,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / deadcode / diversevul_test_002509
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3685,7 +3685,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / deadcode / diversevul_test_002689
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3732,7 +3732,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / deadcode / diversevul_test_002999
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3768,7 +3768,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / deadcode / diversevul_test_003275
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3796,7 +3796,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / deadcode / diversevul_test_003332
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3840,7 +3840,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / controlflow / diversevul_test_000107
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3893,7 +3893,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / controlflow / diversevul_test_000390
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3936,7 +3936,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / controlflow / diversevul_test_001549
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3961,7 +3961,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / controlflow / diversevul_test_001571
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3976,7 +3976,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / controlflow / diversevul_test_001698
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -3995,7 +3995,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / controlflow / diversevul_test_001796
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4028,7 +4028,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / controlflow / diversevul_test_001959
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4047,7 +4047,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / controlflow / diversevul_test_002485
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4065,7 +4065,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / controlflow / diversevul_test_003012
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4080,7 +4080,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## diversevul / controlflow / diversevul_test_003590
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4098,7 +4098,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / identifier / bigvul_test_002200
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4116,7 +4116,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / identifier / bigvul_test_008005
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4140,7 +4140,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / identifier / bigvul_test_009400
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4194,7 +4194,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / identifier / bigvul_test_009559
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4234,7 +4234,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / identifier / bigvul_test_010474
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4299,7 +4299,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / identifier / bigvul_test_011340
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4330,7 +4330,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / identifier / bigvul_test_014169
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4377,7 +4377,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / identifier / bigvul_test_015156
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4393,7 +4393,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / identifier / bigvul_test_016383
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4410,7 +4410,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / identifier / bigvul_test_016391
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4438,7 +4438,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / deadcode / bigvul_test_005312
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4480,7 +4480,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / deadcode / bigvul_test_008187
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4505,7 +4505,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / deadcode / bigvul_test_008644
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4535,7 +4535,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / deadcode / bigvul_test_009902
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4551,7 +4551,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / deadcode / bigvul_test_010144
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4571,7 +4571,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / deadcode / bigvul_test_010615
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4589,7 +4589,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / deadcode / bigvul_test_010855
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4630,7 +4630,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / deadcode / bigvul_test_011648
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4665,7 +4665,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / deadcode / bigvul_test_017506
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4681,7 +4681,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / deadcode / bigvul_test_018170
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4731,7 +4731,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / controlflow / bigvul_test_000859
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4765,7 +4765,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / controlflow / bigvul_test_001658
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4780,7 +4780,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / controlflow / bigvul_test_003468
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4803,7 +4803,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / controlflow / bigvul_test_004376
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4818,7 +4818,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / controlflow / bigvul_test_004827
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4834,7 +4834,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / controlflow / bigvul_test_007614
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4849,7 +4849,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / controlflow / bigvul_test_014570
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4868,7 +4868,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / controlflow / bigvul_test_015963
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4882,7 +4882,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / controlflow / bigvul_test_017585
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original
@@ -4920,7 +4920,7 @@ Mark each item: [x] semantics preserved, or [ ] and write the problem under it.
 
 ## bigvul / controlflow / bigvul_test_017763
 
-- [ ] semantics preserved
+- [x] semantics preserved
 
 ```diff
 --- original

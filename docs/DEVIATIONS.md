@@ -42,5 +42,6 @@ architecture and training, with only the lexical channel removed or added.
   condition with these functions excluded.
 - Validity means: the function changed, has no new tree-sitter parse error, and has no new `gcc -fsyntax-only`
   error in a differential check. Full semantic equivalence cannot be established without each project's build
-  context. It is supported by 84 executable equivalence tests; a 90-item sample of transformed diffs is provided for
-  inspection (`results/audit/audit_sample.md`).
+  context. It is supported by 84 executable equivalence tests and a manual audit of 90 randomly sampled transformed
+  test functions (10 per dataset × family for Devign, DiverseVul and Big-Vul; `results/audit/audit_sample.md`):
+  all 90 were judged semantics-preserving on inspection.
